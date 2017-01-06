@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import logo from './images/SF-logo.jpg';
+import logo from './images/SF-logo-nature.png';
 import './App.css';
 import AccordionCategory from './components/accordion/accordion-category';
 import ImageCarousol from './components/carousol/carousol';
 import EnvironmentConditions from './components/conditions/conditions';
 
-var FontAwesome = require('react-fontawesome');
 import Footer from './components/footer/footer';
 
 
