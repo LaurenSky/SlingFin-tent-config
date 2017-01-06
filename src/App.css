@@ -22,3 +22,18 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+li.WebTruss {
+  background-color: red;
+  list-style: none;
+}
+
+li.FootPrint {
+  background-color: seagreen;
+  list-style: none;
+}
+
+li.Flysheet {
+  background-color: teal;
+  list-style: none;
+}

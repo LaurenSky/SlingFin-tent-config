@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import logo from './images/SF-logo.jpg';
 import './App.css';
+import PartsList from './components/PartList';
+import Footer from './components/footer';
+
 // import Categories from './parts';
 
 class App extends Component {
   render() {
-    console.log('our data is: ', this.props.data)
+
 
     return (
       <div className="App">
@@ -28,7 +32,13 @@ class App extends Component {
         <h3>Alert Box: GOES HERE</h3>
 
         <hr/>
-        <h3>Configure your tent here:</h3>
+        <div>
+          <h3>Configure your tent here:</h3>
+          <PartsList data={this.props.data} />
+        </div>
+        <footer>
+          <Footer />
+        </footer>
       </div>
     );
   }
