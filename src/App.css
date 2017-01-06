@@ -24,20 +24,9 @@
   to { transform: rotate(360deg); }
 }
 
-/*li.WebTruss {
-  background-color: red;
-  list-style: none;
+.img-carousol {
+  width: 40%;
 }
-
-li.FootPrint {
-  background-color: seagreen;
-  list-style: none;
-}
-
-li.Flysheet {
-  background-color: teal;
-  list-style: none;
-}*/
 
 footer {
   background-color: #222;
