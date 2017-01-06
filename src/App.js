@@ -18,30 +18,51 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>SlingFin CrossBow2 Tent System Configurator</h2>
         </header>
+
         <p className="App-intro">
           Design the perfect tent system to fit your needs.
         </p>
+
         <div className="img-carousol">
           <ImageCarousol />
         </div>
-        <h3>WEIGHT SCALE GOES HERE</h3>
-        <h3>PRICE SCALE GOES HERE</h3>
-        <h3>COMFORT SCALE GOES HERE</h3>
 
-        <EnvironmentConditions />
+        <div className="tent-details">
+          <h4>Minimum Trail Weigth: $____</h4>
+          <h4>Peak Height:   _____</h4>
+          <h4>PRICE: $____</h4>
+          <h4>Sq. Footage:</h4>
+          <h5>Body: ____</h5>
+          <h5>Vestibule: ____</h5>
+          <h4># Doors: 2(side)</h4>
+          <h4>Packed Size: _____</h4>
 
-        <h3>List of Items selected split up by owned already and for  purchase or what configs you can make currently plus extra parts</h3>
-        <h3>Alert Box: GOES HERE</h3>
+          <h4>COMFORT: ____ /5(sleeping on clouds)</h4>
+        </div>
+
+        <div>
+          <EnvironmentConditions />
+        </div>
+
+        <div className="parts-selected">
+          <h4>List of Items selected</h4>
+          <h4>List of Accessories selected</h4>
+        </div>
+
+        <div className="alert-box">
+          <h4>Alert Box: GOES HERE</h4>
+        </div>
 
         <hr/>
         <div>
-          <h3>Configure your tent here:</h3>
+          <h4>Configure your tent here:</h4>
           <AccordionCategory data={this.props.data.webtrusses} />
           <AccordionCategory data={this.props.data.footprints} />
           <AccordionCategory data={this.props.data.innerTentBodies} />
           <AccordionCategory data={this.props.data.poles} />
           <AccordionCategory data={this.props.data.accessories} />
         </div>
+
         <footer>
           <Footer />
         </footer>

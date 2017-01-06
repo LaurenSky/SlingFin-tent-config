@@ -34,6 +34,15 @@ footer {
   padding:1%;
 }
 
+/*TENT DETAILS*/
+.tent-details {
+  border: #222 2px solid;
+  border-radius: 15px;
+  width: 40%;
+  padding-left: 1%;
+}
+
+
 /*BUGS, SNOW, RAIN*/
 .snowflake {
   color: #749bdb;
@@ -58,6 +67,20 @@ footer {
 }
 
 .conditions-protection {
+  border: #222 2px solid;
+  border-radius: 15px;
+  width: 20%;
+  text-align: center;
+}
+
+.parts-selected {
+  border: #222 2px solid;
+  border-radius: 15px;
+  width: 20%;
+  text-align: center;
+}
+
+.alert-box {
   border: #222 2px solid;
   border-radius: 15px;
   width: 20%;
