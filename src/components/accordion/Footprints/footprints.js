@@ -12,7 +12,7 @@ const styles = {
   }
 };
 
-class WebTrussCategory extends Component {
+class FootprintCategory extends Component {
   constructor() {
     super();
     this.state = {
@@ -32,7 +32,7 @@ class WebTrussCategory extends Component {
     // OR const {data} = this.props
     const stateStyle = this.state.active ? styles.active : styles.inactive;
 
-    const webTrussList = data.map(part => {
+    const footPrintList = data.map(part => {
       console.log(part.category, part.name)
       return (
         // <li key={part.id} className={part.category}>{part.name}</li>
@@ -49,13 +49,13 @@ class WebTrussCategory extends Component {
 
     return (
       <ul className='part-list-accordion'>
-        {webTrussList}
+        {footPrintList}
       </ul>
     );
   }
 }
 
-export default WebTrussCategory;
+export default FootprintCategory;
 
 // Accordion.propTypes = {
 //   summary: React.PropTypes.string.isRequired,

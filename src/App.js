@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import logo from './images/SF-logo.jpg';
 import './App.css';
-import PartsList from './components/accordion/parts-list';
+// import PartsList from './components/accordion/parts-list';
+import WebTrussCategory from './components/accordion/WebTruss/web-truss';
+import FootprintCategory from './components/accordion/Footprints/footprints';
+import InnerTentBodyCategory from './components/accordion/InnerTentBodies/inner-tent-body';
+
 // import Accordion from './components/accordion/accordion';
 import Footer from './components/footer/footer';
 
@@ -36,8 +40,9 @@ class App extends Component {
         <hr/>
         <div>
           <h3>Configure your tent here:</h3>
-          <PartsList data={this.props.data} />
-
+          <WebTrussCategory data={this.props.data.webtrusses} />
+          <FootprintCategory data={this.props.data.footprints} />
+          <InnerTentBodyCategory data={this.props.data.innerTentBodies} />
         </div>
         <footer>
           <Footer />
@@ -47,7 +52,9 @@ class App extends Component {
   }
 }
 
-// <WebTrussCategory data={this.props.data.webtruss} />
+// <PartsList data={this.props.data} />
+
+
 
 
 export default App;

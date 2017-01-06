@@ -1,5 +1,4 @@
-export default {
-    webtrusses: [
+export default [
     {
       id: 1,
       category: "WebTruss",
@@ -8,9 +7,7 @@ export default {
       price: 30.7,
       weight: 210,
       thumbnail: "http://www.slingfin.com/img/products/800/1080_02.jpg"
-      }
-    ],
-    footprints: [
+      },
       {
         id: 2,
         category: "FootPrint",
@@ -28,9 +25,7 @@ export default {
         price: 1111111,
         weight: 1111111,
         thumbnail: "http://www.slingfin.com/img/products/800/1080_02.jpg"
-      }
-    ],
-    flysheets: [
+      },
       {
         id: 4,
         category: "Flysheet",
@@ -40,16 +35,4 @@ export default {
         weight: 567,
         thumbnail: "http://www.slingfin.com/img/products/800/1082_06.jpg"
       }
-    ],
-    innerTentBodies: [
-      {
-        id: 5,
-        category: "InnerTentBodies",
-        name: "Mesh Body",
-        description: ".....",
-        price: 11111,
-        weight: 111111,
-        thumbnail: "http://www.slingfin.com/img/products/800/1082_06.jpg"
-      }
-    ]
-}
+]
