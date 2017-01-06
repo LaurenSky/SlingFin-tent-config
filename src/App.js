@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Categories from './parts';
+// import Categories from './parts';
 
 class App extends Component {
   render() {
+    console.log('our data is: ', this.props.data)
+
     return (
       <div className="App">
         <header className="App-header">
@@ -27,7 +29,6 @@ class App extends Component {
 
         <hr/>
         <h3>Configure your tent here:</h3>
-        <Categories />
       </div>
     );
   }
