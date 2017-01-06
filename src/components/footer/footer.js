@@ -23,6 +23,20 @@ const Footer = () =>
       {' '}
       From the Mountain to your trailhead.
     </p>
+    <ul>
+      <li>
+        <a href='/contact.html'>mail image</a>
+      </li>
+      <li>
+        <a class="twitter" href="https://twitter.com/slingfin" target="new">twitter image</a>
+      </li>
+      <li>
+        <a class="facebook" href="http://www.facebook.com/slingfin" target="new">facebook image</a>
+      </li>
+      <li>
+        <a class="instagram" href="http://www.instagram.com/slingfin" target="new">instagram image</a>
+      </li>
+    </ul>
   </div>
 
 export default Footer;

@@ -1,4 +1,6 @@
 import React from 'react';
+import './accordion.css';
+
 
 
 const styles = {
@@ -34,10 +36,10 @@ class Accordion extends React.Component {
     return (
 
       <section>
-        <a onClick={this.toggle}>
+        <p onClick={this.toggle} className='accordion-header'>
           {this.props.summary}
-        </a>
-        <p style={stateStyle}>
+        </p>
+        <p style={stateStyle} className='accordion-body'>
           {this.props.details}
         </p>
       </section>

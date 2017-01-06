@@ -2,15 +2,13 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import logo from './images/SF-logo.jpg';
 import './App.css';
-import PartsList from './components/PartList';
-import Accordion from './components/accordion';
-import Footer from './components/footer';
+import PartsList from './components/accordion/parts-list';
+// import Accordion from './components/accordion/accordion';
+import Footer from './components/footer/footer';
 
 // import Categories from './parts';
-const accordion_data = {
-  summary: "Im a summary",
-  details: "lalala lalalla lalala"
-}
+
+
 
 class App extends Component {
   render() {
@@ -39,7 +37,7 @@ class App extends Component {
         <div>
           <h3>Configure your tent here:</h3>
           <PartsList data={this.props.data} />
-          <Accordion summary={accordion_data.summary} details={accordion_data.details}/>
+
         </div>
         <footer>
           <Footer />
@@ -48,5 +46,8 @@ class App extends Component {
     );
   }
 }
+
+// <WebTrussCategory data={this.props.data.webtruss} />
+
 
 export default App;

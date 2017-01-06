@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Roboto', sans-serif;
 }
 
 .App-logo {
@@ -23,7 +24,7 @@
   to { transform: rotate(360deg); }
 }
 
-li.WebTruss {
+/*li.WebTruss {
   background-color: red;
   list-style: none;
 }
@@ -36,4 +37,10 @@ li.FootPrint {
 li.Flysheet {
   background-color: teal;
   list-style: none;
+}*/
+
+footer {
+  background-color: #222;
+  color: orangered;
+  padding:1%;
 }
