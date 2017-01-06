@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../accordion.css';
+import './accordion.css';
 
 
 const styles = {
@@ -12,7 +12,7 @@ const styles = {
   }
 };
 
-class InnerTentBodyCategory extends Component {
+class AccordionCategory extends Component {
   constructor() {
     super();
     this.state = {
@@ -32,30 +32,33 @@ class InnerTentBodyCategory extends Component {
     // OR const {data} = this.props
     const stateStyle = this.state.active ? styles.active : styles.inactive;
 
-    const innerTentBodyList = data.map(part => {
+    const partList = data.map(part => {
       console.log(part.category, part.name)
       return (
         // <li key={part.id} className={part.category}>{part.name}</li>
-        <li key={part.id}>
-          <p onClick={this.toggle} className='accordion-header'>
-            {part.name}
-          </p>
-          <p style={stateStyle} className='accordion-body'>
-            {part.description}
-          </p>
-        </li>
+        <div onClick={this.toggle} className='accordion-header'>
+          <h3>{part.category}</h3>
+          <li key={part.id}>
+            <p>
+              {part.name}
+            </p>
+            <p style={stateStyle} className='accordion-body'>
+              {part.description}
+            </p>
+          </li>
+        </div>
       )
     })
 
     return (
       <ul className='part-list-accordion'>
-        {innerTentBodyList}
+        {partList}
       </ul>
     );
   }
 }
 
-export default InnerTentBodyCategory;
+export default AccordionCategory;
 
 // Accordion.propTypes = {
 //   summary: React.PropTypes.string.isRequired,

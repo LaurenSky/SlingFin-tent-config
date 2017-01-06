@@ -2,16 +2,8 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import logo from './images/SF-logo.jpg';
 import './App.css';
-// import PartsList from './components/accordion/parts-list';
-import WebTrussCategory from './components/accordion/WebTruss/web-truss';
-import FootprintCategory from './components/accordion/Footprints/footprints';
-import InnerTentBodyCategory from './components/accordion/InnerTentBodies/inner-tent-body';
-
-// import Accordion from './components/accordion/accordion';
+import AccordionCategory from './components/accordion/accordion-category';
 import Footer from './components/footer/footer';
-
-// import Categories from './parts';
-
 
 
 class App extends Component {
@@ -40,9 +32,11 @@ class App extends Component {
         <hr/>
         <div>
           <h3>Configure your tent here:</h3>
-          <WebTrussCategory data={this.props.data.webtrusses} />
-          <FootprintCategory data={this.props.data.footprints} />
-          <InnerTentBodyCategory data={this.props.data.innerTentBodies} />
+          <AccordionCategory data={this.props.data.webtrusses} />
+          <AccordionCategory data={this.props.data.footprints} />
+          <AccordionCategory data={this.props.data.innerTentBodies} />
+          <AccordionCategory data={this.props.data.poles} />
+          <AccordionCategory data={this.props.data.accessories} />
         </div>
         <footer>
           <Footer />
@@ -51,9 +45,6 @@ class App extends Component {
     );
   }
 }
-
-// <PartsList data={this.props.data} />
-
 
 
 

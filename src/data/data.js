@@ -45,11 +45,70 @@ export default {
       {
         id: 5,
         category: "InnerTentBodies",
+        name: "Full RipStop Body",
+        description: ".....",
+        price: 11111,
+        weight: 111111,
+        thumbnail: "http://www.slingfin.com/img/products/800/1082_06.jpg"
+      },
+      {
+        id: 6,
+        category: "InnerTentBodies",
         name: "Mesh Body",
         description: ".....",
         price: 11111,
         weight: 111111,
         thumbnail: "http://www.slingfin.com/img/products/800/1082_06.jpg"
+      },
+      {
+        id: 7,
+        category: "InnerTentBodies",
+        name: "Drop-in Mesh Body",
+        description: ".....",
+        price: 11111,
+        weight: 111111,
+        thumbnail: "http://www.slingfin.com/img/products/800/1082_06.jpg"
       }
+    ],
+    poles: [
+      {
+        id: 8,
+        category: "Poles",
+        name: "Cross Poles",
+        description: ".....",
+        price: 11111,
+        weight: 111111,
+        thumbnail: "http://www.slingfin.com/img/products/800/1082_06.jpg"
+      },
+      {
+        id: 9,
+        category: "Poles",
+        name: "Bow Pole",
+        description: ".....",
+        price: 11111,
+        weight: 111111,
+        thumbnail: "http://www.slingfin.com/img/products/800/1082_06.jpg"
+      },
+      {
+        id: 10,
+        category: "Poles",
+        name: "Your Own Trekking Poles",
+        description: ".....",
+        price: 11111,
+        weight: 111111,
+        thumbnail: "http://www.slingfin.com/img/products/800/1082_06.jpg"
+      }
+    ],
+    accessories: [
+      {
+        id: 11,
+        category: "Accessories",
+        name: "Stakes (qty 6)",
+        description: ".....",
+        price: 11111,
+        weight: 111111,
+        thumbnail: "http://www.slingfin.com/img/products/800/1082_06.jpg"
+      },
     ]
+
 }
