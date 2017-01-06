@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
 import logo from './images/SF-logo.jpg';
 import './App.css';
 import AccordionCategory from './components/accordion/accordion-category';
-import MainImage from './components/main-img/main-img';
-import ImageGallery from './components/img-gallery/img-gallery';
 import ImageCarousol from './components/carousol/carousol';
+import EnvironmentConditions from './components/conditions/conditions';
 
-
-
+var FontAwesome = require('react-fontawesome');
 import Footer from './components/footer/footer';
 
 
@@ -30,7 +27,9 @@ class App extends Component {
         <h3>WEIGHT SCALE GOES HERE</h3>
         <h3>PRICE SCALE GOES HERE</h3>
         <h3>COMFORT SCALE GOES HERE</h3>
-        <h3>Protected from (bugs, snow, rain) SCALE GOES HERE</h3>
+
+        <EnvironmentConditions />
+
         <h3>List of Items selected split up by owned already and for  purchase or what configs you can make currently plus extra parts</h3>
         <h3>Alert Box: GOES HERE</h3>
 

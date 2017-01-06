@@ -1,4 +1,7 @@
 import React from 'react';
+var FontAwesome = require('react-fontawesome');
+import './footer.css';
+
 
 // class component
 // class Credit extends React.Component {
@@ -23,20 +26,15 @@ const Footer = () =>
       {' '}
       From the Mountain to your trailhead.
     </p>
-    <ul>
-      <li>
-        <a href='/contact.html'>mail image</a>
-      </li>
-      <li>
-        <a className="twitter" href="https://twitter.com/slingfin" target="new">twitter image</a>
-      </li>
-      <li>
-        <a className="facebook" href="http://www.facebook.com/slingfin" target="new">facebook image</a>
-      </li>
-      <li>
-        <a className="instagram" href="http://www.instagram.com/slingfin" target="new">instagram image</a>
-      </li>
-    </ul>
+    <section className="social-media-icons">
+        <a href='http://www.slingfin.com/contact.html' target="new"><FontAwesome className="fa fa-envelope increase-icon" name='mail' aria-hidden="true" /></a>
+
+        <a className="twitter" href="https://twitter.com/slingfin" target="new"><FontAwesome className="fa fa-twitter-square increase-icon" name='twitter' aria-hidden="true" /></a>
+
+        <a className="facebook" href="http://www.facebook.com/slingfin" target="new"><FontAwesome className="fa fa-facebook-square increase-icon" name='facebook' aria-hidden="true" /></a>
+
+        <a className="instagram" href="http://www.instagram.com/slingfin" target="new"><FontAwesome className="fa fa-instagram increase-icon" name='instagram' aria-hidden="true" /></a>
+    </section>
   </div>
 
 export default Footer;

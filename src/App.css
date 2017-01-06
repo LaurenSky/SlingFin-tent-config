@@ -33,3 +33,33 @@ footer {
   color: orangered;
   padding:1%;
 }
+
+/*BUGS, SNOW, RAIN*/
+.snowflake {
+  color: #749bdb;
+}
+
+.raindrop {
+  color: darkblue;
+}
+
+.bugs {
+  color: brown;
+}
+
+.increase-icon {
+  font-size: 180%;
+  padding: 0 4% 3% 4%;
+}
+
+.conditions-protection h3 {
+  color: #222;
+  padding: 0;
+}
+
+.conditions-protection {
+  border: #222 2px solid;
+  border-radius: 15px;
+  width: 20%;
+  text-align: center;
+}

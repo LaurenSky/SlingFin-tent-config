@@ -36,9 +36,9 @@ class AccordionCategory extends Component {
       console.log(part.category, part.name)
       return (
         // <li key={part.id} className={part.category}>{part.name}</li>
-        <div onClick={this.toggle} className='accordion-header'>
+        <div key={part.id} onClick={this.toggle} className='accordion-header'>
           <h3>{part.category}</h3>
-          <li key={part.id}>
+          <li>
             <p>
               {part.name}
             </p>

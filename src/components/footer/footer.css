@@ -1,0 +1,7 @@
+.social-media-icons a {
+  color: grey;
+}
+
+.social-media-icons a:hover {
+  color: orangered;
+}
