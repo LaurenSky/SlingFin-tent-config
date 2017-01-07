@@ -52,6 +52,7 @@ class ImageCarousol extends React.Component {
       }
     ]
 
+
     return (
       <ImageGallery
       ref={i => this._imageGallery = i}
