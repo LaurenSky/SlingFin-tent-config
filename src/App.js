@@ -9,6 +9,8 @@ import TentDetails from './components/TentDetails/tent-details';
 import Footer from './components/footer/footer';
 
 import Checkboxes from './components/checkbox/checkbox';
+import { Button } from 'react-bootstrap';
+
 
 
 
@@ -29,6 +31,8 @@ class App extends Component {
         <div className="img-carousol">
           <ImageCarousol />
         </div>
+
+        <Button bsStyle="success">Success</Button>
 
         <div className="tent-details">
           <TentDetails data={this.props.data}/>
