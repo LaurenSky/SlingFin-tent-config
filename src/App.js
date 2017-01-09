@@ -3,6 +3,9 @@ import logo from './images/SF-logo-nature.png';
 import './App.css';
 
 import AccordionCategory from './components/accordion/accordion-category';
+import PartCategory from './components/accordion/part-categories';
+
+
 import ImageCarousol from './components/carousol/carousol';
 import EnvironmentConditions from './components/conditions/conditions';
 import TentDetails from './components/TentDetails/tent-details';
@@ -53,14 +56,16 @@ class App extends Component {
         </div>
 
         <hr/>
-        <div>
-          <h4>Configure your tent here:</h4>
-          <AccordionCategory data={this.props.data.webtrusses} />
-          <AccordionCategory data={this.props.data.footprints} />
-          <AccordionCategory data={this.props.data.innerTentBodies} />
-          <AccordionCategory data={this.props.data.poles} />
-          <AccordionCategory data={this.props.data.accessories} />
-        </div>
+          <div>
+            <h4>Configure your tent here:</h4>
+            <PartCategory data={this.props.data} category={this.props.data.webtrusses[0].category} />
+            <PartCategory data={this.props.data} category={this.props.data.footprints[0].category} />
+            <PartCategory data={this.props.data} category={this.props.data.innerTentBodies[0].category} />
+            <PartCategory data={this.props.data} category={this.props.data.poles[0].category} />
+            <PartCategory data={this.props.data} category={this.props.data.accessories[0].category} />
+          </div>
+
+        <hr/>
 
         <footer>
           <Footer />
@@ -69,6 +74,15 @@ class App extends Component {
     );
   }
 }
+
+// <div>
+//   <h4>Configure your tent here:</h4>
+//   <AccordionCategory data={this.props.data.webtrusses} />
+//   <AccordionCategory data={this.props.data.footprints} />
+//   <AccordionCategory data={this.props.data.innerTentBodies} />
+//   <AccordionCategory data={this.props.data.poles} />
+//   <AccordionCategory data={this.props.data.accessories} />
+// </div>
 
 
 

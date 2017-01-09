@@ -11,11 +11,11 @@ export default {
       main: "https://indianexpressonline.files.wordpress.com/2015/10/monkey-759.jpg",
       gallery1: "http://images.indianexpress.com/2015/10/monkey-759.jpg",
       gallery2: "http://images.indianexpress.com/2015/10/monkey-759.jpg"
-      }
+    }
     ],
     footprints: [
       {
-        id: 2,
+        id: 3,
         category: "FootPrint",
         name: "Tub Footprint",
         description: "SlingFin's patented Tub Footprint actually keeps  wateout -- unlike flat tarps! Creates StormPack system when   paired with fly, WebTruss and poles.",
@@ -28,7 +28,7 @@ export default {
 
       },
       {
-        id: 3,
+        id: 4,
         category: "FootPrint",
         name: "Flat Footprint",
         description: "Can be used in conjunction with tent body to provideadditional ground protection.",
@@ -43,7 +43,7 @@ export default {
     ],
     flysheets: [
       {
-        id: 4,
+        id: 5,
         category: "Flysheet",
         name: "Gray Flysheet",
         description: "This flysheet will keep you dry in rain and snow. (Standard Version. Made of 15D Nylon RipStop, Sil/PU 1200mm FR.)",
@@ -58,7 +58,7 @@ export default {
     ],
     innerTentBodies: [
       {
-        id: 5,
+        id: 6,
         category: "InnerTentBodies",
         name: "Full RipStop Body",
         description: ".....",
@@ -71,7 +71,7 @@ export default {
 
       },
       {
-        id: 6,
+        id: 7,
         category: "InnerTentBodies",
         name: "Mesh Body",
         description: ".....",
@@ -84,7 +84,7 @@ export default {
 
       },
       {
-        id: 7,
+        id: 8,
         category: "InnerTentBodies",
         name: "Drop-in Mesh Body",
         description: ".....",
@@ -99,7 +99,7 @@ export default {
     ],
     poles: [
       {
-        id: 8,
+        id: 9,
         category: "Poles",
         name: "Cross Poles",
         description: ".....",
@@ -112,7 +112,7 @@ export default {
 
       },
       {
-        id: 9,
+        id: 10,
         category: "Poles",
         name: "Bow Pole",
         description: ".....",
@@ -125,7 +125,7 @@ export default {
 
       },
       {
-        id: 10,
+        id: 11,
         category: "Poles",
         name: "Your Own Trekking Poles",
         description: ".....",
@@ -140,7 +140,7 @@ export default {
     ],
     accessories: [
       {
-        id: 11,
+        id: 12,
         category: "Accessories",
         name: "Stakes (qty 6)",
         description: ".....",
