@@ -59,8 +59,3 @@ class AccordionCategory extends Component {
 }
 
 export default AccordionCategory;
-
-// Accordion.propTypes = {
-//   summary: React.PropTypes.string.isRequired,
-//   details: React.PropTypes.string.isRequired
-// };

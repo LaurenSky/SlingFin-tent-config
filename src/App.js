@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import logo from './images/SF-logo-nature.png';
 import './App.css';
+
 import AccordionCategory from './components/accordion/accordion-category';
 import ImageCarousol from './components/carousol/carousol';
 import EnvironmentConditions from './components/conditions/conditions';
-
+import TentDetails from './components/TentDetails/tent-details';
 import Footer from './components/footer/footer';
+
+import Checkboxes from './components/checkbox/checkbox';
+
 
 
 class App extends Component {
@@ -27,16 +31,7 @@ class App extends Component {
         </div>
 
         <div className="tent-details">
-          <h4>Minimum Trail Weigth: $____</h4>
-          <h4>Peak Height:   _____</h4>
-          <h4>PRICE: $____</h4>
-          <h4>Sq. Footage:</h4>
-          <h5>Body: ____</h5>
-          <h5>Vestibule: ____</h5>
-          <h4># Doors: 2(side)</h4>
-          <h4>Packed Size: _____</h4>
-
-          <h4>COMFORT: ____ /5(sleeping on clouds)</h4>
+          <TentDetails data={this.props.data}/>
         </div>
 
         <div>
@@ -50,6 +45,7 @@ class App extends Component {
 
         <div className="alert-box">
           <h4>Alert Box: GOES HERE</h4>
+          <Checkboxes />
         </div>
 
         <hr/>
