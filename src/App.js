@@ -13,9 +13,11 @@ import Footer from './components/footer/footer';
 
 import Checkboxes from './components/checkbox/checkbox';
 import { Button } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 
 
 
+// <Row className='show-grid'>
 
 class App extends Component {
   render() {
@@ -30,39 +32,46 @@ class App extends Component {
           <article className="App-intro">
             <p>Design the perfect tent system to fit your needs.</p>
           </article>
-          
-          <article className="img-carousol bkgrd">
-            <ImageCarousol />
-          </article>
 
-          <article className="bkgrd">
-            <TentDetails data={this.props.data}/>
-          </article>
-
-          <article className='bkgrd'>
-            <EnvironmentConditions />
-          </article>
-
-          <article className="parts-selected bkgrd">
-
-            <h4>List of Items selected</h4>
-            <h4>List of Accessories selected</h4>
-          </article>
-
-          <article className="alert-box bkgrd">
-            <h4>Alert Box: GOES HERE</h4>
-            <Checkboxes />
-          </article>
-
-          <hr/>
-            <article>
+          <Row>
+            <Col xs={12} md={6}>
               <h4>Configure your tent here:</h4>
               <PartCategory data={this.props.data} category={this.props.data.webtrusses[0].category} />
               <PartCategory data={this.props.data} category={this.props.data.poles[0].category} />
               <PartCategory data={this.props.data} category={this.props.data.footprints[0].category} />
-              <PartCategory data={this.props.data} category={this.props.data.innerTentBodies[0].category} />
+              <PartCategory data={this.props.data}category={this.props.data.innerTentBodies[0].category} />
               <PartCategory data={this.props.data} category={this.props.data.accessories[0].category} />
-            </article>
+            </Col>
+            <Col xs={12} md={5} className="img-carousol bkgrd">
+              <ImageCarousol />
+                <Row>
+                  <Col xs={6} md={5} className='bkgrd'>
+                    <EnvironmentConditions />
+                  </Col>
+                </Row>
+            </Col>
+
+            <Col xs={6} md={5} className="parts-selected bkgrd">
+              <h4>List of Items selected</h4>
+              <h4>List of Accessories selected</h4>
+            </Col>
+
+            <Col xs={6} md={5} className="bkgrd">
+              <TentDetails data={this.props.data}/>
+            </Col>
+
+            <Col xs={6} md={5} className="alert-box bkgrd">
+              <h4>Alert Box: GOES HERE</h4>
+              <Checkboxes />
+            </Col>
+          </Row>
+
+
+
+
+
+          <hr/>
+
           </section>
 
         <hr/>

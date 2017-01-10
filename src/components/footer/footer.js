@@ -1,6 +1,7 @@
 import React from 'react';
 var FontAwesome = require('react-fontawesome');
 import './footer.css';
+import { Row, Col } from 'react-bootstrap';
 
 
 // class component
@@ -20,13 +21,15 @@ import './footer.css';
 
 // same this but stateless component
 const Footer = () =>
-  <div className='credit'>
-    <p>
-      ©2017 SlingFin, Inc.
-      {' '}
-      From the Mountain to your trailhead.
-    </p>
-    <section className="social-media-icons">
+  <Row className='credit'>
+    <Col xs={7} md={10}>
+      <h5>
+        ©2017 SlingFin, Inc.
+        {' '}
+        From the Mountain to your trailhead.
+      </h5>
+    </Col>
+    <Col xs={4} md={2} className="social-media-icons">
         <a href='http://www.slingfin.com/contact.html' target="new"><FontAwesome className="fa fa-envelope increase-icon" name='mail' aria-hidden="true" /></a>
 
         <a className="twitter" href="https://twitter.com/slingfin" target="new"><FontAwesome className="fa fa-twitter-square increase-icon" name='twitter' aria-hidden="true" /></a>
@@ -34,7 +37,7 @@ const Footer = () =>
         <a className="facebook" href="http://www.facebook.com/slingfin" target="new"><FontAwesome className="fa fa-facebook-square increase-icon" name='facebook' aria-hidden="true" /></a>
 
         <a className="instagram" href="http://www.instagram.com/slingfin" target="new"><FontAwesome className="fa fa-instagram increase-icon" name='instagram' aria-hidden="true" /></a>
-    </section>
-  </div>
+    </Col>
+  </Row>
 
 export default Footer;

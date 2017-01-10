@@ -36,7 +36,7 @@
 }
 
 .img-carousol {
-  width: 30%;
+  /*width: 30%;*/
 }
 
 footer {
@@ -79,7 +79,6 @@ footer {
 
 .conditions-protection {
   border: #222 2px solid;
-  /*width: 20%;*/
   text-align: center;
   background-color: white;
 }
@@ -91,12 +90,10 @@ footer {
 
 .parts-selected {
   border: #222 2px solid;
-  width: 20%;
   text-align: center;
 }
 
 .alert-box {
   border: #222 2px solid;
-  width: 20%;
   text-align: center;
 }
