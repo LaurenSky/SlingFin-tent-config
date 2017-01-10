@@ -9,9 +9,9 @@ import PartCategory from './components/accordion/part-categories';
 import ImageCarousol from './components/carousol/carousol';
 import EnvironmentConditions from './components/conditions/conditions';
 import TentDetails from './components/TentDetails/tent-details';
+import TentDimensions from './components/TentDimensions/tent-dimensions';
 import Footer from './components/footer/footer';
 
-import Checkboxes from './components/checkbox/checkbox';
 import { Button } from 'react-bootstrap';
 import { Row, Col } from 'react-bootstrap';
 
@@ -34,19 +34,22 @@ class App extends Component {
           </article>
 
           <Row>
-            <Col xs={12} md={6}>
-              <h4>Configure your tent here:</h4>
+            <Col xs={12} md={4} className='no-padding'>
               <PartCategory data={this.props.data} category={this.props.data.webtrusses[0].category} />
               <PartCategory data={this.props.data} category={this.props.data.poles[0].category} />
               <PartCategory data={this.props.data} category={this.props.data.footprints[0].category} />
-              <PartCategory data={this.props.data}category={this.props.data.innerTentBodies[0].category} />
+              <PartCategory data={this.props.data} category={this.props.data.innerTentBodies[0].category} />
               <PartCategory data={this.props.data} category={this.props.data.accessories[0].category} />
             </Col>
-            <Col xs={12} md={5} className="img-carousol bkgrd">
+            <Col xs={12} md={6} className="img-carousol bkgrd">
+              <h4 className='configuration-title'>Your Configuration Details:</h4>
               <ImageCarousol />
                 <Row>
-                  <Col xs={6} md={5} className='bkgrd'>
+                  <Col xs={4} md={4} className='bkgrd'>
                     <EnvironmentConditions />
+                  </Col>
+                  <Col xs={12} md={12} className='bkgrd'>
+                    <TentDetails data={this.props.data}/>
                   </Col>
                 </Row>
             </Col>
@@ -57,24 +60,16 @@ class App extends Component {
             </Col>
 
             <Col xs={6} md={5} className="bkgrd">
-              <TentDetails data={this.props.data}/>
+              <TentDimensions/>
             </Col>
 
             <Col xs={6} md={5} className="alert-box bkgrd">
               <h4>Alert Box: GOES HERE</h4>
-              <Checkboxes />
             </Col>
           </Row>
 
-
-
-
-
           <hr/>
-
-          </section>
-
-        <hr/>
+        </section>
 
         <footer>
           <Footer />

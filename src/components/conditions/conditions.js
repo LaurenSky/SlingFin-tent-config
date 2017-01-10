@@ -9,7 +9,7 @@ class EnvironmentConditions extends React.Component {
 
     return (
       <div className='conditions-protection'>
-        <h4>Protected from the following conditions:</h4>
+        <h5>Protects you from:</h5>
         <FontAwesome className="fa fa-snowflake-o increase-icon snowflake" name='snowflake' aria-hidden="true" />
         <FontAwesome className="fa fa-tint increase-icon raindrop" name='raindrop' aria-hidden="true" />
         <FontAwesome className="fa fa-bug increase-icon bugs" name='bugs' aria-hidden="true" />

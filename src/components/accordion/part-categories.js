@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './accordion.css';
 import { Button } from 'react-bootstrap';
-
+import { Row, Col } from 'react-bootstrap';
 
 
 class PartCategory extends Component {
@@ -31,22 +31,34 @@ class PartCategory extends Component {
       const dropInMeshDetails = propsData.innerTentBodies[2]
       if(partName === 'Tub Footprint') {
         return (
-          <div className='recommended-part-header'>
-            <div className='recommended-part-body'>
-              <h5><strong>Add a Drop-in Mesh Body to this to have a 3-season tent</strong></h5>
-              <img src={dropInMeshDetails.main} className="part-image" alt="Part" />
-              <Button bsStyle="info">Add Drop-in Mesh Body</Button>
-              <p>
-                {dropInMeshDetails.description}
-              </p>
-              <p>
-                Price: ${dropInMeshDetails.price}
-              </p>
-              <p>
-                Weight(oz): {dropInMeshDetails.weight}
-              </p>
-            </div>
-          </div>
+          <Row className='recommended-part-header'>
+            <Col xs={12} md={12} className='recommended-part-name'>
+              <h4>Add a Drop-in Mesh Body to have a 3-season tent</h4>
+            </Col>
+              <Row>
+                <Col xs={9} md={9}>
+                  <Button bsStyle="info">Add Drop-in Mesh Body</Button>
+                </Col>
+                <Col xs={3} md={3}>
+                  <h4>
+                    ${dropInMeshDetails.price}
+                  </h4>
+                </Col>
+              </Row>
+            <Col xs={12} md={12} className='recommended-part-body'>
+              <Row>
+                <Col xs={12} md={12}>
+                  <img src={dropInMeshDetails.main} className="part-image" alt="Part" />
+                </Col>
+              </Row>
+              <Row>
+                <Col xs={12} md={12}>
+                  {dropInMeshDetails.description}
+                  ( {dropInMeshDetails.weight}oz )
+                </Col>
+              </Row>
+            </Col>
+          </Row>
         )
       }
     };
@@ -55,23 +67,34 @@ class PartCategory extends Component {
       const tubFootprintDetails = propsData.footprints[0]
       if(partName === 'Drop-in Mesh Body') {
         return (
-            <div className='recommended-part-header'>
-              <div className='recommended-part-body'>
-                <h5><strong>You need a Tub Footprint for this to be functional. Would You Like to add a Tub Footprint</strong></h5>
-                <img src={tubFootprintDetails.main} className="part-image" alt="Part" />
-                {/* Indicates a successful or positive action */}
-                <Button bsStyle="info">Add Tub Footprint</Button>
-                <p>
+          <Row className='recommended-part-header'>
+            <Col xs={12} md={12} className='recommended-part-name'>
+              <h4>This Requires a Tub Footprint. (please order one if you don't own one)</h4>
+            </Col>
+              <Row>
+                <Col xs={9} md={9}>
+                  <Button bsStyle="info">Add Drop-in Mesh Body</Button>
+                </Col>
+                <Col xs={3} md={3}>
+                  <h4>
+                    ${tubFootprintDetails.price}
+                  </h4>
+                </Col>
+              </Row>
+            <Col xs={12} md={12} className='recommended-part-body'>
+              <Row>
+                <Col xs={12} md={12}>
+                  <img src={tubFootprintDetails.main} className="part-image" alt="Part" />
+                </Col>
+              </Row>
+              <Row>
+                <Col xs={12} md={12}>
                   {tubFootprintDetails.description}
-                </p>
-                <p>
-                  Price: ${tubFootprintDetails.price}
-                </p>
-                <p>
-                  Weight(oz): {tubFootprintDetails.weight}
-                </p>
-              </div>
-            </div>
+                  ( {tubFootprintDetails.weight}oz )
+                </Col>
+              </Row>
+            </Col>
+          </Row>
         )
       }
     };
@@ -86,29 +109,51 @@ class PartCategory extends Component {
       // console.log(part.category, part.name)
       return(
         <li key={part.id} className='accordion-body'>
-          <h4 className='part-name'>
-            {part.name}
-          </h4>
+          <Row>
+            <Col xs={12} md={12}>
+              <h5 className='part-name'>
+                {part.name}
+              </h5>
+            </Col>
+          </Row>
 
-          <p>
-            <img src={part.main} className="part-image" alt="Part"/>
-          </p>
+          <Row>
+            <Col xs={4} md={4}>
+              <img src={part.main} className="part-image" alt="Part"/>
+            </Col>
 
-          {/* Indicates a successful or positive action */}
-          <Button bsStyle="success">Add {part.name}</Button>
+            <Col xs={8} md={8}>
+              <Row>
+                <Col xs={12} md={12}>
+                  {part.description}
+                  ( {part.weight}oz )
+                </Col>
 
-          <p>
-            {part.description}
-          </p>
-          <p>
-            Price: ${part.price}
-          </p>
-          <p>
-            Weight(oz): {part.weight}
-          </p>
+                <Row>
+                  <Col xs={8} md={8}>
+                    {/* Indicates a successful or positive action */}
+                    <Button bsStyle="success">Add {part.name}</Button>
+                  </Col>
 
-          {dropInMeshBody(part.name)}
-          {tubFootprint(part.name)}
+                  <Col xs={4} md={4}>
+                    <h4>
+                      ${part.price}
+                    </h4>
+                  </Col>
+                </Row>
+              </Row>
+
+              <Row>
+                <Col xs={12} md={12}>
+                  {dropInMeshBody(part.name)}
+                </Col>
+
+                <Col xs={12} md={12}>
+                  {tubFootprint(part.name)}
+                </Col>
+              </Row>
+            </Col>
+          </Row>
         </li>
       )
     })
@@ -116,7 +161,7 @@ class PartCategory extends Component {
     return (
       <ul className='part-list-accordion'>
         <div className='accordion-header'>
-          <h3>{this.props.category}</h3>
+          <h4>{this.props.category}</h4>
           {partList}
         </div>
       </ul>

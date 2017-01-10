@@ -35,6 +35,10 @@
   to { transform: rotate(360deg); }
 }
 
+.configuration-title {
+  color: white;
+}
+
 .img-carousol {
   /*width: 30%;*/
 }
@@ -96,4 +100,9 @@ footer {
 .alert-box {
   border: #222 2px solid;
   text-align: center;
+}
+
+.no-padding {
+  margin-left: 3%;
+  padding-left: 1%;
 }
