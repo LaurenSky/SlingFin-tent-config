@@ -2,7 +2,7 @@ import React from 'react';
 // import './accordion.css';
 
 
-class PeakHeight extends React.Component {
+class NumPoles extends React.Component {
 
   constructor() {
     super();
@@ -15,7 +15,7 @@ class PeakHeight extends React.Component {
 
     return (
       <div>
-        <h4>Peak Height:   _____</h4>
+        <h4>Poles:   _____</h4>
       </div>
     );
   }
@@ -25,4 +25,4 @@ class PeakHeight extends React.Component {
 //   weight: React.PropTypes.number.isRequired,
 // };
 
-export default PeakHeight;
+export default NumPoles;

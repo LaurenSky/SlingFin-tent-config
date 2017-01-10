@@ -30,7 +30,7 @@ class App extends Component {
           <article className="App-intro">
             <p>Design the perfect tent system to fit your needs.</p>
           </article>
-
+          
           <article className="img-carousol bkgrd">
             <ImageCarousol />
           </article>
