@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import './accordion.css';
+import { Button } from 'react-bootstrap';
+
 
 
 class PartCategory extends Component {
@@ -26,17 +28,50 @@ class PartCategory extends Component {
     }
 
     const dropInMeshBody = function(partName) {
+      const dropInMeshDetails = propsData.innerTentBodies[2]
       if(partName === 'Tub Footprint') {
         return (
-          <p>Would You Like to add a Drop-in Mesh Body</p>
+          <div className='recommended-part-header'>
+            <div className='recommended-part-body'>
+              <h5><strong>Add a Drop-in Mesh Body to this to have a 3-season tent</strong></h5>
+              <img src={dropInMeshDetails.main} className="part-image" alt="Part" />
+              <Button bsStyle="info">Add Drop-in Mesh Body</Button>
+              <p>
+                {dropInMeshDetails.description}
+              </p>
+              <p>
+                Price: ${dropInMeshDetails.price}
+              </p>
+              <p>
+                Weight(oz): {dropInMeshDetails.weight}
+              </p>
+            </div>
+          </div>
         )
       }
     };
 
     const tubFootprint = function(partName) {
+      const tubFootprintDetails = propsData.footprints[0]
       if(partName === 'Drop-in Mesh Body') {
         return (
-          <p> You need a Tub Footprint for this to be functional. Would You Like to add a Tub Footprint</p>
+            <div className='recommended-part-header'>
+              <div className='recommended-part-body'>
+                <h5><strong>You need a Tub Footprint for this to be functional. Would You Like to add a Tub Footprint</strong></h5>
+                <img src={tubFootprintDetails.main} className="part-image" alt="Part" />
+                {/* Indicates a successful or positive action */}
+                <Button bsStyle="info">Add Tub Footprint</Button>
+                <p>
+                  {tubFootprintDetails.description}
+                </p>
+                <p>
+                  Price: ${tubFootprintDetails.price}
+                </p>
+                <p>
+                  Weight(oz): {tubFootprintDetails.weight}
+                </p>
+              </div>
+            </div>
         )
       }
     };
@@ -48,15 +83,30 @@ class PartCategory extends Component {
 
 
     const partList = data.map(part => {
-      console.log(part.category, part.name)
+      // console.log(part.category, part.name)
       return(
-        <li key={part.id}>
-          <p>
+        <li key={part.id} className='accordion-body'>
+          <h4 className='part-name'>
             {part.name}
+          </h4>
+
+          <p>
+            <img src={part.main} className="part-image" alt="Part"/>
           </p>
-          <p className='accordion-body'>
+
+          {/* Indicates a successful or positive action */}
+          <Button bsStyle="success">Add {part.name}</Button>
+
+          <p>
             {part.description}
           </p>
+          <p>
+            Price: ${part.price}
+          </p>
+          <p>
+            Weight(oz): {part.weight}
+          </p>
+
           {dropInMeshBody(part.name)}
           {tubFootprint(part.name)}
         </li>

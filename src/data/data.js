@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default {
     webtrusses: [
     {
@@ -8,9 +10,9 @@ export default {
       price: 30.7,
       weight: 210,
       thumbnail: "http://www.slingfin.com/img/products/800/1080_02.jpg",
-      main: "https://indianexpressonline.files.wordpress.com/2015/10/monkey-759.jpg",
-      gallery1: "http://images.indianexpress.com/2015/10/monkey-759.jpg",
-      gallery2: "http://images.indianexpress.com/2015/10/monkey-759.jpg"
+      main: "http://www.slingfin.com/img/products/800/1080_02.jpg",
+      gallery1: "http://www.slingfin.com/img/products/800/1080_04.jpg",
+      gallery2: "http://www.slingfin.com/img/products/800/1080_09.jpg"
     }
     ],
     footprints: [
@@ -22,7 +24,7 @@ export default {
         price: 34.9,
         weight: 245,
         thumbnail: "http://www.slingfin.com/img/products/800/1083_01.jpg",
-        main: "https://indianexpressonline.files.wordpress.com/2015/10/monkey-759.jpg",
+        main: 'http://images.indianexpress.com/2015/10/monkey-759.jpg',
         gallery1: "http://images.indianexpress.com/2015/10/monkey-759.jpg",
         gallery2: "http://images.indianexpress.com/2015/10/monkey-759.jpg"
 
@@ -35,9 +37,9 @@ export default {
         price: 1111111,
         weight: 1111111,
         thumbnail: "http://www.slingfin.com/img/products/800/1080_02.jpg",
-        main: "https://indianexpressonline.files.wordpress.com/2015/10/monkey-759.jpg",
-        gallery1: "http://images.indianexpress.com/2015/10/monkey-759.jpg",
-        gallery2: "http://images.indianexpress.com/2015/10/monkey-759.jpg"
+        main: "http://www.slingfin.com/img/products/800/1083_01.jpg",
+        gallery1: "http://www.slingfin.com/img/products/800/1083_02.jpg",
+        gallery2: "http://www.slingfin.com/img/products/800/1083_03.jpg"
 
       }
     ],
@@ -66,8 +68,8 @@ export default {
         weight: 111111,
         thumbnail: "http://www.slingfin.com/img/products/800/1082_06.jpg",
         main: "http://www.slingfin.com/img/products/800/1082_02.jpg",
-        gallery1: "http://images.indianexpress.com/2015/10/monkey-759.jpg",
-        gallery2: "http://images.indianexpress.com/2015/10/monkey-759.jpg"
+        gallery1: "http://www.slingfin.com/img/products/800/1085_01a.jpg",
+        gallery2: "http://www.slingfin.com/img/products/800/1085_02.jpg"
 
       },
       {
@@ -77,10 +79,10 @@ export default {
         description: ".....",
         price: 11111,
         weight: 111111,
-        thumbnail: "http://www.slingfin.com/img/products/800/1082_06.jpg",
-        main: "https://indianexpressonline.files.wordpress.com/2015/10/monkey-759.jpg",
-        gallery1: "http://images.indianexpress.com/2015/10/monkey-759.jpg",
-        gallery2: "http://images.indianexpress.com/2015/10/monkey-759.jpg"
+        thumbnail: "http://www.slingfin.com/img/products/800/1084_01a.jpg",
+        main: "http://www.slingfin.com/img/products/800/1084_01a.jpg",
+        gallery1: "http://www.slingfin.com/img/products/800/1084_02.jpg",
+        gallery2: "http://www.slingfin.com/img/products/800/1084_03.jpg"
 
       },
       {
@@ -90,10 +92,10 @@ export default {
         description: ".....",
         price: 11111,
         weight: 111111,
-        thumbnail: "http://www.slingfin.com/img/products/800/1082_06.jpg",
-        main: "https://indianexpressonline.files.wordpress.com/2015/10/monkey-759.jpg",
-        gallery1: "http://images.indianexpress.com/2015/10/monkey-759.jpg",
-        gallery2: "http://images.indianexpress.com/2015/10/monkey-759.jpg"
+        thumbnail: "http://www.slingfin.com/img/products/800/1086_01.jpg",
+        main: "http://www.slingfin.com/img/products/800/1086_01.jpg",
+        gallery1: "http://www.slingfin.com/img/products/800/1086_04.jpg",
+        gallery2: "http://www.slingfin.com/img/products/800/1086_07.jpg"
 
       }
     ],
@@ -106,7 +108,7 @@ export default {
         price: 11111,
         weight: 111111,
         thumbnail: "http://www.slingfin.com/img/products/800/1082_06.jpg",
-        main: "https://indianexpressonline.files.wordpress.com/2015/10/monkey-759.jpg",
+        main: "http://images.indianexpress.com/2015/10/monkey-759.jpg",
         gallery1: "http://images.indianexpress.com/2015/10/monkey-759.jpg",
         gallery2: "http://images.indianexpress.com/2015/10/monkey-759.jpg"
 
@@ -119,7 +121,7 @@ export default {
         price: 11111,
         weight: 111111,
         thumbnail: "http://www.slingfin.com/img/products/800/1082_06.jpg",
-        main: "https://indianexpressonline.files.wordpress.com/2015/10/monkey-759.jpg",
+        main: "http://www.slingfin.com/img/products/800/1082_06.jpg",
         gallery1: "http://images.indianexpress.com/2015/10/monkey-759.jpg",
         gallery2: "http://images.indianexpress.com/2015/10/monkey-759.jpg"
 
@@ -147,7 +149,7 @@ export default {
         price: 11111,
         weight: 111111,
         thumbnail: "http://www.slingfin.com/img/products/800/1082_06.jpg",
-        main: "https://indianexpressonline.files.wordpress.com/2015/10/monkey-759.jpg",
+        main: "http://www.slingfin.com/img/products/800/1082_06.jpg",
         gallery1: "http://images.indianexpress.com/2015/10/monkey-759.jpg",
         gallery2: "http://images.indianexpress.com/2015/10/monkey-759.jpg"
 

@@ -33,7 +33,7 @@ class TentDetails extends React.Component {
     // const stateStyle = this.state.active ? styles.active : styles.inactive;
 
     return (
-      <div>
+      <div className='tent-details'>
         <TrailWeight data={this.props.data}/>
         <TrailWeightTest webtrusses={this.props.data.webtrusses} flysheet={this.props.data.flysheets} innerTentBodies={this.props.data.innerTentBodies}/>
         <Cost data={this.props.data}/>

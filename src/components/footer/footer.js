@@ -22,7 +22,7 @@ import './footer.css';
 const Footer = () =>
   <div className='credit'>
     <p>
-      SlingFin:
+      ©2017 SlingFin, Inc.
       {' '}
       From the Mountain to your trailhead.
     </p>

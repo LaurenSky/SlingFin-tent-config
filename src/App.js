@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './images/SF-logo-nature.png';
 import './App.css';
 
-import AccordionCategory from './components/accordion/accordion-category';
+// import AccordionCategory from './components/accordion/accordion-category';
 import PartCategory from './components/accordion/part-categories';
 
 
@@ -21,68 +21,59 @@ class App extends Component {
   render() {
 
     return (
-      <div className="App">
+      <section className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>SlingFin CrossBow2 Tent System Configurator</h2>
         </header>
+        <section className='background-img'>
+          <article className="App-intro">
+            <p>Design the perfect tent system to fit your needs.</p>
+          </article>
 
-        <p className="App-intro">
-          Design the perfect tent system to fit your needs.
-        </p>
+          <article className="img-carousol bkgrd">
+            <ImageCarousol />
+          </article>
 
-        <div className="img-carousol">
-          <ImageCarousol />
-        </div>
+          <article className="bkgrd">
+            <TentDetails data={this.props.data}/>
+          </article>
 
-        <Button bsStyle="success">Success</Button>
+          <article className='bkgrd'>
+            <EnvironmentConditions />
+          </article>
 
-        <div className="tent-details">
-          <TentDetails data={this.props.data}/>
-        </div>
+          <article className="parts-selected bkgrd">
 
-        <div>
-          <EnvironmentConditions />
-        </div>
+            <h4>List of Items selected</h4>
+            <h4>List of Accessories selected</h4>
+          </article>
 
-        <div className="parts-selected">
-          <h4>List of Items selected</h4>
-          <h4>List of Accessories selected</h4>
-        </div>
+          <article className="alert-box bkgrd">
+            <h4>Alert Box: GOES HERE</h4>
+            <Checkboxes />
+          </article>
 
-        <div className="alert-box">
-          <h4>Alert Box: GOES HERE</h4>
-          <Checkboxes />
-        </div>
-
-        <hr/>
-          <div>
-            <h4>Configure your tent here:</h4>
-            <PartCategory data={this.props.data} category={this.props.data.webtrusses[0].category} />
-            <PartCategory data={this.props.data} category={this.props.data.footprints[0].category} />
-            <PartCategory data={this.props.data} category={this.props.data.innerTentBodies[0].category} />
-            <PartCategory data={this.props.data} category={this.props.data.poles[0].category} />
-            <PartCategory data={this.props.data} category={this.props.data.accessories[0].category} />
-          </div>
+          <hr/>
+            <article>
+              <h4>Configure your tent here:</h4>
+              <PartCategory data={this.props.data} category={this.props.data.webtrusses[0].category} />
+              <PartCategory data={this.props.data} category={this.props.data.poles[0].category} />
+              <PartCategory data={this.props.data} category={this.props.data.footprints[0].category} />
+              <PartCategory data={this.props.data} category={this.props.data.innerTentBodies[0].category} />
+              <PartCategory data={this.props.data} category={this.props.data.accessories[0].category} />
+            </article>
+          </section>
 
         <hr/>
 
         <footer>
           <Footer />
         </footer>
-      </div>
+      </section>
     );
   }
 }
-
-// <div>
-//   <h4>Configure your tent here:</h4>
-//   <AccordionCategory data={this.props.data.webtrusses} />
-//   <AccordionCategory data={this.props.data.footprints} />
-//   <AccordionCategory data={this.props.data.innerTentBodies} />
-//   <AccordionCategory data={this.props.data.poles} />
-//   <AccordionCategory data={this.props.data.accessories} />
-// </div>
 
 
 

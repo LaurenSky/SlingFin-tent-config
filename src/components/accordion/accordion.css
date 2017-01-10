@@ -1,21 +1,52 @@
 .accordion-header {
-  background-color: orange;
+  background-color: #222;
   width: 50%;
   border: black 2px solid;
-  border-radius: 15px;
   margin:1% 0 0 0;
   padding: 1%;
+  color: white;
 }
 
 .accordion-body {
-  background-color: white;
-  width: 50%;
+  /*width: 50%;*/
   border: black 2px solid;
-  border-radius: 10px;
   padding:1%;
-  margin: 0;
+  margin-bottom: 2%;
+  background-color: white;
+  color: #222;
 }
 
 ul.part-list-accordion {
   list-style: none;
+}
+
+.part-image {
+  width: 40%;
+  display: block;
+}
+
+/*.individual-part {
+  border-bottom: 1px black solid;
+  padding-bottom: 4%;
+}*/
+
+.recommended-part-header {
+  background-color: #222;
+  border: 1px black solid;
+  padding: 1%;
+  margin-left: 6%;
+}
+
+.recommended-part-body {
+  background-color: white;
+  border: black 2px solid;
+  padding:1%;
+  margin-bottom: 2%;
+  background-color: white;
+  color: #222;
+
+}
+
+.part-name {
+  color: #222;
 }
