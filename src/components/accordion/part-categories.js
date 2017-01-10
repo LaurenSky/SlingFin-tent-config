@@ -16,8 +16,8 @@ class PartCategory extends Component {
         return data.footprints;
       } else if (category==='InnerTentBodies') {
         return data.innerTentBodies;
-      } else if (category==='FlySheet') {
-        return data.poles;
+      } else if (category==='Flysheet') {
+        return data.flysheets;
       } else if (category==='Poles') {
         return data.poles;
       } else if (category==='Accessories') {

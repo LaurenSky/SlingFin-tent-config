@@ -9,8 +9,8 @@ export default {
       description: "SlingFin's patented WebTruss makes this tent much strongeand easier to pitch than traditional sleeve or clip tents.",
       price: 30.7,
       weight: 210,
-      thumbnail: "http://www.slingfin.com/img/products/800/1080_02.jpg",
-      main: "http://www.slingfin.com/img/products/800/1080_02.jpg",
+      thumbnail: require('../images/line-drawings/WebTruss-only.jpg'),
+      main: require('../images/line-drawings/WebTruss-only.jpg'),
       gallery1: "http://www.slingfin.com/img/products/800/1080_04.jpg",
       gallery2: "http://www.slingfin.com/img/products/800/1080_09.jpg"
     }
@@ -20,13 +20,13 @@ export default {
         id: 3,
         category: "FootPrint",
         name: "Tub Footprint",
-        description: "SlingFin's patented Tub Footprint actually keeps  wateout -- unlike flat tarps! Creates StormPack system when   paired with fly, WebTruss and poles.",
+        description: "SlingFin's patented Tub Footprint actually keeps  water out -- unlike flat tarps! Creates StormPack system when paired with fly, WebTruss and poles.",
         price: 34.9,
         weight: 245,
-        thumbnail: "http://www.slingfin.com/img/products/800/1083_01.jpg",
-        main: 'http://images.indianexpress.com/2015/10/monkey-759.jpg',
-        gallery1: "http://images.indianexpress.com/2015/10/monkey-759.jpg",
-        gallery2: "http://images.indianexpress.com/2015/10/monkey-759.jpg"
+        thumbnail: require('../images/footprints/tub-footprint-no-background.png'),
+        main: require('../images/footprints/tub-footprint-no-background.png'),
+        gallery1: require('../images/line-drawings/Flat-Footprint-only.jpg'),
+        gallery2: require('../images/footprints/tub-footprint-no-background.png')
 
       },
       {
@@ -36,11 +36,10 @@ export default {
         description: "Can be used in conjunction with tent body to provideadditional ground protection.",
         price: 1111111,
         weight: 1111111,
-        thumbnail: "http://www.slingfin.com/img/products/800/1080_02.jpg",
-        main: "http://www.slingfin.com/img/products/800/1083_01.jpg",
+        thumbnail: require('../images/footprints/flat-footprint.png'),
+        main: require('../images/footprints/flat-footprint.png'),
         gallery1: "http://www.slingfin.com/img/products/800/1083_02.jpg",
-        gallery2: "http://www.slingfin.com/img/products/800/1083_03.jpg"
-
+        gallery2: require('../images/line-drawings/Flat-Footprint-only.jpg')
       }
     ],
     flysheets: [
@@ -66,8 +65,8 @@ export default {
         description: ".....",
         price: 11111,
         weight: 111111,
-        thumbnail: "http://www.slingfin.com/img/products/800/1082_06.jpg",
-        main: "http://www.slingfin.com/img/products/800/1082_02.jpg",
+        thumbnail: require('../images/line-drawings/RS-body-only.jpg'),
+        main: require('../images/line-drawings/RS-body-only.jpg'),
         gallery1: "http://www.slingfin.com/img/products/800/1085_01a.jpg",
         gallery2: "http://www.slingfin.com/img/products/800/1085_02.jpg"
 
@@ -79,8 +78,8 @@ export default {
         description: ".....",
         price: 11111,
         weight: 111111,
-        thumbnail: "http://www.slingfin.com/img/products/800/1084_01a.jpg",
-        main: "http://www.slingfin.com/img/products/800/1084_01a.jpg",
+        thumbnail: require('../images/line-drawings/Mesh-body-only.jpg'),
+        main: require('../images/line-drawings/Mesh-body-only.jpg'),
         gallery1: "http://www.slingfin.com/img/products/800/1084_02.jpg",
         gallery2: "http://www.slingfin.com/img/products/800/1084_03.jpg"
 
@@ -108,7 +107,7 @@ export default {
         price: 11111,
         weight: 111111,
         thumbnail: "http://www.slingfin.com/img/products/800/1082_06.jpg",
-        main: "http://images.indianexpress.com/2015/10/monkey-759.jpg",
+        main: require('../images/poles/cross-poles.png'),
         gallery1: "http://images.indianexpress.com/2015/10/monkey-759.jpg",
         gallery2: "http://images.indianexpress.com/2015/10/monkey-759.jpg"
 
@@ -120,10 +119,10 @@ export default {
         description: ".....",
         price: 11111,
         weight: 111111,
-        thumbnail: "http://www.slingfin.com/img/products/800/1082_06.jpg",
-        main: "http://www.slingfin.com/img/products/800/1082_06.jpg",
-        gallery1: "http://images.indianexpress.com/2015/10/monkey-759.jpg",
-        gallery2: "http://images.indianexpress.com/2015/10/monkey-759.jpg"
+        thumbnail: require('../images/poles/bow-pole.png'),
+        main: require('../images/poles/bow-pole.png'),
+        gallery1: require('../images/poles/bow-pole.png'),
+        gallery2: require('../images/poles/bow-pole.png')
 
       },
       {
@@ -133,10 +132,10 @@ export default {
         description: ".....",
         price: 11111,
         weight: 111111,
-        thumbnail: "http://www.slingfin.com/img/products/800/1082_06.jpg",
-        main: "https://indianexpressonline.files.wordpress.com/2015/10/monkey-759.jpg",
-        gallery1: "http://images.indianexpress.com/2015/10/monkey-759.jpg",
-        gallery2: "http://images.indianexpress.com/2015/10/monkey-759.jpg"
+        thumbnail: require('../images/poles/trekking-poles.png'),
+        main: require('../images/poles/trekking-poles.png'),
+        gallery1: require('../images/poles/trekking-poles.png'),
+        gallery2: require('../images/poles/trekking-poles.png')
 
       }
     ],
@@ -148,10 +147,10 @@ export default {
         description: ".....",
         price: 11111,
         weight: 111111,
-        thumbnail: "http://www.slingfin.com/img/products/800/1082_06.jpg",
-        main: "http://www.slingfin.com/img/products/800/1082_06.jpg",
-        gallery1: "http://images.indianexpress.com/2015/10/monkey-759.jpg",
-        gallery2: "http://images.indianexpress.com/2015/10/monkey-759.jpg"
+        thumbnail: require('../images/stakes/stakes.jpg'),
+        main: require('../images/stakes/stakes.jpg'),
+        gallery1: require('../images/stakes/stakes.jpg'),
+        gallery2: require('../images/stakes/stakes.jpg')
 
       },
     ]

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SquareFootage from './square-footage';
+import Volume from './volume';
 import PackSize from './pack-size';
 
 
@@ -30,11 +30,12 @@ class TentDimensions extends React.Component {
       <div className='tent-details'>
         <h3>Dimensions</h3>
         <ul>
-          <li><h4>Doors: 2 side doors with dry entries</h4></li>
+          <li><h4>2 Person Tent</h4></li>
+          <li><h4>2 Side Doors with Dry Entries</h4></li>
           <li><h4>Length: 92.25" long</h4></li>
           <li><h4>Interior Height: 41.5in</h4></li>
-          <li><h4>Total Volume: 108.6 cu ft / 3.08 cu m</h4></li>
-          <li><SquareFootage data={this.props.data}/></li>
+          <li><h4>Floor Area: 32 ft^2 / 2.97m^2</h4></li>
+          <li><Volume data={this.props.data}/></li>
           <li><h4>Vestibules: 2 (11 sq ft + 11 sq ft)</h4></li>
           <li><PackSize data={this.props.data}/></li>
         </ul>
