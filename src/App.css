@@ -106,3 +106,8 @@ footer {
   margin-left: 3%;
   padding-left: 1%;
 }
+
+.page-title {
+  /*margin-left: 30%;*/
+  text-align: right;
+}

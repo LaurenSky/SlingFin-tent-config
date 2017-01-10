@@ -1,4 +1,3 @@
-import React from 'react';
 
 export default {
     webtrusses: [
@@ -50,10 +49,10 @@ export default {
         description: "This flysheet will keep you dry in rain and snow. (Standard Version. Made of 15D Nylon RipStop, Sil/PU 1200mm FR.)",
         price: 72.25,
         weight: 567,
-        thumbnail: "http://www.slingfin.com/img/products/800/1082_06.jpg",
-        main: "https://indianexpressonline.files.wordpress.com/2015/10/monkey-759.jpg",
-        gallery1: "http://images.indianexpress.com/2015/10/monkey-759.jpg",
-        gallery2: "http://images.indianexpress.com/2015/10/monkey-759.jpg"
+        thumbnail: "http://www.slingfin.com/img/products/800/1081_08.jpg",
+        main: "http://www.slingfin.com/img/products/800/1081_08.jpg",
+        gallery1: "http://www.slingfin.com/img/products/800/1081_08.jpg",
+        gallery2: "http://www.slingfin.com/img/products/800/1081_08.jpg"
 
       }
     ],

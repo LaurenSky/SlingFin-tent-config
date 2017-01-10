@@ -8,8 +8,6 @@ class PartCategory extends Component {
 
   render () {
     const categoryData = function(category, data) {
-      console.log(category)
-
       if(category==='WebTruss') {
         return data.webtrusses;
       } else if (category==='FootPrint'){
@@ -22,8 +20,6 @@ class PartCategory extends Component {
         return data.poles;
       } else if (category==='Accessories') {
         return data.accessories;
-      } else {
-        return []
       }
     }
 
@@ -100,10 +96,8 @@ class PartCategory extends Component {
     };
 
     const propsData = this.props.data;
-    const propsCategory = this.props.category;
-    const data = categoryData(propsCategory, propsData);
-    // console.log("new data: ", data)
-
+    // const propsCategory = this.props.category;
+    const data = categoryData(this.props.category, this.props.data);
 
     const partList = data.map(part => {
       // console.log(part.category, part.name)

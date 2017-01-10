@@ -4,23 +4,18 @@ import TrailWeight from './trail-weight';
 import NumPoles from './num-poles';
 import Cost from './cost';
 
-
 import TrailWeightTest from './trail-weight-test';
-
-
-
-// import './accordion.css';
 
 
 class TentDetails extends React.Component {
 
-  constructor() {
-    super();
-    this.state = {
-      // active: false
-    };
-    // this.toggle = this.toggle.bind(this);
-  }
+  // constructor() {
+  //   super();
+  //   this.state = {
+  //     // active: false
+  //   };
+  //   // this.toggle = this.toggle.bind(this);
+  // }
 
   // toggle() {
   //   this.setState({
@@ -44,5 +39,6 @@ class TentDetails extends React.Component {
     );
   }
 }
+
 
 export default TentDetails;
