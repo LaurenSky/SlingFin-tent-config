@@ -27,9 +27,11 @@ class App extends Component {
     }
   }
 
-  partStateUpdate(value) {
+  partStateUpdate(value, partName) {
+    let newState = {};
+    newState[partName] = value;
     this.setState({
-      partInCart: value
+      partInCart: newState
     })
   }
 

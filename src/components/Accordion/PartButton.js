@@ -14,7 +14,8 @@ class PartButton extends Component {
 
   partStateUpdate() {
     const val = this.state.partInCart
-    this.props.partStateUpdate(val)
+    const partName = this.props.part.name
+    this.props.partStateUpdate(val, partName)
   }
 
   _handleClick() {
