@@ -4,7 +4,7 @@ import PartButton from '../PartButton';
 import { Row, Col } from 'react-bootstrap';
 
 
-class recommendedPart extends Component {
+class RecommendedPart extends Component {
 
   render () {
     const part = this.props.part;
@@ -58,4 +58,4 @@ class recommendedPart extends Component {
   };
 }
 
-export default recommendedPart;
+export default RecommendedPart;
