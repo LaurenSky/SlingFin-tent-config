@@ -12,7 +12,6 @@ import TentDetails from './components/TentDetails/tent-details';
 import TentDimensions from './components/TentDimensions/tent-dimensions';
 import Footer from './components/footer/footer';
 
-import { Button } from 'react-bootstrap';
 import { Row, Col } from 'react-bootstrap';
 
 

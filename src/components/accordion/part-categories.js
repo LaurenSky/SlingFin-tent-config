@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './accordion.css';
 import { Button } from 'react-bootstrap';
 import { Row, Col } from 'react-bootstrap';
+import RecommendPart from './recommendPart/recommend-part';
 
 
 class PartCategory extends Component {
@@ -23,80 +24,6 @@ class PartCategory extends Component {
       }
     }
 
-    const dropInMeshBody = function(partName) {
-      const dropInMeshDetails = propsData.innerTentBodies[2]
-      if(partName === 'Tub Footprint') {
-        return (
-          <Row className='recommended-part-header'>
-            <Col xs={12} md={12} className='recommended-part-name'>
-              <h4>Add a Drop-in Mesh Body to have a 3-season tent</h4>
-            </Col>
-              <Row>
-                <Col xs={9} md={9}>
-                  <Button bsStyle="info">Add Drop-in Mesh Body</Button>
-                </Col>
-                <Col xs={3} md={3}>
-                  <h4>
-                    ${dropInMeshDetails.price}
-                  </h4>
-                </Col>
-              </Row>
-            <Col xs={12} md={12} className='recommended-part-body'>
-              <Row>
-                <Col xs={12} md={12}>
-                  <img src={dropInMeshDetails.main} className="part-image" alt="Part" />
-                </Col>
-              </Row>
-              <Row>
-                <Col xs={12} md={12}>
-                  {dropInMeshDetails.description}
-                  ( {dropInMeshDetails.weight}oz )
-                </Col>
-              </Row>
-            </Col>
-          </Row>
-        )
-      }
-    };
-
-    const tubFootprint = function(partName) {
-      const tubFootprintDetails = propsData.footprints[0]
-      if(partName === 'Drop-in Mesh Body') {
-        return (
-          <Row className='recommended-part-header'>
-            <Col xs={12} md={12} className='recommended-part-name'>
-              <h4>This Requires a Tub Footprint. (please order one if you don't own one)</h4>
-            </Col>
-              <Row>
-                <Col xs={9} md={9}>
-                  <Button bsStyle="info">Add Drop-in Mesh Body</Button>
-                </Col>
-                <Col xs={3} md={3}>
-                  <h4>
-                    ${tubFootprintDetails.price}
-                  </h4>
-                </Col>
-              </Row>
-            <Col xs={12} md={12} className='recommended-part-body'>
-              <Row>
-                <Col xs={12} md={12}>
-                  <img src={tubFootprintDetails.main} className="part-image" alt="Part" />
-                </Col>
-              </Row>
-              <Row>
-                <Col xs={12} md={12}>
-                  {tubFootprintDetails.description}
-                  ( {tubFootprintDetails.weight}oz )
-                </Col>
-              </Row>
-            </Col>
-          </Row>
-        )
-      }
-    };
-
-    const propsData = this.props.data;
-    // const propsCategory = this.props.category;
     const data = categoryData(this.props.category, this.props.data);
 
     const partList = data.map(part => {
@@ -139,11 +66,7 @@ class PartCategory extends Component {
 
               <Row>
                 <Col xs={12} md={12}>
-                  {dropInMeshBody(part.name)}
-                </Col>
-
-                <Col xs={12} md={12}>
-                  {tubFootprint(part.name)}
+                  <RecommendPart  part={part.recommend} />
                 </Col>
               </Row>
             </Col>
