@@ -23,18 +23,19 @@ class App extends Component {
   constructor (props){
     super(props)
     this.state = {
-      webTrussSelected: false
+      partInCart: false,
     }
   }
 
-  webTrussUpdate(value) {
+  partStateUpdate(value) {
     this.setState({
-      webTrussSelected: value
+      partInCart: value
     })
   }
 
   render() {
-    console.log("webTrussSelected value in app.js: ", this.state.webTrussSelected)
+    console.log("partInCart value in APP: ", this.state.partInCart)
+
 
     return (
       <section className="App">
@@ -56,12 +57,12 @@ class App extends Component {
 
           <Row>
             <Col xs={12} md={4} className='no-padding'>
-              <PartCategory data={this.props.data} category='WebTruss' />
-              <PartCategory data={this.props.data} category='Poles' />
-              <PartCategory data={this.props.data} category='FootPrint' />
-              <PartCategory data={this.props.data} category='Flysheet' />
-              <PartCategory data={this.props.data} category='InnerTentBodies' />
-              <PartCategory data={this.props.data} category='Accessories' />
+              <PartCategory data={this.props.data} category='WebTruss' partStateUpdate={this.partStateUpdate.bind(this)} />
+              <PartCategory data={this.props.data} category='Poles' partStateUpdate={this.partStateUpdate.bind(this)} />
+              <PartCategory data={this.props.data} category='FootPrint' partStateUpdate={this.partStateUpdate.bind(this)} />
+              <PartCategory data={this.props.data} category='Flysheet' partStateUpdate={this.partStateUpdate.bind(this)}/>
+              <PartCategory data={this.props.data} category='InnerTentBodies' partStateUpdate={this.partStateUpdate.bind(this)} />
+              <PartCategory data={this.props.data} category='Accessories' partStateUpdate={this.partStateUpdate.bind(this)} />
             </Col>
             <Col xs={12} md={6} className="img-carousol bkgrd">
               <h4 className='configuration-title'>Your Configuration Details:</h4>

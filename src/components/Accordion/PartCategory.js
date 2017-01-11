@@ -7,22 +7,8 @@ import PartButton from './PartButton';
 
 
 class PartCategory extends Component {
-  constructor () {
-    super();
-
-    this.state = {
-      webTrussInCart: false,
-    }
-  }
-
-  webTrussUpdate(value) {
-    this.setState({
-      webTrussInCart: value
-    })
-  }
 
   render () {
-    console.log("webTrussInCart value in partCategory: ", this.state.webTrussInCart)
 
     const categoryData = function(category, data) {
       if(category==='WebTruss') {
@@ -69,7 +55,7 @@ class PartCategory extends Component {
                 <Row>
                   <Col xs={8} md={8}>
                     {/* Indicates a successful or positive action */}
-                    <PartButton part={part} type='normal' webTrussUpdate={this.webTrussUpdate.bind(this)}/>
+                    <PartButton part={part} type='normal' partStateUpdate={this.props.partStateUpdate}/>
                   </Col>
 
                   <Col xs={4} md={4}>
