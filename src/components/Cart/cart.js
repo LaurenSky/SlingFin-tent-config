@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-class TentDetails extends React.Component {
+class Cart extends React.Component {
 
   // constructor() {
   //   super();
@@ -19,12 +19,11 @@ class TentDetails extends React.Component {
 
   render () {
     // const stateStyle = this.state.active ? styles.active : styles.inactive;
+    // console.log(this.props.webTrussSelected)
 
     return (
-      <div className='tent-details'>
-        <table>
-          
-        </table>
+      <div>
+        <p> I'm in the cart</p>
       </div>
     );
   }

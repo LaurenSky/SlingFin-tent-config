@@ -12,16 +12,30 @@ class PartButton extends Component {
     }
   }
 
+  webTrussUpdate() {
+    const val = this.state.partInCart
+    this.props.webTrussUpdate(val)
+  }
+
   _handleClick() {
+    console.log("before switch, value is " + this.state.partInCart);
     this.setState({
       partInCart: !this.state.partInCart
-    })
-    console.log("switch")
+    },
+    function() {
+      console.log("switch, value is " + this.state.partInCart);
+      this.webTrussUpdate()
+    }
+  );
+
   }
 
   render () {
+    console.log('partInCart in button:', this.state.partInCart)
+
     const part = this.props.part;
     console.log('render:', part.name)
+
 
     let buttonText = 'Add'
     if (this.state.partInCart) {

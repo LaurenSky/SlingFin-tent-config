@@ -8,6 +8,8 @@ import ImageCarousol from './components/Carousol/Carousol';
 import EnvironmentConditions from './components/Conditions/Conditions';
 import TentDetails from './components/TentDetails/TentDetails';
 import TentDimensions from './components/TentDimensions/TentDimensions';
+import Cart from './components/Cart/Cart';
+
 import Footer from './components/Footer/Footer';
 
 import { Row, Col } from 'react-bootstrap';
@@ -17,7 +19,22 @@ import { Row, Col } from 'react-bootstrap';
 // <Row className='show-grid'>
 
 class App extends Component {
+
+  constructor (props){
+    super(props)
+    this.state = {
+      webTrussSelected: false
+    }
+  }
+
+  webTrussUpdate(value) {
+    this.setState({
+      webTrussSelected: value
+    })
+  }
+
   render() {
+    console.log("webTrussSelected value in app.js: ", this.state.webTrussSelected)
 
     return (
       <section className="App">
@@ -62,6 +79,7 @@ class App extends Component {
             <Col xs={6} md={5} className="parts-selected bkgrd">
               <h4>List of Items selected</h4>
               <h4>List of Accessories selected</h4>
+              <Cart webTrussSelected={this.state.webTrussSelected}/>
             </Col>
 
             <Col xs={6} md={5} className="bkgrd">

@@ -6,23 +6,24 @@ import RecommendPart from './RecommendPart/RecommendPart';
 import PartButton from './PartButton';
 
 
-
 class PartCategory extends Component {
   constructor () {
     super();
 
     this.state = {
-      partInCart: false
+      webTrussInCart: false,
     }
   }
 
-  _handleClick() {
+  webTrussUpdate(value) {
     this.setState({
-      partInCart: !this.state.partInCart
+      webTrussInCart: value
     })
   }
 
   render () {
+    console.log("webTrussInCart value in partCategory: ", this.state.webTrussInCart)
+
     const categoryData = function(category, data) {
       if(category==='WebTruss') {
         return data.webtrusses;
@@ -38,11 +39,6 @@ class PartCategory extends Component {
         return data.accessories;
       }
     }
-
-    // let buttonText = 'Add'
-    // if (this.state.partInCart) {
-    //   buttonText = 'Remove '
-    // }
 
     const data = categoryData(this.props.category, this.props.data);
 
@@ -73,7 +69,7 @@ class PartCategory extends Component {
                 <Row>
                   <Col xs={8} md={8}>
                     {/* Indicates a successful or positive action */}
-                    <PartButton part={part} type='normal'/>
+                    <PartButton part={part} type='normal' webTrussUpdate={this.webTrussUpdate.bind(this)}/>
                   </Col>
 
                   <Col xs={4} md={4}>
