@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
 import logo from './images/SF-logo-nature.png';
+import 'normalize.css';
 import './App.css';
 
-// import AccordionCategory from './components/accordion/accordion-category';
-import PartCategory from './components/accordion/part-categories';
-
-
-import ImageCarousol from './components/carousol/carousol';
-import EnvironmentConditions from './components/conditions/conditions';
-import TentDetails from './components/TentDetails/tent-details';
-import TentDimensions from './components/TentDimensions/tent-dimensions';
-import Footer from './components/footer/footer';
+import PartCategory from './components/Accordion/PartCategory';
+import ImageCarousol from './components/Carousol/Carousol';
+import EnvironmentConditions from './components/Conditions/Conditions';
+import TentDetails from './components/TentDetails/TentDetails';
+import TentDimensions from './components/TentDimensions/TentDimensions';
+import Footer from './components/Footer/Footer';
 
 import { Row, Col } from 'react-bootstrap';
 

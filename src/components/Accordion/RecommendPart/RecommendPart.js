@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import '../accordion.css';
-import { Button } from 'react-bootstrap';
+import PartButton from '../PartButton';
 import { Row, Col } from 'react-bootstrap';
 
 
@@ -21,18 +21,6 @@ class recommendedPart extends Component {
       }
     }
 
-    const decideButtonText = function(partName) {
-      if(partName ==='Drop-in Mesh Body') {
-        return (
-          "Add Drop-in Mesh Body"
-        )
-      } else if(partName ==='Tub Footprint') {
-        return (
-          "Add Tub Footprint"
-        )
-      }
-    }
-
     if(part === null) {
       return null;
     } else {
@@ -43,7 +31,7 @@ class recommendedPart extends Component {
           </Col>
             <Row>
               <Col xs={9} md={9}>
-                <Button bsStyle="info">{decideButtonText(part.name)}</Button>
+                <PartButton part={part} type='recommend'/>
               </Col>
               <Col xs={3} md={3}>
                 <h4>

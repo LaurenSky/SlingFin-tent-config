@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Volume from './volume';
+import Volume from './Volume';
 import PackSize from './pack-size';
 
 

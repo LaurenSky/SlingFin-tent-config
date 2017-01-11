@@ -1,11 +1,26 @@
 import React, {Component} from 'react';
 import './accordion.css';
-import { Button } from 'react-bootstrap';
+// import { Button } from 'react-bootstrap';
 import { Row, Col } from 'react-bootstrap';
-import RecommendPart from './recommendPart/recommend-part';
+import RecommendPart from './RecommendPart/RecommendPart';
+import PartButton from './PartButton';
+
 
 
 class PartCategory extends Component {
+  constructor () {
+    super();
+
+    this.state = {
+      partInCart: false
+    }
+  }
+
+  _handleClick() {
+    this.setState({
+      partInCart: !this.state.partInCart
+    })
+  }
 
   render () {
     const categoryData = function(category, data) {
@@ -23,6 +38,11 @@ class PartCategory extends Component {
         return data.accessories;
       }
     }
+
+    // let buttonText = 'Add'
+    // if (this.state.partInCart) {
+    //   buttonText = 'Remove '
+    // }
 
     const data = categoryData(this.props.category, this.props.data);
 
@@ -53,7 +73,7 @@ class PartCategory extends Component {
                 <Row>
                   <Col xs={8} md={8}>
                     {/* Indicates a successful or positive action */}
-                    <Button bsStyle="success">Add {part.name}</Button>
+                    <PartButton part={part} type='normal'/>
                   </Col>
 
                   <Col xs={4} md={4}>
