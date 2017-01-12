@@ -68,7 +68,7 @@ class PartCategory extends Component {
 
               <Row>
                 <Col xs={12} md={12}>
-                  <RecommendPart  part={part.recommend} />
+                  <RecommendPart  part={part.recommend} partStateUpdate={this.props.partStateUpdate}/>
                 </Col>
               </Row>
             </Col>

@@ -31,7 +31,7 @@ class RecommendedPart extends Component {
           </Col>
             <Row>
               <Col xs={9} md={9}>
-                <PartButton part={part} type='recommend'/>
+                <PartButton part={part} type='recommend' partStateUpdate={this.props.partStateUpdate}/>
               </Col>
               <Col xs={3} md={3}>
                 <h4>

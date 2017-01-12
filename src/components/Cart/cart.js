@@ -1,29 +1,19 @@
 import React from 'react';
-
+import '../../App.css';
 
 class Cart extends React.Component {
 
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     // active: false
-  //   };
-  //   // this.toggle = this.toggle.bind(this);
-  // }
-
-  // toggle() {
-  //   this.setState({
-  //     active:!this.state.active
-  //   });
-  // }
 
   render () {
-    // const stateStyle = this.state.active ? styles.active : styles.inactive;
-    // console.log(this.props.webTrussSelected)
+    console.log("In Cart state passed: ", this.props.partInCart)
+    // const partsInCart = this.props.partInCart
 
     return (
-      <div>
+      <div className='tent-details'>
         <p> I'm in the cart</p>
+        <ul>
+          <li>{Object.keys(this.props.partInCart)}</li>
+        </ul>
       </div>
     );
   }

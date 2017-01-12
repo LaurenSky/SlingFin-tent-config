@@ -27,9 +27,12 @@ class App extends Component {
     }
   }
 
-  partStateUpdate(value, partName) {
+  partStateUpdate(value, part) {
     let newState = {};
-    newState[partName] = value;
+    newState[part.name] = {
+      value: value,
+      partInfo: part
+    };
     this.setState({
       partInCart: newState
     })
@@ -58,7 +61,7 @@ class App extends Component {
           </article>
 
           <Row>
-            <Col xs={12} md={4} className='no-padding'>
+            <Col xs={6} lg={4} className='no-padding'>
               <PartCategory data={this.props.data} category='WebTruss' partStateUpdate={this.partStateUpdate.bind(this)} />
               <PartCategory data={this.props.data} category='Poles' partStateUpdate={this.partStateUpdate.bind(this)} />
               <PartCategory data={this.props.data} category='FootPrint' partStateUpdate={this.partStateUpdate.bind(this)} />
@@ -66,7 +69,7 @@ class App extends Component {
               <PartCategory data={this.props.data} category='InnerTentBodies' partStateUpdate={this.partStateUpdate.bind(this)} />
               <PartCategory data={this.props.data} category='Accessories' partStateUpdate={this.partStateUpdate.bind(this)} />
             </Col>
-            <Col xs={12} md={6} className="img-carousol bkgrd">
+            <Col xs={5} lg={6} className="img-carousol bkgrd">
               <h4 className='configuration-title'>Your Configuration Details:</h4>
               <ImageCarousol />
                 <Row>
@@ -82,7 +85,7 @@ class App extends Component {
             <Col xs={6} md={5} className="parts-selected bkgrd">
               <h4>List of Items selected</h4>
               <h4>List of Accessories selected</h4>
-              <Cart webTrussSelected={this.state.webTrussSelected}/>
+              <Cart partInCart={this.state.partInCart}/>
             </Col>
 
             <Col xs={6} md={5} className="bkgrd">

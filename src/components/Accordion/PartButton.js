@@ -14,7 +14,7 @@ class PartButton extends Component {
 
   partStateUpdate() {
     const val = this.state.partInCart
-    const partName = this.props.part.name
+    const partName = this.props.part
     this.props.partStateUpdate(val, partName)
   }
 
@@ -33,7 +33,7 @@ class PartButton extends Component {
 
   render () {
     const part = this.props.part;
-    console.log('render:', part.name)
+    // console.log('render:', part.name)
     console.log('partInCart in button:', part.name, this.state.partInCart)
 
 
