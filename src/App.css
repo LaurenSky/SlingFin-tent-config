@@ -111,3 +111,8 @@ footer {
   /*margin-left: 30%;*/
   text-align: right;
 }
+
+.cart-header {
+  color: white;
+  text-align: left;
+}

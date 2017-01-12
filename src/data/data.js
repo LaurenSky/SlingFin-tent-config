@@ -1,3 +1,5 @@
+import React from 'react'
+let FontAwesome = require('react-fontawesome');
 
 export default {
   webtrusses: [

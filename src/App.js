@@ -83,9 +83,9 @@ class App extends Component {
             </Col>
 
             <Col xs={6} md={5} className="parts-selected bkgrd">
-              <h4>List of Items selected</h4>
-              <h4>List of Accessories selected</h4>
+              <h3 className='cart-header'>List of Items selected</h3>
               <Cart partInCart={this.state.partInCart}/>
+              <h3 className='cart-header'>List of Accessories selected</h3>
             </Col>
 
             <Col xs={6} md={5} className="bkgrd">
