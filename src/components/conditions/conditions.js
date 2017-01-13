@@ -1,7 +1,6 @@
 import React from 'react';
 var FontAwesome = require('react-fontawesome');
 
-
 class EnvironmentConditions extends React.Component {
   constructor () {
     super();
