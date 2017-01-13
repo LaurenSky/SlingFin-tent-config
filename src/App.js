@@ -16,14 +16,12 @@ import { Row, Col } from 'react-bootstrap';
 
 
 
-// <Row className='show-grid'>
-
 class App extends Component {
 
   constructor (props){
     super(props)
     this.state = {
-      partInCart: false,
+      partInCart: false
     }
   }
 
@@ -32,6 +30,7 @@ class App extends Component {
     newState[part.name] = {
       value: value,
       partInfo: part
+      // partName: part.name
     };
     this.setState({
       partInCart: newState
@@ -83,9 +82,9 @@ class App extends Component {
             </Col>
 
             <Col xs={6} md={5} className="parts-selected bkgrd">
-              <h4>List of Items selected</h4>
-              <h4>List of Accessories selected</h4>
+              <h3 className='cart-header'>List of Items selected</h3>
               <Cart partInCart={this.state.partInCart}/>
+              <h3 className='cart-header'>List of Accessories selected</h3>
             </Col>
 
             <Col xs={6} md={5} className="bkgrd">
