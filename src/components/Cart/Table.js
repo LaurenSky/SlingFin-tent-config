@@ -19,22 +19,25 @@ class NewTable extends Component {
     noDataText: 'There are no parts in your cart yet :( '
     };
 
-    function addDeleteIcon(cell, row, enumObject) {
+    function addDeleteIcon(cell, row) {
       // return <FontAwesome className="fa fa-trash-o" name='bugs' aria-hidden="true" />;
-      return <DeleteButton />
+      console.log('cell: ', cell)
+      console.log('row: ', row)
+      return <DeleteButton row={row}/>
     }
 
     return (
       <BootstrapTable data={ partsInCart } options={ options} bordered={ false }>
-        <TableHeaderColumn dataField='id' hidden isKey={ true }>ID</TableHeaderColumn>
         <TableHeaderColumn dataField='name'>Part</TableHeaderColumn>
         <TableHeaderColumn dataField='weight'>Weight</TableHeaderColumn>
         <TableHeaderColumn dataField='price'>Price</TableHeaderColumn>
-        <TableHeaderColumn dataFormat={ addDeleteIcon }></TableHeaderColumn>
-
+        <TableHeaderColumn dataField='id' isKey={ true } dataFormat={ addDeleteIcon }></TableHeaderColumn>
 
       </BootstrapTable>
     );
 }};
+// <TableHeaderColumn dataField='id' hidden isKey={ true }>ID</TableHeaderColumn>
+// <TableHeaderColumn datafield='id' dataFormat={ addDeleteIcon }>ID</TableHeaderColumn>
+
 
 export default NewTable;

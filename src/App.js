@@ -16,8 +16,6 @@ import { Row, Col } from 'react-bootstrap';
 
 
 
-// <Row className='show-grid'>
-
 class App extends Component {
 
   constructor (props){
@@ -32,6 +30,7 @@ class App extends Component {
     newState[part.name] = {
       value: value,
       partInfo: part
+      // partName: part.name
     };
     this.setState({
       partInCart: newState
