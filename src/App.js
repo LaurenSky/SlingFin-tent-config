@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Row, Col } from 'react-bootstrap';
+
 import logo from './images/SF-logo-nature.png';
 import 'normalize.css';
 import './App.css';
@@ -9,10 +11,8 @@ import EnvironmentConditions from './components/Conditions/Conditions';
 import TentDetails from './components/TentDetails/TentDetails';
 import TentDimensions from './components/TentDimensions/TentDimensions';
 import Cart from './components/Cart/Cart';
-
 import Footer from './components/Footer/Footer';
 
-import { Row, Col } from 'react-bootstrap';
 
 
 
