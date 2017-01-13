@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Row, Col } from 'react-bootstrap';
-
 import logo from './images/SF-logo-nature.png';
 import 'normalize.css';
 import './App.css';
@@ -11,8 +9,10 @@ import EnvironmentConditions from './components/Conditions/Conditions';
 import TentDetails from './components/TentDetails/TentDetails';
 import TentDimensions from './components/TentDimensions/TentDimensions';
 import Cart from './components/Cart/Cart';
+
 import Footer from './components/Footer/Footer';
 
+import { Row, Col } from 'react-bootstrap';
 
 
 
@@ -26,28 +26,16 @@ class App extends Component {
   }
 
   partStateUpdate(value, part) {
-    let newState = {...this.state.partInCart}; //Duplicate state.
-    newState[part.id] = {
+    let newState = {};
+    newState[part.name] = {
       value: value,
       partInfo: part
-    }                  //remove Item form stateCopy.
-    this.setState({
-      partInCart: newState
-    });
-  }
-
-  deletePart(partId) {
-    console.log('>>>>>In APP ready to delete Part: ', partId)
-    // delete this.state.parts[partName]
-    // this.props.partStateUpdate(false, part, partName)
-
-    const newState = {...this.state.partInCart}; //Duplicate state.
-    delete newState[partId];                  //remove Item form stateCopy.
+      // partName: part.name
+    };
     this.setState({
       partInCart: newState
     })
   }
-
 
   render() {
     console.log("partInCart value in APP: ", this.state.partInCart)
@@ -95,7 +83,7 @@ class App extends Component {
 
             <Col xs={6} md={5} className="parts-selected bkgrd">
               <h3 className='cart-header'>List of Items selected</h3>
-              <Cart partInCart={this.state.partInCart} deletePart={this.deletePart.bind(this)} />
+              <Cart partInCart={this.state.partInCart} />
               <h3 className='cart-header'>List of Accessories selected</h3>
             </Col>
 

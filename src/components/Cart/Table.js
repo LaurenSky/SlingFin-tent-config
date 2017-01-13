@@ -12,8 +12,8 @@ class NewTable extends Component {
 
     Object.entries(this.props.parts).forEach(
       ([key, value]) => {
-        console.log("in iterate!!!!" , key, value.details)
-        partsInCart.push(value.details)
+        console.log("in iterate!!!!" , key, value.partInfo)
+        partsInCart.push(value.partInfo)
         console.log('MY PART ARRAY:' , partsInCart)
       }
     );
@@ -22,10 +22,12 @@ class NewTable extends Component {
     noDataText: 'There are no parts in your cart yet :( '
     };
 
+    const deleteFunction = this.props.deletePart
+
     function addDeleteIcon(cell, row) {
       console.log('cell: ', cell)
       console.log('row: ', row)
-      return <DeleteButton row={row}/>
+      return <DeleteButton row={row} deletePart={deleteFunction}/>
     }
 
     return (
