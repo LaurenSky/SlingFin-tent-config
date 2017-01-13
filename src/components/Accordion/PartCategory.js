@@ -55,7 +55,7 @@ class PartCategory extends Component {
                 <Row>
                   <Col xs={8} md={8}>
                     {/* Indicates a successful or positive action */}
-                    <PartButton part={part} type='normal' partStateUpdate={this.props.partStateUpdate}/>
+                    <PartButton part={part} type='normal' partStateUpdate={this.props.partStateUpdate} partInCart={this.props.partInCart} />
                   </Col>
 
                   <Col xs={4} md={4}>
@@ -68,7 +68,7 @@ class PartCategory extends Component {
 
               <Row>
                 <Col xs={12} md={12}>
-                  <RecommendPart  part={part.recommend} partStateUpdate={this.props.partStateUpdate}/>
+                  <RecommendPart  part={part.recommend} partStateUpdate={this.props.partStateUpdate} partInCart={this.props.partInCart} />
                 </Col>
               </Row>
             </Col>

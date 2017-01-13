@@ -3,37 +3,54 @@ let FontAwesome = require('react-fontawesome');
 
 
 class EnvironmentConditions extends React.Component {
-  constructor () {
-    super();
+ // meshbodyID = 7
+ // ripstopID = 6
+ // dropinMeshID = 8
+ // flysheetID = 5
 
-    this.state = {
-      showConditions: false
-    }
+  showSnowflake() {
+
   }
-  _handleClick (){
-    this.setState({
-      showConditions: !this.state.showConditions
-    })
+
+  showRaindrop() {
+
+  }
+
+  showBug() {
+    const partsInCart = this.props.partsInCart
+
+    if (Object.keys(partsInCart).includes(6) || Object.keys(partsInCart).includes(7) || Object.keys(partsInCart).includes(8)) {
+      return true
+    }
   }
 
   render () {
-    let conditionNodes;
-    if (this.state.showConditions) {
-      conditionNodes=<div><FontAwesome className="fa fa-snowflake-o increase-icon snowflake" name='snowflake' aria-hidden="true" />
-      <FontAwesome className="fa fa-tint increase-icon raindrop" name='raindrop' aria-hidden="true" />
-      <FontAwesome className="fa fa-bug increase-icon bugs" name='bugs' aria-hidden="true" /></div>
+    let snowflake;
+    let raindrop;
+    let bug;
+
+    console.log(">>>>>>-------- in conditions: ", this.props.partInCart)
+    console.log(this.props.partInCart)
+
+    if (this.showSnowflake.bind(this) === true) {
+      snowflake = <FontAwesome className="fa fa-snowflake-o increase-icon snowflake" name='snowflake' aria-hidden="true" />
     }
 
-    let buttonText = 'Show Conditions'
-    if (this.state.showConditions) {
-      buttonText = 'Hide Conditions';
+    if (this.showRaindrop.bind(this) === true) {
+      raindrop = <FontAwesome className="fa fa-tint increase-icon raindrop" name='raindrop' aria-hidden="true" />
     }
+
+    if (this.showBug.bind(this) === true) {
+      bug = <FontAwesome className="fa fa-bug increase-icon bugs" name='bugs' aria-hidden="true" />
+    }
+
 
     return (
       <div className='conditions-protection'>
         <h5>Protects you from:</h5>
-        {conditionNodes}
-        <button onClick={this._handleClick.bind(this)}>{buttonText}</button>
+        {snowflake}
+        {raindrop}
+        {bug}
       </div>
     );
   }

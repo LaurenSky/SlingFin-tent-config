@@ -77,19 +77,19 @@ class App extends Component {
 
           <Row>
             <Col xs={6} lg={4} className='no-padding'>
-              <PartCategory data={this.props.data} category='WebTruss' partStateUpdate={this.partStateUpdate.bind(this)} />
-              <PartCategory data={this.props.data} category='Poles' partStateUpdate={this.partStateUpdate.bind(this)} />
-              <PartCategory data={this.props.data} category='FootPrint' partStateUpdate={this.partStateUpdate.bind(this)} />
-              <PartCategory data={this.props.data} category='Flysheet' partStateUpdate={this.partStateUpdate.bind(this)}/>
-              <PartCategory data={this.props.data} category='InnerTentBodies' partStateUpdate={this.partStateUpdate.bind(this)} />
-              <PartCategory data={this.props.data} category='Accessories' partStateUpdate={this.partStateUpdate.bind(this)} />
+              <PartCategory data={this.props.data} category='WebTruss' partStateUpdate={this.partStateUpdate.bind(this)} partInCart={this.state.partInCart} />
+              <PartCategory data={this.props.data} category='Poles' partStateUpdate={this.partStateUpdate.bind(this)} partInCart={this.state.partInCart} />
+              <PartCategory data={this.props.data} category='FootPrint' partStateUpdate={this.partStateUpdate.bind(this)} partInCart={this.state.partInCart} />
+              <PartCategory data={this.props.data} category='Flysheet' partStateUpdate={this.partStateUpdate.bind(this)} partInCart={this.state.partInCart} />
+              <PartCategory data={this.props.data} category='InnerTentBodies' partStateUpdate={this.partStateUpdate.bind(this)} partInCart={this.state.partInCart} />
+              <PartCategory data={this.props.data} category='Accessories' partStateUpdate={this.partStateUpdate.bind(this)} partInCart={this.state.partInCart} />
             </Col>
             <Col xs={5} lg={6} className="img-carousol bkgrd">
               <h4 className='configuration-title'>Your Configuration Details:</h4>
               <ImageCarousol />
                 <Row>
                   <Col xs={4} md={4} className='bkgrd'>
-                    <EnvironmentConditions />
+                    <EnvironmentConditions partInCart={this.state.partInCart} />
                   </Col>
                   <Col xs={12} md={12} className='bkgrd'>
                     <TentDetails data={this.props.data}/>

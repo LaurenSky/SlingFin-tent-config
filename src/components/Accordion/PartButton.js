@@ -32,7 +32,21 @@ class PartButton extends Component {
   }
 
   render () {
+    let parts = []
+
+    if (!this.props.partInCart === false) {
+      Object.entries(this.props.partInCart).forEach(
+        ([key, value]) => {
+          console.log("in button iterate!!!!" , key)
+          parts.push(value.partInfo.id)
+          console.log('MY button PART ARRAY:' , parts)
+        }
+      );
+    }
+
+
     const part = this.props.part;
+    console.log('*****props', this.props.partInCart)
     // console.log('render:', part.name)
     console.log('partInCart in button:', part.name, this.state.partInCart)
 
