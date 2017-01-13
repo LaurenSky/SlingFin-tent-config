@@ -15,7 +15,6 @@ import Footer from './components/Footer/Footer';
 import { Row, Col } from 'react-bootstrap';
 
 
-
 class App extends Component {
 
   constructor (props){
