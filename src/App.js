@@ -54,7 +54,7 @@ class App extends Component {
 
 
   render() {
-    console.log("partInCart value in APP: ", this.state.partInCart)
+    console.log("partInCart value in render APP: ", this.state.partInCart)
 
 
     return (

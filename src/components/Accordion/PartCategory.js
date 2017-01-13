@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import './accordion.css';
-// import { Button } from 'react-bootstrap';
 import { Row, Col } from 'react-bootstrap';
 import RecommendPart from './RecommendPart/RecommendPart';
 import PartButton from './PartButton';

@@ -5,8 +5,8 @@ import DeleteButton from './DeleteButton'
 class NewTable extends Component {
 
   render() {
-    console.log(">>>> I'm creating a table!")
-    console.log('parts in table', this.props.parts);
+    // console.log(">>>> I'm creating a table!")
+    // console.log('parts in table', this.props.parts);
 
     let partsInCart = [];
 
@@ -14,7 +14,7 @@ class NewTable extends Component {
       ([key, value]) => {
         console.log("in iterate!!!!" , key, value.partInfo)
         partsInCart.push(value.partInfo)
-        console.log('MY PART ARRAY:' , partsInCart)
+        // console.log('MY PART ARRAY:' , partsInCart)
       }
     );
 

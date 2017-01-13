@@ -8,49 +8,50 @@ class EnvironmentConditions extends React.Component {
  // dropinMeshID = 8
  // flysheetID = 5
 
-  showSnowflake() {
-
+  showSnowflake(partsInCart) {
+    if (Object.keys(partsInCart).includes('6') && Object.keys(partsInCart).includes('5')) {
+      console.log(true)
+      console.log("^^^^^^^^ I'm showing a snowflake")
+      return <FontAwesome className="fa fa-snowflake-o increase-icon snowflake" name='snowflake' aria-hidden="true" />
+    } else {
+      console.log(false)
+      return false
+    }
   }
 
-  showRaindrop() {
-
+  showRaindrop(partsInCart) {
+    if (Object.keys(partsInCart).includes('5')) {
+      console.log(true)
+      console.log("^^^^^^^^ I'm showing a raindrop")
+      return <FontAwesome className="fa fa-tint increase-icon raindrop" name='raindrop' aria-hidden="true" />
+    } else {
+      console.log(false)
+      return false
+    }
   }
 
-  showBug() {
-    const partsInCart = this.props.partsInCart
-
-    if (Object.keys(partsInCart).includes(6) || Object.keys(partsInCart).includes(7) || Object.keys(partsInCart).includes(8)) {
-      return true
+  showBug(partsInCart) {
+    if (Object.keys(partsInCart).includes('6') || Object.keys(partsInCart).includes('7') || Object.keys(partsInCart).includes('8')) {
+      console.log(true)
+      console.log("^^^^^^^^ I'm showing a bug")
+      return <FontAwesome className="fa fa-bug increase-icon bugs" name='bugs' aria-hidden="true" />
+    } else {
+      console.log(false)
+      return false
     }
   }
 
   render () {
-    let snowflake;
-    let raindrop;
-    let bug;
-
-    console.log(">>>>>>-------- in conditions: ", this.props.partInCart)
-    console.log(this.props.partInCart)
-
-    if (this.showSnowflake.bind(this) === true) {
-      snowflake = <FontAwesome className="fa fa-snowflake-o increase-icon snowflake" name='snowflake' aria-hidden="true" />
-    }
-
-    if (this.showRaindrop.bind(this) === true) {
-      raindrop = <FontAwesome className="fa fa-tint increase-icon raindrop" name='raindrop' aria-hidden="true" />
-    }
-
-    if (this.showBug.bind(this) === true) {
-      bug = <FontAwesome className="fa fa-bug increase-icon bugs" name='bugs' aria-hidden="true" />
-    }
+    const partsInCart = this.props.partInCart
+    console.log("^^^^^^^keys in conditions: ----" , Object.keys(partsInCart))
 
 
     return (
       <div className='conditions-protection'>
         <h5>Protects you from:</h5>
-        {snowflake}
-        {raindrop}
-        {bug}
+        {this.showSnowflake(this.props.partInCart)}
+        {this.showRaindrop(this.props.partInCart)}
+        {this.showBug(this.props.partInCart)}
       </div>
     );
   }

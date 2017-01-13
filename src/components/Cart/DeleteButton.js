@@ -5,7 +5,7 @@ import { Button } from 'react-bootstrap';
 
 class DeleteButton extends Component {
   _handleClick() {
-   console.log("clicked delete button on", this.props.row)
+  //  console.log("clicked delete button on", this.props.row)
    const row = this.props.row;
    const partId = row.id
    console.log('delete this' ,partId, row.name)
