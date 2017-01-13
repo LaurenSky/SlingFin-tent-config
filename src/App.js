@@ -83,7 +83,7 @@ class App extends Component {
 
             <Col xs={6} md={5} className="parts-selected bkgrd">
               <h3 className='cart-header'>List of Items selected</h3>
-              <Cart partInCart={this.state.partInCart}/>
+              <Cart partInCart={this.state.partInCart} />
               <h3 className='cart-header'>List of Accessories selected</h3>
             </Col>
 
@@ -106,14 +106,5 @@ class App extends Component {
     );
   }
 }
-
-// <PartCategory data={this.props.data} category={this.props.data.webtrusses[0].category} />
-// <PartCategory data={this.props.data} category={this.props.data.poles[0].category} />
-// <PartCategory data={this.props.data} category={this.props.data.footprints[0].category} />
-// <PartCategory data={this.props.data} category={this.props.data.flysheets[0].category} />
-// <PartCategory data={this.props.data} category={this.props.data.innerTentBodies[0].category} />
-// <PartCategory data={this.props.data} category={this.props.data.accessories[0].category} />
-
-
 
 export default App;
