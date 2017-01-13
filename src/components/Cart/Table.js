@@ -1,26 +1,28 @@
 import React, { Component } from 'react';
-// import { Table } from 'react-bootstrap';
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
-let FontAwesome = require('react-fontawesome');
 import DeleteButton from './DeleteButton'
 
 class NewTable extends Component {
 
-  handleRowSelect(row, isSelected, e) {
-    console.log("im in a selected row")
-  }
-
   render() {
     console.log(">>>> I'm creating a table!")
-    const partsInCart = this.props.parts;
-    console.log('parts in table' ,partsInCart);
+    console.log('parts in table', this.props.parts);
+
+    let partsInCart = [];
+
+    Object.entries(this.props.parts).forEach(
+      ([key, value]) => {
+        console.log("in iterate!!!!" , key, value.details)
+        partsInCart.push(value.details)
+        console.log('MY PART ARRAY:' , partsInCart)
+      }
+    );
 
     const options = {
     noDataText: 'There are no parts in your cart yet :( '
     };
 
     function addDeleteIcon(cell, row) {
-      // return <FontAwesome className="fa fa-trash-o" name='bugs' aria-hidden="true" />;
       console.log('cell: ', cell)
       console.log('row: ', row)
       return <DeleteButton row={row}/>

@@ -1,13 +1,12 @@
 import React from 'react';
 import '../../App.css';
 import Table from './Table';
-import DeleteButton from './DeleteButton'
 
 class Cart extends React.Component {
   constructor () {
     super()
     this.state = {
-      parts: [],
+      parts: {},
       accessories: []
     }
   }
@@ -15,7 +14,7 @@ class Cart extends React.Component {
   render () {
     console.log("In Cart state passed: ", this.props.partInCart)
 
-    const partKey = Object.keys(this.props.partInCart)
+    const partKey = Object.getOwnPropertyNames(this.props.partInCart)[0]
     console.log("keys", partKey)
 
     const partProps = this.props.partInCart[partKey]
@@ -23,11 +22,14 @@ class Cart extends React.Component {
 
     if(this.props.partInCart !== false) {
       if(partProps.value === true) {
-        this.state.parts.push(partProps.partInfo);
+        this.state.parts[partKey] = {
+          value: partProps.value,
+          details: partProps.partInfo
+        }
         console.log("parts", this.state.parts)
+
       }
     }
-
 
 
     return (
