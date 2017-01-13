@@ -12,8 +12,8 @@ class NewTable extends Component {
 
     Object.entries(this.props.parts).forEach(
       ([key, value]) => {
-        console.log("in iterate!!!!" , key, value.details)
-        partsInCart.push(value.details)
+        console.log("in iterate!!!!" , key, value.partInfo)
+        partsInCart.push(value.partInfo)
         console.log('MY PART ARRAY:' , partsInCart)
       }
     );
