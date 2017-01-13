@@ -26,14 +26,19 @@ class App extends Component {
   }
 
   partStateUpdate(value, part) {
-    let newState = {...this.state.partInCart}; //Duplicate state.
-    newState[part.id] = {
-      value: value,
-      partInfo: part
-    }                  //remove Item form stateCopy.
-    this.setState({
-      partInCart: newState
-    });
+    if (value === true) {
+      let newState = {...this.state.partInCart}; //Duplicate state.
+      newState[part.id] = {
+        value: value,
+        partInfo: part
+      }                  //remove Item form stateCopy.
+      this.setState({
+        partInCart: newState
+      });
+    } else {
+      this.deletePart(part.id)
+    }
+
   }
 
   deletePart(partId) {
