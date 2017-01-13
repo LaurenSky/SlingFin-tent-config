@@ -7,9 +7,11 @@ class EnvironmentConditions extends React.Component {
  // ripstopID = 6
  // dropinMeshID = 8
  // flysheetID = 5
+ // webtruss and cross-poles: 1 & 9
 
   showSnowflake(partsInCart) {
-    if (Object.keys(partsInCart).includes('6') && Object.keys(partsInCart).includes('5')) {
+    // needs webtruss, cross-poles, ripstopBody, flysheet, and (bow-pole / trekking-poles)
+    if (Object.keys(partsInCart).includes('1' && '9' &&'6' && '5' && '10') || Object.keys(partsInCart).includes('1' && '9' && '6' && '5' && '11')) {
       console.log(true)
       console.log("^^^^^^^^ I'm showing a snowflake")
       return <FontAwesome className="fa fa-snowflake-o increase-icon snowflake" name='snowflake' aria-hidden="true" />
@@ -20,7 +22,8 @@ class EnvironmentConditions extends React.Component {
   }
 
   showRaindrop(partsInCart) {
-    if (Object.keys(partsInCart).includes('5')) {
+    // needs webtruss, cross-poles, flysheet, and (bow-pole / trekking-poles)
+    if (Object.keys(partsInCart).includes('1' && '9' && '5' && '10') || Object.keys(partsInCart).includes('1' && '9' && '5' && '11')) {
       console.log(true)
       console.log("^^^^^^^^ I'm showing a raindrop")
       return <FontAwesome className="fa fa-tint increase-icon raindrop" name='raindrop' aria-hidden="true" />
@@ -31,7 +34,8 @@ class EnvironmentConditions extends React.Component {
   }
 
   showBug(partsInCart) {
-    if (Object.keys(partsInCart).includes('6') || Object.keys(partsInCart).includes('7') || Object.keys(partsInCart).includes('8')) {
+    // needs webtruss, cross-poles, (ripstopBody / meshBody / DropIn mesh Body), (bow-pole / trekking-poles)
+    if (Object.keys(partsInCart).includes('1' && '9' && '6' && ('10')) || Object.keys(partsInCart).includes('1' && '9' && '7') || Object.keys(partsInCart).includes('1' && '9' && '8')) {
       console.log(true)
       console.log("^^^^^^^^ I'm showing a bug")
       return <FontAwesome className="fa fa-bug increase-icon bugs" name='bugs' aria-hidden="true" />
