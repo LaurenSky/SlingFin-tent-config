@@ -11,7 +11,10 @@ class EnvironmentConditions extends React.Component {
 
   showSnowflake(partsInCart) {
     // needs webtruss, cross-poles, ripstopBody, flysheet, and (bow-pole / trekking-poles)
-    if (Object.keys(partsInCart).includes('1' && '9' &&'6' && '5' && '10') || Object.keys(partsInCart).includes('1' && '9' && '6' && '5' && '11')) {
+    // snowflake1 = '1' && '9' && '6' && '5' && '10'
+    // snowflake2 = '1' && '9' && '6' && '5' && '11'
+
+    if ( (Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('6') && Object.keys(partsInCart).includes('5') && Object.keys(partsInCart).includes('10')) || (Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('6') && Object.keys(partsInCart).includes('5') && Object.keys(partsInCart).includes('11')) ){
       console.log(true)
       console.log("^^^^^^^^ I'm showing a snowflake")
       return <FontAwesome className="fa fa-snowflake-o increase-icon snowflake" name='snowflake' aria-hidden="true" />
@@ -23,7 +26,9 @@ class EnvironmentConditions extends React.Component {
 
   showRaindrop(partsInCart) {
     // needs webtruss, cross-poles, flysheet, and (bow-pole / trekking-poles)
-    if (Object.keys(partsInCart).includes('1' && '9' && '5' && '10') || Object.keys(partsInCart).includes('1' && '9' && '5' && '11')) {
+    // raindrop1 = '1' && '9' && '5' && '10'
+    // raindrop2 = '1' && '9' && '5' && '11'
+    if ( (Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('5') && Object.keys(partsInCart).includes('10')) || (Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('5') && Object.keys(partsInCart).includes('11')) ){
       console.log(true)
       console.log("^^^^^^^^ I'm showing a raindrop")
       return <FontAwesome className="fa fa-tint increase-icon raindrop" name='raindrop' aria-hidden="true" />
@@ -35,7 +40,14 @@ class EnvironmentConditions extends React.Component {
 
   showBug(partsInCart) {
     // needs webtruss, cross-poles, (ripstopBody / meshBody / DropIn mesh Body), (bow-pole / trekking-poles)
-    if (Object.keys(partsInCart).includes('1' && '9' && '6' && ('10')) || Object.keys(partsInCart).includes('1' && '9' && '7') || Object.keys(partsInCart).includes('1' && '9' && '8')) {
+    // bug-bow1 = '1' && '9' && '6' && '10'
+    // bug-bow2 = '1' && '9' && '7' && '10'
+    // bug-bow3 = '1' && '9' && '8' && '10'
+
+    // bug-trek1 = '1' && '9' && '6' && '11'
+    // bug-trek2 = '1' && '9' && '7' && '11'
+    // bug-trek3 = '1' && '9' && '8' && '11'
+    if ( (Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('6') && Object.keys(partsInCart).includes('10')) || (Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('7') && Object.keys(partsInCart).includes('10')) || (Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('8') && Object.keys(partsInCart).includes('3') && Object.keys(partsInCart).includes('10')) || (Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('6') && Object.keys(partsInCart).includes('11')) || (Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('7') && Object.keys(partsInCart).includes('11')) || (Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('8') && Object.keys(partsInCart).includes('3') && Object.keys(partsInCart).includes('11'))) {
       console.log(true)
       console.log("^^^^^^^^ I'm showing a bug")
       return <FontAwesome className="fa fa-bug increase-icon bugs" name='bugs' aria-hidden="true" />
