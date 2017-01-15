@@ -15,8 +15,8 @@ class EnvironmentConditions extends React.Component {
     // snowflake2 = '1' && '9' && '6' && '5' && '11'
 
     if ( (Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('6') && Object.keys(partsInCart).includes('5') && Object.keys(partsInCart).includes('10')) || (Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('6') && Object.keys(partsInCart).includes('5') && Object.keys(partsInCart).includes('11')) ){
-      console.log(true)
-      console.log("^^^^^^^^ I'm showing a snowflake")
+      // console.log(true)
+      // console.log("^^^^^^^^ I'm showing a snowflake")
       return <FontAwesome className="fa fa-snowflake-o increase-icon snowflake" name='snowflake' aria-hidden="true" />
     } else {
       console.log(false)
@@ -38,8 +38,8 @@ class EnvironmentConditions extends React.Component {
     // raindrop7 = '1' && '9' && '5' && '10' && '6'
     // raindrop8 = '1' && '9' && '5' && '11' && '6'
     if ( ( Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('5') && Object.keys(partsInCart).includes('10') && Object.keys(partsInCart).includes('3') ) || ( Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('5') && Object.keys(partsInCart).includes('11') && Object.keys(partsInCart).includes('3') ) || ( Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('5') && Object.keys(partsInCart).includes('10') && Object.keys(partsInCart).includes('4') ) || ( Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('5') && Object.keys(partsInCart).includes('11') && Object.keys(partsInCart).includes('4') ) || ( Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('5') && Object.keys(partsInCart).includes('10') && Object.keys(partsInCart).includes('7') ) || ( Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('5') && Object.keys(partsInCart).includes('11') && Object.keys(partsInCart).includes('7') ) || ( Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('5') && Object.keys(partsInCart).includes('10') && Object.keys(partsInCart).includes('6') ) || ( Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('5') && Object.keys(partsInCart).includes('11') && Object.keys(partsInCart).includes('6') ) ){
-      console.log(true)
-      console.log("^^^^^^^^ I'm showing a raindrop")
+      // console.log(true)
+      // console.log("^^^^^^^^ I'm showing a raindrop")
       return <FontAwesome className="fa fa-tint increase-icon raindrop" name='raindrop' aria-hidden="true" />
     } else {
       console.log(false)
@@ -57,8 +57,8 @@ class EnvironmentConditions extends React.Component {
     // bug-trek2 = '1' && '9' && '7' && '11'
     // bug-trek3 = '1' && '9' && '8' && '11'
     if ( (Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('6') && Object.keys(partsInCart).includes('10')) || (Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('7') && Object.keys(partsInCart).includes('10')) || (Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('8') && Object.keys(partsInCart).includes('3') && Object.keys(partsInCart).includes('10')) || (Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('6') && Object.keys(partsInCart).includes('11')) || (Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('7') && Object.keys(partsInCart).includes('11')) || (Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('8') && Object.keys(partsInCart).includes('3') && Object.keys(partsInCart).includes('11'))) {
-      console.log(true)
-      console.log("^^^^^^^^ I'm showing a bug")
+      // console.log(true)
+      // console.log("^^^^^^^^ I'm showing a bug")
       return <FontAwesome className="fa fa-bug increase-icon bugs" name='bugs' aria-hidden="true" />
     } else {
       console.log(false)
@@ -68,7 +68,7 @@ class EnvironmentConditions extends React.Component {
 
   render () {
     const partsInCart = this.props.partInCart
-    console.log("^^^^^^^keys in conditions: ----" , Object.keys(partsInCart))
+    // console.log("^^^^^^^keys in conditions: ----" , Object.keys(partsInCart))
 
 
     return (
