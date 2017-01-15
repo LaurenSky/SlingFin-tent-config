@@ -25,10 +25,19 @@ class EnvironmentConditions extends React.Component {
   }
 
   showRaindrop(partsInCart) {
-    // needs webtruss, cross-poles, flysheet, and (bow-pole / trekking-poles)
-    // raindrop1 = '1' && '9' && '5' && '10'
-    // raindrop2 = '1' && '9' && '5' && '11'
-    if ( (Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('5') && Object.keys(partsInCart).includes('10')) || (Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('5') && Object.keys(partsInCart).includes('11')) ){
+    // needs webtruss, cross-poles, flysheet, and (bow-pole / trekking-poles) && ( tub footprint / flatfootprint / meshBody / ripstopBody)
+    // raindrop1 = '1' && '9' && '5' && '10' && '3'
+    // raindrop2 = '1' && '9' && '5' && '11' && '3'
+
+    // raindrop3 = '1' && '9' && '5' && '10' && '4'
+    // raindrop4 = '1' && '9' && '5' && '11' && '4'
+
+    // raindrop5 = '1' && '9' && '5' && '10' && '7'
+    // raindrop6 = '1' && '9' && '5' && '11' && '7'
+
+    // raindrop7 = '1' && '9' && '5' && '10' && '6'
+    // raindrop8 = '1' && '9' && '5' && '11' && '6'
+    if ( ( Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('5') && Object.keys(partsInCart).includes('10') && Object.keys(partsInCart).includes('3') ) || ( Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('5') && Object.keys(partsInCart).includes('11') && Object.keys(partsInCart).includes('3') ) || ( Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('5') && Object.keys(partsInCart).includes('10') && Object.keys(partsInCart).includes('4') ) || ( Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('5') && Object.keys(partsInCart).includes('11') && Object.keys(partsInCart).includes('4') ) || ( Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('5') && Object.keys(partsInCart).includes('10') && Object.keys(partsInCart).includes('7') ) || ( Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('5') && Object.keys(partsInCart).includes('11') && Object.keys(partsInCart).includes('7') ) || ( Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('5') && Object.keys(partsInCart).includes('10') && Object.keys(partsInCart).includes('6') ) || ( Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('5') && Object.keys(partsInCart).includes('11') && Object.keys(partsInCart).includes('6') ) ){
       console.log(true)
       console.log("^^^^^^^^ I'm showing a raindrop")
       return <FontAwesome className="fa fa-tint increase-icon raindrop" name='raindrop' aria-hidden="true" />
