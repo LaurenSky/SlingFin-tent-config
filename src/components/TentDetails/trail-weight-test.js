@@ -19,15 +19,11 @@ class TrailWeight extends React.Component {
   }
 
   render () {
-    const webtrusses=this.props.webtrusses;
-    const flysheets=this.props.flysheets;
-    const innerTentBodies=this.props.innerTentBodies;
-    var finalWeight=this.calculateWeight
+
 
     return (
       <div>
-        <h4>Minimum Trail Weigth Test: {webtrusses[0].weight} oz (___ pounds)</h4>
-        <h4>Minimum Trail Weigth Test: calculating.... {finalWeight(webtrusses, flysheets, innerTentBodies)} oz (___ pounds)</h4>
+        <h4>Total Pack Weigth Test:  oz (___ pounds)</h4>
       </div>
     );
   }

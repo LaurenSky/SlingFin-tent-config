@@ -5,6 +5,8 @@ import NumPoles from './num-poles';
 import Cost from './cost';
 
 import TrailWeightTest from './trail-weight-test';
+import TotalPackWeightTest from './total-pack-weight-test';
+
 
 
 class TentDetails extends React.Component {
@@ -30,10 +32,11 @@ class TentDetails extends React.Component {
       <div className='tent-details'>
         <h5>Variable Items</h5>
         <ul>
-          <li><TrailWeight data={this.props.data}/></li>
-          <li><TrailWeightTest webtrusses={this.props.data.webtrusses} flysheet={this.props.data.flysheets} innerTentBodies={this.props.data.innerTentBodies}/></li>
-          <li><Cost data={this.props.data}/></li>
-          <li><NumPoles /></li>
+          <li><TrailWeight partsInCart={this.props.partsInCart} /></li>
+          <li><TrailWeightTest partsInCart={this.props.partsInCart} /></li>
+          <li><TotalPackWeightTest partsInCart={this.props.partsInCart} /></li>
+          <li><Cost partsInCart={this.props.partsInCart} /></li>
+          <li><NumPoles partsInCart={this.props.partsInCart} /></li>
         </ul>
       </div>
     );
