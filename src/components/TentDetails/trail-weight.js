@@ -41,8 +41,4 @@ class TrailWeight extends React.Component {
   }
 }
 
-// Accordion.propTypes = {
-//   weight: React.PropTypes.number.isRequired,
-// };
-
 export default TrailWeight;
