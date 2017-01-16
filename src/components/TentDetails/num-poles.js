@@ -14,8 +14,6 @@ class NumPoles extends React.Component {
       }
     );
 
-    let style
-
     if ( partsInCart.includes('9') && partsInCart.includes('10') ) {
       console.log('return 3')
       return <span className='normal'> 3</span>

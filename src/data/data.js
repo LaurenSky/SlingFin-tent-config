@@ -44,7 +44,7 @@ export default {
       category: "FootPrint",
       name: "Flat Footprint",
       description: "Can be used in conjunction with tent body to provide additional ground protection.",
-      price: '60',
+      price: '60.00',
       weight: 1111111,
       thumbnail:require('../images/footprints/flat-footprint.png'),
       main:require('../images/footprints/flat-footprint.png'),
