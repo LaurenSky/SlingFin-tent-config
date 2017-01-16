@@ -3,16 +3,6 @@ let money = require("money-math");
 
 class Cost extends React.Component {
 
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     // active: false
-  //   };
-  // }
-
-  calculateTotal() {
-
-  }
 
   render () {
     let partsInCart = [];
