@@ -92,7 +92,7 @@ class App extends Component {
                     <EnvironmentConditions partInCart={this.state.partInCart} />
                   </Col>
                   <Col xs={12} md={12} className='bkgrd'>
-                    <TentDetails data={this.props.data}/>
+                    <TentDetails partsInCart={this.state.partInCart}/>
                   </Col>
                 </Row>
             </Col>

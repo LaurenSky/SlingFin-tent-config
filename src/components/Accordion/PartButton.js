@@ -24,14 +24,14 @@ class PartButton extends Component {
   //   //   })
   //   // }
   // }
+  // componentWillUpdate(nextProps, nextState) {
+  //   console.log("@@@@ in ON CHANGE -- state b4:", this.state.partInCart)
+  //   this.setState({
+  //     partInCart: !this.state.partInCart
+  //   })
+  //   console.log("@@@@ in ON CHANGE -- state after:", this.state.partInCart)
+  // }
 
-  onChange() {
-    console.log("@@@@ in ON CHANGE -- state b4:", this.state.partInCart)
-    this.setState({
-      partInCart: !this.state.partInCart
-    })
-    console.log("@@@@ in ON CHANGE -- state after:", this.state.partInCart)
-  }
 
   partStateUpdate() {
     const val = this.state.partInCart
@@ -88,12 +88,12 @@ class PartButton extends Component {
     this.currentlyInPartInCart.bind(this)
 
     if (this.currentlyInPartInCart(part.id)) {
-      buttonText = 'Remove ';
-      bsStyle="danger";
+      buttonText = 'Remove';
+      bsStyle = "danger";
     }
 
 
-    const partButton = <Button onChange={this.onChange.bind(this)} onClick={this._handleClick.bind(this)} bsStyle={bsStyle}>{buttonText} {part.name}</Button>
+    const partButton = <Button onClick={this._handleClick.bind(this)} bsStyle={bsStyle}>{buttonText} {part.name}</Button>
 
     return (
       partButton

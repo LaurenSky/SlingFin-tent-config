@@ -67,7 +67,6 @@ class EnvironmentConditions extends React.Component {
   }
 
   render () {
-    const partsInCart = this.props.partInCart
     // console.log("^^^^^^^keys in conditions: ----" , Object.keys(partsInCart))
 
 
