@@ -4,8 +4,8 @@ import 'normalize.css';
 import './App.css';
 
 import PartCategory from './components/Accordion/PartCategory';
-import ImageCarousol from './components/Carousol/Carousol';
-import EnvironmentConditions from './components/Conditions/Conditions';
+import ImageCarousol from './components/Carousol/carousol';
+import EnvironmentConditions from './components/Conditions/conditions';
 import TentDetails from './components/TentDetails/TentDetails';
 import TentDimensions from './components/TentDimensions/TentDimensions';
 import Cart from './components/Cart/Cart';
