@@ -42,9 +42,8 @@ class NumPoles extends React.Component {
 
     return (
       <div>
-        <h4>
-          Poles: { this.countPoles(this.props.partsInCart) }
-        </h4>
+        <h3>Current # of Poles:</h3>
+        <h4># of Poles:  { this.countPoles(this.props.partsInCart) }</h4>
       </div>
     );
   }

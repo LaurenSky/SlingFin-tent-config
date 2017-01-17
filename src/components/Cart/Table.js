@@ -33,8 +33,8 @@ class NewTable extends Component {
     return (
       <BootstrapTable data={ partsInCart } options={ options} bordered={ false }>
         <TableHeaderColumn dataField='name'>Part</TableHeaderColumn>
-        <TableHeaderColumn dataField='weight'>Weight</TableHeaderColumn>
-        <TableHeaderColumn dataField='price'>Price</TableHeaderColumn>
+        <TableHeaderColumn dataField='weight'>Weight(grams)</TableHeaderColumn>
+        <TableHeaderColumn dataField='price'>Price($)</TableHeaderColumn>
         <TableHeaderColumn dataField='id' isKey={ true } dataFormat={ addDeleteIcon }></TableHeaderColumn>
 
       </BootstrapTable>

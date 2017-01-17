@@ -1,41 +1,45 @@
 import React from 'react';
-// import './accordion.css';
+let money = require("money-math");
 
 
 class TrailWeight extends React.Component {
 
-  constructor() {
-    super();
-    this.state = {
-      // active: false
-    };
-  }
+  convertToOunces(grams) {
+    let ounces = money.mul(grams, "00.035274");
+    let ounces1 = money.div(ounces, "10000.00");
 
-  calculateWeight() {
-    console.log('caluclating weight');
-    return(
-      ">>>>>>>>>>>"
-    )
+    return ounces1;
   }
 
   render () {
-    // const data=this.props.data;
-    var finalWeight=this.calculateWeight
+    let partWeightsInCart = [];
 
-    // let partsInCart = [];
-    //
-    // Object.entries(this.props.parts).forEach(
-    //   ([key, value]) => {
-    //     console.log("in iterate!!!!" , key, value.partInfo)
-    //     partsInCart.push(value.partInfo)
-    //     // console.log('MY PART ARRAY:' , partsInCart)
-    //   }
-    // );
+    Object.entries(this.props.partsInCart).forEach(
+      ([key, value]) => {
+        console.log("in iterate!!!!" , key, value.partInfo)
+        partWeightsInCart.push(value.partInfo.weight)
+        console.log('<<<<>>>>>>>>> MY PARTs ARRAY ---- WEIGHT :' , partWeightsInCart)
+      }
+    );
+
+    let totalGrams = '0.00'
+
+    for (let i = 0 ; i < partWeightsInCart.length; i++) {
+      console.log('<<<<>>>>>>>>> IN WEIGHT ---- TOTAL-WEIGHT :' , totalGrams)
+      console.log('<<<<>>>>>>>>> IN WEIGHT ---- TOTAL-WEIGHT :' , partWeightsInCart[i])
+      totalGrams = money.add(totalGrams, partWeightsInCart[i])
+    }
+
+    console.log('<<<<>>>>>>>>> IN WEIGHT ---- TOTAL-WEIGHT :' , totalGrams)
+
+    this.convertToOunces.bind(this)
+    let totalOunces = this.convertToOunces(totalGrams);
 
     return (
       <div>
-        <h4>Minimum Trail Weigth:  oz (___ pounds)</h4>
-        <h4>Minimum Trail Weigth: calculating.... {finalWeight()} oz (___ pounds)</h4>
+        <h3>Current Weight:</h3>
+        <h4>Minimum Trail Weigth:  grams (___ oz)</h4>
+        <h4>Total Trail Weigth: { totalGrams } grams ({ totalOunces } oz)</h4>
       </div>
     );
   }
