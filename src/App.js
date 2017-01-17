@@ -86,7 +86,7 @@ class App extends Component {
             </Col>
             <Col xs={5} lg={6} className="img-carousol bkgrd">
               <h4 className='configuration-title'>Your Configuration Details:</h4>
-              <ImageCarousol />
+              <ImageCarousol partsInCart={this.state.partsInCart} data={this.props.data}/>
                 <Row>
                   <Col xs={4} md={4} className='bkgrd'>
                     <EnvironmentConditions partsInCart={this.state.partsInCart} />
