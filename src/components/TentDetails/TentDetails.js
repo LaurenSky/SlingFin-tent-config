@@ -8,7 +8,6 @@ import TrailWeightTest from './trail-weight-test';
 import TotalPackWeightTest from './total-pack-weight-test';
 
 
-
 class TentDetails extends React.Component {
 
   // constructor() {
@@ -36,6 +35,7 @@ class TentDetails extends React.Component {
           <li><TrailWeightTest partsInCart={this.props.partsInCart} /></li>
           <li><TotalPackWeightTest partsInCart={this.props.partsInCart} /></li>
           <li><Cost partsInCart={this.props.partsInCart} /></li>
+          <li><TrailWeight partsInCart={this.props.partsInCart} /></li>
           <li><NumPoles partsInCart={this.props.partsInCart} /></li>
         </ul>
       </div>
