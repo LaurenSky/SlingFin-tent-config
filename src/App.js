@@ -20,19 +20,19 @@ class App extends Component {
   constructor (props){
     super(props)
     this.state = {
-      partInCart: false
+      partsInCart: false
     }
   }
 
   partStateUpdate(value, part) {
     if (value === true) {
-      let newState = {...this.state.partInCart}; //Duplicate state.
+      let newState = {...this.state.partsInCart}; //Duplicate state.
       newState[part.id] = {
         value: value,
         partInfo: part
       }                  //remove Item form stateCopy.
       this.setState({
-        partInCart: newState
+        partsInCart: newState
       });
     } else {
       this.deletePart(part.id)
@@ -45,16 +45,16 @@ class App extends Component {
     // delete this.state.parts[partName]
     // this.props.partStateUpdate(false, part, partName)
 
-    const newState = {...this.state.partInCart}; //Duplicate state.
+    const newState = {...this.state.partsInCart}; //Duplicate state.
     delete newState[partId];                  //remove Item form stateCopy.
     this.setState({
-      partInCart: newState
+      partsInCart: newState
     })
   }
 
 
   render() {
-    console.log("partInCart value in render APP: ", this.state.partInCart)
+    console.log("partInCart value in render APP: ", this.state.partsInCart)
 
 
     return (
@@ -77,29 +77,29 @@ class App extends Component {
 
           <Row>
             <Col xs={6} lg={4} className='no-padding'>
-              <PartCategory data={this.props.data} category='WebTruss' partStateUpdate={this.partStateUpdate.bind(this)} partInCart={this.state.partInCart} />
-              <PartCategory data={this.props.data} category='Poles' partStateUpdate={this.partStateUpdate.bind(this)} partInCart={this.state.partInCart} />
-              <PartCategory data={this.props.data} category='FootPrint' partStateUpdate={this.partStateUpdate.bind(this)} partInCart={this.state.partInCart} />
-              <PartCategory data={this.props.data} category='Flysheet' partStateUpdate={this.partStateUpdate.bind(this)} partInCart={this.state.partInCart} />
-              <PartCategory data={this.props.data} category='InnerTentBodies' partStateUpdate={this.partStateUpdate.bind(this)} partInCart={this.state.partInCart} />
-              <PartCategory data={this.props.data} category='Accessories' partStateUpdate={this.partStateUpdate.bind(this)} partInCart={this.state.partInCart} />
+              <PartCategory data={this.props.data} category='WebTruss' partStateUpdate={this.partStateUpdate.bind(this)} partInCart={this.state.partsInCart} />
+              <PartCategory data={this.props.data} category='Poles' partStateUpdate={this.partStateUpdate.bind(this)} partInCart={this.state.partsInCart} />
+              <PartCategory data={this.props.data} category='FootPrint' partStateUpdate={this.partStateUpdate.bind(this)} partInCart={this.state.partsInCart} />
+              <PartCategory data={this.props.data} category='Flysheet' partStateUpdate={this.partStateUpdate.bind(this)} partInCart={this.state.partsInCart} />
+              <PartCategory data={this.props.data} category='InnerTentBodies' partStateUpdate={this.partStateUpdate.bind(this)} partInCart={this.state.partsInCart} />
+              <PartCategory data={this.props.data} category='Accessories' partStateUpdate={this.partStateUpdate.bind(this)} partInCart={this.state.partsInCart} />
             </Col>
             <Col xs={5} lg={6} className="img-carousol bkgrd">
               <h4 className='configuration-title'>Your Configuration Details:</h4>
-              <ImageCarousol />
+              <ImageCarousol partsInCart={this.state.partsInCart} data={this.props.data}/>
                 <Row>
                   <Col xs={4} md={4} className='bkgrd'>
-                    <EnvironmentConditions partInCart={this.state.partInCart} />
+                    <EnvironmentConditions partsInCart={this.state.partsInCart} />
                   </Col>
                   <Col xs={12} md={12} className='bkgrd'>
-                    <TentDetails partsInCart={this.state.partInCart}/>
+                    <TentDetails partsInCart={this.state.partsInCart}/>
                   </Col>
                 </Row>
             </Col>
 
             <Col xs={6} md={5} className="parts-selected bkgrd">
               <h3 className='cart-header'>List of Items selected</h3>
-              <Cart partInCart={this.state.partInCart} deletePart={this.deletePart.bind(this)} />
+              <Cart partInCart={this.state.partsInCart} deletePart={this.deletePart.bind(this)} />
               <h3 className='cart-header'>List of Accessories selected</h3>
             </Col>
 

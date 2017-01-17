@@ -38,8 +38,8 @@ class TrailWeight extends React.Component {
     return (
       <div>
         <h3>Current Weight:</h3>
-        <h4>Minimum Trail Weigth:  grams (___ oz)</h4>
-        <h4>Total Trail Weigth: { totalGrams } grams ({ totalOunces } oz)</h4>
+        <h4>Minimum Trail Weight:  grams (___ oz)</h4>
+        <h4>Total Pack Weight: { totalGrams } grams ({ totalOunces } oz)</h4>
       </div>
     );
   }

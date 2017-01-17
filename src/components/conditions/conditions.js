@@ -69,9 +69,9 @@ class EnvironmentConditions extends React.Component {
     return (
       <div className='conditions-protection'>
         <h5>Protects you from:</h5>
-        {this.showSnowflake(this.props.partInCart)}
-        {this.showRaindrop(this.props.partInCart)}
-        {this.showBug(this.props.partInCart)}
+        {this.showSnowflake(this.props.partsInCart)}
+        {this.showRaindrop(this.props.partsInCart)}
+        {this.showBug(this.props.partsInCart)}
       </div>
     );
   }

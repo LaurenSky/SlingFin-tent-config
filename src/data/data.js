@@ -10,8 +10,10 @@ export default {
       weight: '210.00',
       thumbnail:require('../images/line-drawings/WebTruss-only.jpg'),
       main:require('../images/line-drawings/WebTruss-only.jpg'),
-      gallery1:"http://www.slingfin.com/img/products/800/080_04.jpg",
-      gallery2:"http://www.slingfin.com/img/products/800/080_09.jpg",
+      gallery1:"http://www.slingfin.com/img/products/800/1080_04.jpg",
+      gallery2:"http://www.slingfin.com/img/products/800/1080_09.jpg",
+      gallery3:"http://www.slingfin.com/img/products/800/1082_03.jpg",
+      gallery4:"http://www.slingfin.com/img/products/800/1082_04.jpg",
       recommend: null
     }
   ],
@@ -80,8 +82,10 @@ export default {
       weight: '679.00',
       thumbnail:require('../images/line-drawings/RS-body-only.jpg'),
       main:require('../images/line-drawings/RS-body-only.jpg'),
-      gallery1:"http://www.slingfin.com/img/products/800/085_01a.jpg",
-      gallery2:"http://www.slingfin.com/img/products/800/085_02.jpg",
+      gallery1:"http://www.slingfin.com/img/products/800/1085_01a.jpg",
+      gallery2:"http://www.slingfin.com/img/products/800/1085_02.jpg",
+      gallery3:"http://www.slingfin.com/img/products/800/1085_02.jpg",
+      gallery4:"http://www.slingfin.com/img/products/800/1085_02.jpg",
       recommend: null
     },
     {
@@ -93,8 +97,9 @@ export default {
       weight: '555.00',
       thumbnail:require('../images/line-drawings/Mesh-body-only.jpg'),
       main:require('../images/line-drawings/Mesh-body-only.jpg'),
-      gallery1:"http://www.slingfin.com/img/products/800/084_02.jpg",
-      gallery2:"http://www.slingfin.com/img/products/800/084_03.jpg",
+      gallery1:"http://www.slingfin.com/img/products/800/1081_02.jpg",
+      gallery2:"http://www.slingfin.com/img/products/800/1081_03.jpg",
+      gallery3:"http://www.slingfin.com/img/products/800/1081_04.jpg",
       recommend: null
     },
     {
@@ -129,7 +134,7 @@ export default {
       description: ".....",
       price: '22.46',
       weight: '404.00',
-      thumbnail:"http://www.slingfin.com/img/products/800/082_06.jpg",
+      thumbnail: require('../images/poles/cross-poles.png'),
       main:require('../images/poles/cross-poles.png'),
       gallery1:"http://images.indianexpress.com/2015/10/mnkey-759.jpg",
       gallery2:"http://images.indianexpress.com/2015/10/mnkey-759.jpg",
@@ -157,8 +162,8 @@ export default {
       weight:'0.00',
       thumbnail:require('../images/poles/trekking-poles.png'),
       main:require('../images/poles/trekking-poles.png'),
-      gallery1:require('../images/poles/trekking-poles.png'),
-      gallery2:require('../images/poles/trekking-poles.png'),
+      gallery1:'http://www.slingfin.com/img/products/800/1082_04.jpg',
+      gallery2: '',
       recommend: null
     }
   ],
