@@ -37,7 +37,7 @@ class Mailto extends React.Component {
     link += 'Total # of Items: ' + headers.body.length + '%0D%0A'
     link += 'Order Total: $' + headers.total + '%0D%0A' + '%0D%0A'
 
-    link += 'Thank You! We will contact you as soon as possible. Have a great day! -- The SlingFin Crew'
+    link += 'Thank You! We will contact you as soon as possible in to complete this order. Have a great day! -- The SlingFin Crew'
     return link;
   }
 
