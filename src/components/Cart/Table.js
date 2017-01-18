@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import DeleteButton from './DeleteButton';
+import SendEmail from './Email'
 
 
 class NewTable extends Component {
@@ -34,12 +35,15 @@ class NewTable extends Component {
 
 
     return (
-      <BootstrapTable data={ partsInCart } options={ options} bordered={ false } exportCSV>
-        <TableHeaderColumn dataField='name'>Part</TableHeaderColumn>
-        <TableHeaderColumn dataField='weight'>Weight(grams)</TableHeaderColumn>
-        <TableHeaderColumn dataField='price'>Price($)</TableHeaderColumn>
-        <TableHeaderColumn dataField='id' isKey={ true } dataFormat={ addDeleteIcon }></TableHeaderColumn>
-      </BootstrapTable>
+      <div>
+        <BootstrapTable data={ partsInCart } options={ options} bordered={ false } exportCSV>
+          <TableHeaderColumn dataField='name'>Part</TableHeaderColumn>
+          <TableHeaderColumn dataField='weight'>Weight(grams)</TableHeaderColumn>
+          <TableHeaderColumn dataField='price'>Price($)</TableHeaderColumn>
+          <TableHeaderColumn dataField='id' isKey={ true } dataFormat={ addDeleteIcon }></TableHeaderColumn>
+        </BootstrapTable>
+        <SendEmail className='send-email' body='body' partsInCart={this.props.partsInCart} />
+      </div>
     );
   }
 };

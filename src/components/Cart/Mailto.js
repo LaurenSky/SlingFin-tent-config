@@ -1,52 +1,36 @@
 import React, { Component, PropTypes } from 'react';
 import '../../App.css';
 
-export const toSearchString = (searchParams = {}) => {
-  return Object.keys(searchParams).map(key =>
-    `${key}=${encodeURIComponent(searchParams[key])}`
-  ).join('&');
 
-};
+class Mailto extends React.Component {
 
-export const createMailtoLink = (email, headers) => {
-  let link = `mailto:${email}`;
-  if (headers) {
-    link += `?${toSearchString(headers)}`;
+  createMailLink(email, headers) {
+    let link = 'mailto:' + email + '?subject=Tent Configurator Order&body=';
+    link += headers.body
+    return link;
   }
-  return link;
-};
-
-class Mailto extends Component {
 
   renderLink () {
-    const { email, obfuscate, headers, children, ...others } = this.props;
     return (
-      <a href={createMailtoLink(email, headers)} {...others}>
-        {children}
+      <a className='send-email' href={this.createMailLink(this.props.email, this.props.headers)}>
+        {this.props.children}
       </a>
     );
   }
 
-  renderObfuscatedLink () {
-    const { email, obfuscate, headers, children, ...others } = this.props;
-    return (
-      <a className='send-email' onClick={this.handleClick.bind(this)} href="mailto:obfuscated" {...others}>
-        {children}
-      </a>
-    );
-  }
 
   handleClick (event) {
     event.preventDefault();
-    const { email, headers } = this.props;
-    window.location.href = createMailtoLink(email, headers);
+    window.location.href = this.createMailLink(this.props.email, this.props.headers);
   }
 
-  render () {
 
-    return this.props.obfuscate ?
-      this.renderObfuscatedLink() :
-      this.renderLink();
+  render () {
+    this.createMailLink.bind(this)
+
+    return(
+      this.renderLink()
+    );
   }
 }
 
@@ -54,11 +38,6 @@ Mailto.propTypes = {
   children: PropTypes.node.isRequired,
   email: PropTypes.string.isRequired,
   headers: PropTypes.object,
-  obfuscate: PropTypes.bool
-};
-
-Mailto.defaultProps = {
-  obfuscate: false
 };
 
 
