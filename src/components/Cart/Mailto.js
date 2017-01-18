@@ -5,9 +5,11 @@ import '../../App.css';
 class Mailto extends React.Component {
 
   createMailLink(email, headers) {
+    // let link = 'mailto:' + email + '?subject=Tent Configurator Order&body=';
     let link = 'mailto:' + email + '?subject=Tent Configurator Order&body=';
     link += headers.body
     return link;
+
   }
 
   renderLink () {

@@ -5,18 +5,33 @@ import SendEmail from './Email'
 
 
 class NewTable extends Component {
+  // determineBody() {
+  //   let partsInCart = [];
+  //
+  //   Object.entries(this.props.parts).forEach(
+  //     ([key, value]) => {
+  //       console.log("in iterate!!!!" , key, value.partInfo)
+  //       partsInCart.push(key)
+  //       // console.log('MY PART ARRAY:' , partsInCart)
+  //     }
+  //   );
+  //
+  //   return partsInCart
+  // }
 
   render() {
     // console.log(">>>> I'm creating a table!")
     // console.log('parts in table', this.props.parts);
 
     let partsInCart = [];
+    let orderItems = [];
 
     Object.entries(this.props.parts).forEach(
       ([key, value]) => {
         console.log("in iterate!!!!" , key, value.partInfo)
         partsInCart.push(value.partInfo)
         // console.log('MY PART ARRAY:' , partsInCart)
+        orderItems.push(value.partInfo.name)
       }
     );
 
@@ -33,7 +48,6 @@ class NewTable extends Component {
       return <DeleteButton row={row} deletePart={deleteFunction}/>
     }
 
-
     return (
       <div>
         <BootstrapTable data={ partsInCart } options={ options} bordered={ false } exportCSV>
@@ -42,7 +56,7 @@ class NewTable extends Component {
           <TableHeaderColumn dataField='price'>Price($)</TableHeaderColumn>
           <TableHeaderColumn dataField='id' isKey={ true } dataFormat={ addDeleteIcon }></TableHeaderColumn>
         </BootstrapTable>
-        <SendEmail className='send-email' body='body' partsInCart={this.props.partsInCart} />
+        <SendEmail className='send-email' body={orderItems} partsInCart={this.props.partsInCart} />
       </div>
     );
   }

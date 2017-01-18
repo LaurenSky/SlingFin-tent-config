@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-// var Mailto = require('react-mailto');
 import Mailto from './Mailto'
 
 class SendEmail extends React.Component {
 
   render() {
+    console.log('IN EMAIL RENDER: ', this.props.body)
     let headerItems = {
       body: this.props.body
     }

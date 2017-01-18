@@ -41,7 +41,7 @@ class PartCategory extends Component {
 
           <Row>
             <Col xs={4} md={4}>
-              <img src={part.main} className="part-image" alt="Part"/>
+              <img src={part.lineDrawing} className="part-image" alt="Part"/>
             </Col>
 
             <Col xs={8} md={8}>
