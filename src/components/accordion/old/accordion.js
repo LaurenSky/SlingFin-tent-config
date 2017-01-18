@@ -1,54 +1,42 @@
 import React from 'react';
-import './accordion.css';
+import '../accordion.css';
+import PartCategory from '../PartCategory';
 
 
-const styles = {
-  active: {
-    display: 'inherit'
-  },
-
-  inactive: {
-    display: 'none'
-  }
-};
+import { Accordion, Panel } from 'react-bootstrap';
 
 
-class Accordion extends React.Component {
+class AccordionTest extends React.Component {
+  render() {
 
-  constructor() {
-    super();
-    this.state = {
-      active: false
-    };
-    this.toggle = this.toggle.bind(this);
-  }
+    return(
+      <Accordion>
+        <Panel header="Collapsible Group Item #1" eventKey="1">
+          <PartCategory data={this.props.data} category='WebTruss' partStateUpdate={this.props.partStateUpdate} partInCart={this.props.partsInCart} />
+        </Panel>
 
-  toggle() {
-    this.setState({
-      active:!this.state.active
-    });
-  }
+        <Panel header="Collapsible Group Item #2" eventKey="2">
+          <PartCategory data={this.props.data} category='Poles' partStateUpdate={this.props.partStateUpdate} partInCart={this.props.partsInCart} />
+        </Panel>
 
-  render () {
-    const stateStyle = this.state.active ? styles.active : styles.inactive;
+        <Panel header="Collapsible Group Item #3" eventKey="3">
+          <PartCategory data={this.props.data} category='FootPrint' partStateUpdate={this.props.partStateUpdate} partInCart={this.props.partsInCart} />
+        </Panel>
 
-    return (
+        <Panel header="Collapsible Group Item #3" eventKey="3">
+          <PartCategory data={this.props.data} category='Flysheet' partStateUpdate={this.props.partStateUpdate} partInCart={this.props.partsInCart} />
+        </Panel>
 
-      <section>
-        <p onClick={this.toggle} className='accordion-header'>
-          {this.props.summary}
-        </p>
-        <p style={stateStyle} className='accordion-body'>
-          {this.props.details}
-        </p>
-      </section>
-    );
+        <Panel header="Collapsible Group Item #3" eventKey="3">
+          <PartCategory data={this.props.data} category='InnerTentBodies' partStateUpdate={this.props.partStateUpdate} partInCart={this.props.partsInCart} />
+        </Panel>
+        <Panel header="Collapsible Group Item #3" eventKey="3">
+          <PartCategory data={this.props.data} category='Accessories' partStateUpdate={this.props.partStateUpdate} partInCart={this.props.partsInCart} />
+        </Panel>
+      </Accordion>
+    )
   }
 }
 
-Accordion.propTypes = {
-  summary: React.PropTypes.string.isRequired,
-  details: React.PropTypes.string.isRequired
-};
-
-export default Accordion;
+  // ReactDOM.render(accordionInstance, mountNode);
+export default AccordionTest;

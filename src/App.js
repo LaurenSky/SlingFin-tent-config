@@ -10,6 +10,8 @@ import TentDetails from './components/TentDetails/TentDetails';
 import TentDimensions from './components/TentDimensions/TentDimensions';
 import Cart from './components/Cart/cart';
 
+import Accordion from './components/Accordion/old/accordion'
+
 import Footer from './components/Footer/Footer';
 
 import { Row, Col } from 'react-bootstrap';
@@ -76,13 +78,9 @@ class App extends Component {
           </article>
 
           <Row>
+
             <Col xs={6} lg={4} className='no-padding'>
-              <PartCategory data={this.props.data} category='WebTruss' partStateUpdate={this.partStateUpdate.bind(this)} partInCart={this.state.partsInCart} />
-              <PartCategory data={this.props.data} category='Poles' partStateUpdate={this.partStateUpdate.bind(this)} partInCart={this.state.partsInCart} />
-              <PartCategory data={this.props.data} category='FootPrint' partStateUpdate={this.partStateUpdate.bind(this)} partInCart={this.state.partsInCart} />
-              <PartCategory data={this.props.data} category='Flysheet' partStateUpdate={this.partStateUpdate.bind(this)} partInCart={this.state.partsInCart} />
-              <PartCategory data={this.props.data} category='InnerTentBodies' partStateUpdate={this.partStateUpdate.bind(this)} partInCart={this.state.partsInCart} />
-              <PartCategory data={this.props.data} category='Accessories' partStateUpdate={this.partStateUpdate.bind(this)} partInCart={this.state.partsInCart} />
+              <Accordion data={this.props.data} category='Accessories' partStateUpdate={this.partStateUpdate.bind(this)} partsInCart={this.state.partsInCart}/>
             </Col>
             <Col xs={5} lg={6} className="img-carousol bkgrd">
               <h4 className='configuration-title'>Your Configuration Details:</h4>
