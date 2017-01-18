@@ -26,7 +26,7 @@ class ImageCarousol extends React.Component {
 
     let images = []
 
-    if (!partsInCart.length == 0) {
+    if (partsInCart.length > 0) {
       console.log('<<<<>>>>>>>>> IN CAROUSOL ---- TOTAL-CAROUSOL :' , images)
       images.push(
         {

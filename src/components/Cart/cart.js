@@ -11,7 +11,7 @@ class Cart extends React.Component {
 
     return (
       <div className='tent-details'>
-        <Table parts={this.props.partInCart} deletePart={this.props.deletePart}/>
+        <Table parts={this.props.partInCart} deletePart={this.props.deletePart} />
       </div>
     );
   }
