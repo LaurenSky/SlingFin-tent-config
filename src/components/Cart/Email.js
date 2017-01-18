@@ -6,8 +6,12 @@ class SendEmail extends React.Component {
   render() {
     console.log('IN EMAIL RENDER: ', this.props.body)
     let headerItems = {
-      body: this.props.body
+      body: this.props.body,
+      price: this.props.prices,
+      total: this.props.total
     }
+
+
 
     let slingFinAddress = 'sky@slingfin.com'
 

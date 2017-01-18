@@ -8,7 +8,7 @@ import ImageCarousol from './components/Carousol/carousol';
 import EnvironmentConditions from './components/Conditions/conditions';
 import TentDetails from './components/TentDetails/TentDetails';
 import TentDimensions from './components/TentDimensions/TentDimensions';
-import Cart from './components/Cart/Cart';
+import Cart from './components/Cart/cart';
 
 import Footer from './components/Footer/Footer';
 
