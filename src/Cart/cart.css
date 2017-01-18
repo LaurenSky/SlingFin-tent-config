@@ -117,16 +117,3 @@ footer {
   color: white;
   text-align: left;
 }
-
-.send-email {
-  background-color: green;
-  color: white;
-  border-radius: 5px;
-  padding: 1.5%;
-}
-
-a.send-email:hover {
-  background-color: darkgreen;
-  color: white;
-  text-decoration: none;
-}

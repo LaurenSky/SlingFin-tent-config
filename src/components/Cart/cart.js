@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../App.css';
 import Table from './Table';
+import SendEmail from './Email'
 
 class Cart extends React.Component {
 
@@ -11,7 +12,8 @@ class Cart extends React.Component {
 
     return (
       <div className='tent-details'>
-        <Table parts={this.props.partInCart} deletePart={this.props.deletePart}/>
+        <Table parts={this.props.partInCart} deletePart={this.props.deletePart} />
+        <SendEmail className='send-email button' partsInCart={this.props.partsInCart} table={Table}/>
       </div>
     );
   }
