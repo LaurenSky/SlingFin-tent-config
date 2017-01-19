@@ -115,6 +115,10 @@ footer {
   margin: .6%;
 }
 
+.add-padding {
+  padding: 1%;
+}
+
 .add-padding-bottom {
   padding-bottom: 2%;
 }

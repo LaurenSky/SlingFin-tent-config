@@ -2,7 +2,7 @@ import React from 'react';
 let money = require("money-math");
 
 
-class TrailWeight extends React.Component {
+class PackWeight extends React.Component {
 
   convertToOunces(grams) {
     let ounces = money.mul(grams, "00.035274");
@@ -37,11 +37,11 @@ class TrailWeight extends React.Component {
 
     return (
       <div>
-        <h5>Minimum Trail Weight:</h5>
-        <h7>grams (___ oz)</h7>
+        <h5>Total Pack Weight:</h5>
+        <h7>{ totalGrams } grams ({ totalOunces } oz)</h7>
       </div>
     );
   }
 }
 
-export default TrailWeight;
+export default PackWeight;
