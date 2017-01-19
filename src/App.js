@@ -80,21 +80,23 @@ class App extends Component {
 
           <Row className='add-margin'>
             <Col xs={5} lg={5} className="img-carousol add-margin bkgrd add-padding-bottom">
-              <Row className='tent-details add-margin'>
+              <Row className='add-margin'>
                 <Row>
-                  <Col xs={6} md={6}>
+                  <Col xs={4} md={4} className='tent-details'>
                     <Cost partsInCart={this.state.partsInCart} />
                   </Col>
-                  <Col xs={6} md={6}>
+                  <Col xs={4} md={4} className='tent-details'>
                     <EnvironmentConditions partsInCart={this.state.partsInCart} />
                   </Col>
                 </Row>
-                <Col xs={6} md={6}>
-                  <TrailWeight partsInCart={this.state.partsInCart} />
-                </Col>
-                <Col xs={6} md={6}>
-                  <PackWeight partsInCart={this.state.partsInCart} />
-                </Col>
+                <Row className='tent-details'>
+                  <Col xs={6} md={6}>
+                    <TrailWeight partsInCart={this.state.partsInCart} />
+                  </Col>
+                  <Col xs={6} md={6}>
+                    <PackWeight partsInCart={this.state.partsInCart} />
+                  </Col>
+                </Row>
               </Row>
               <Row className='add-margin'>
                 <h4 className='configuration-title'>Your Configuration Details:</h4>
@@ -124,6 +126,7 @@ class App extends Component {
                 <p>Follow the steps below to add an remove parts and accessories to design a tent system that fits your life.</p>
               </div>
             </Col>
+
 
             <Col xs={6} lg={6} className='no-padding add-margin'>
               <AccordionPanelItems data={this.props.data} partStateUpdate={this.partStateUpdate.bind(this)} partsInCart={this.state.partsInCart}/>

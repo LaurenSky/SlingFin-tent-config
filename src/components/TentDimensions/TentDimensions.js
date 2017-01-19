@@ -13,9 +13,10 @@ class TentDimensions extends React.Component {
           backgroundColor: 'placeholder so i can set my own color'
         }
 
+
     return (
       <Accordion>
-        <Panel bsStyle={color} header='CrossBow2 Dimensions' eventKey='1'>
+        <Panel bsStyle='custom' header='CrossBow2 Dimensions' eventKey='1'>
           <div className='tent-details'>
             <ul>
               <li><h5>2 Person Tent</h5></li>

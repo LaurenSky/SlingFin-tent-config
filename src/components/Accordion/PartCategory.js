@@ -3,6 +3,9 @@ import './accordion.css';
 import { Row, Col, Panel } from 'react-bootstrap';
 import RecommendPart from './RecommendPart/RecommendPart';
 import PartButton from './PartButton';
+import Hover from './hover';
+
+// <img src={part.lineDrawing} className="part-image" alt="Part" />
 
 class PartCategory extends Component {
 
@@ -40,7 +43,7 @@ class PartCategory extends Component {
 
           <Row>
             <Col xs={4} md={4}>
-              <img src={part.lineDrawing} className="part-image" alt="Part"/>
+              <Hover lineDrawing={part.lineDrawing} className="part-image" alt="Part" />
             </Col>
 
             <Col xs={8} md={8}>
@@ -84,5 +87,6 @@ class PartCategory extends Component {
     );
   }
 }
+// <img src={part.lineDrawing} className="part-image" alt="Part"/>
 
 export default PartCategory;
