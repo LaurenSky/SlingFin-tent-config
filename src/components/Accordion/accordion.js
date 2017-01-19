@@ -1,6 +1,7 @@
 import React from 'react';
 import './accordion.css';
 import PartCategory from './PartCategory';
+import NumPoles from '../TentDetails/num-poles';
 
 import { Accordion, Panel } from 'react-bootstrap';
 
@@ -18,6 +19,7 @@ class AccordionTest extends React.Component {
           </Panel>
 
         <Panel bsStyle={color} header='(2) Poles' eventKey='2'>
+          <NumPoles part='Poles' partsInCart={this.props.partsInCart} />
           <PartCategory data={this.props.data} category='Poles' partStateUpdate={this.props.partStateUpdate} partInCart={this.props.partsInCart} />
         </Panel>
 

@@ -165,7 +165,7 @@ export default {
       description: ".....",
       price: '0.00',
       weight:'0.00',
-      lineDrawing:require('../images/poles/trekking-poles.png'),
+      lineDrawing:require('../images/line-drawings/sized-images/trekking-poles.png'),
       thumbnail:require('../images/poles/trekking-poles.png'),
       main:require('../images/poles/trekking-poles.png'),
       gallery1:'http://www.slingfin.com/img/products/800/1082_04.jpg',

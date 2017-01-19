@@ -16,23 +16,27 @@ class NumPoles extends React.Component {
 
     if ( partsInCart.includes('9') && partsInCart.includes('10') ) {
       console.log('return 3')
-      return <span className='normal'> 3</span>
+      return <div><h5># of Poles Selected: 3 </h5><h4 className='normal'>[ You have all of the poles you need ]</h4></div>
 
     } else if ( partsInCart.includes('9') && partsInCart.includes('11') ) {
       console.log('return 2')
-      return <span className='normal'> 2</span>
+      return <div><h5># of Poles Selected: 2 </h5><h4 className='normal'>[ You have all of the poles you need ]</h4></div>
 
     } else if ( partsInCart.includes('9') ) {
       console.log('return add a bow pole or use trekking-poles')
-      return <span className='warning'> You NEED to ADD a bow pole or use trekking-poles</span>
+      return <div><h5># of Poles Selected: 2 </h5><h4 className='warning'>[ You NEED to ADD a bow pole or use trekking-poles ]</h4></div>
 
-    } else if ( partsInCart.includes('10') || partsInCart.includes('11') ) {
+    } else if ( partsInCart.includes('10') ) {
       console.log('return add cross-poles')
-      return <span className='warning'> You NEED to ADD cross-poles</span>
+      return <div><h5># of Poles Selected: 1 </h5><h4 className='warning'>[ You NEED to ADD cross-poles ]</h4></div>
+
+    } else if ( partsInCart.includes('11') ) {
+      console.log('return add cross-poles')
+      return <div><h5># of Poles Selected: 0 </h5><h4 className='warning'>[ You NEED to ADD cross-poles ]</h4></div>
 
     } else {
       console.log('return add cross poles and a (bow pole / trekking poles)')
-      return <span className='warning'> You Need To ADD cross poles and a (bow pole / trekking poles)</span>
+      return <div><h5># of Poles Selected: 0 </h5><h4 className='warning'>[ You Need To ADD cross poles and a (bow pole / trekking poles ]</h4></div>
     }
   }
 
@@ -42,8 +46,7 @@ class NumPoles extends React.Component {
 
     return (
       <div>
-        <h3>Current # of Poles:</h3>
-        <h4># of Poles:  { this.countPoles(this.props.partsInCart) }</h4>
+        { this.countPoles(this.props.partsInCart) }
       </div>
     );
   }
