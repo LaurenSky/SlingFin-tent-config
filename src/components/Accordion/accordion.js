@@ -1,7 +1,6 @@
 import React from 'react';
-import '../accordion.css';
-import PartCategory from '../PartCategory';
-
+import './accordion.css';
+import PartCategory from './PartCategory';
 
 import { Accordion, Panel } from 'react-bootstrap';
 

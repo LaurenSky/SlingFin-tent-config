@@ -1,7 +1,20 @@
+.small-image {
+  width: 80%;
+}
+
+.large-image {
+  width: 120%;
+}
+
 .panel {
   background-color: #222;
   color: white
 }
+
+/*.btn-custom {
+  background-color: purple;
+  color: white;
+}*/
 
 .custom-panel {
   background-color: #222;
@@ -45,7 +58,6 @@
   padding:1%;
   background-color: white;
   color: #222;
-
 }
 
 .part-name {
