@@ -8,6 +8,10 @@
   height: 80px;
 }
 
+.SF-logo-main {
+  width: 20%;
+}
+
 .App-header {
   /*background-image: url('./images/one-up-bkgd-thin.jpg');*/
   background-image: url('./images/one-up-bkgnd.png');

@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 import './accordion.css';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Panel } from 'react-bootstrap';
 import RecommendPart from './RecommendPart/RecommendPart';
 import PartButton from './PartButton';
-
 
 class PartCategory extends Component {
 
@@ -77,12 +76,11 @@ class PartCategory extends Component {
     })
 
     return (
-      <ul className='part-list-accordion'>
-        <div className='accordion-header'>
-          <h4>{this.props.category}</h4>
-          {partList}
-        </div>
-      </ul>
+        <ul className='part-list-accordion'>
+          <div className='accordion-header'>
+            {partList}
+          </div>
+        </ul>
     );
   }
 }
