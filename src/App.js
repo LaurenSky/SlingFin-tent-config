@@ -16,7 +16,6 @@ import AccordionTest from './components/Accordion/old/accordion'
 
 import Footer from './components/Footer/Footer';
 
-import { Row, Col } from 'react-bootstrap';
 import { Accordion } from 'react-bootstrap';
 
 
