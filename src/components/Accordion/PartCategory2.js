@@ -1,12 +1,38 @@
 import React, {Component} from 'react';
 import './accordion.css';
-import { Row, Col, Panel } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import RecommendPart from './RecommendPart/RecommendPart';
 import PartButton from './PartButton';
 
+const styles = {
+  active: {
+    display: 'inherit'
+  },
+
+  inactive: {
+    display: 'none'
+  }
+};
+
 class PartCategory extends Component {
+  constructor() {
+    super();
+    this.state = {
+      active: false
+    };
+    this.toggle = this.toggle.bind(this);
+  }
+
+  toggle() {
+    console.log('>>>>>><<<<<<< IM IN TOGGLE FOR ACCORDION!!!!: ', this.state.active)
+    this.setState({
+      active:!this.state.active
+    });
+  }
+
 
   render () {
+    const stateStyle = this.state.active ? styles.active : styles.inactive;
 
     const categoryData = function(category, data) {
       if(category==='WebTruss') {
@@ -76,11 +102,12 @@ class PartCategory extends Component {
     })
 
     return (
-        <ul className='part-list-accordion'>
-          <div className='accordion-header'>
-            {partList}
-          </div>
-        </ul>
+      <ul className='part-list-accordion'>
+        <section className='accordion-header'>
+          <h4 onClick={this.toggle}>{this.props.category}</h4>
+          <article style={stateStyle}> {partList} </article>
+        </section>
+      </ul>
     );
   }
 }

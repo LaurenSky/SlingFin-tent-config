@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Row, Col } from 'react-bootstrap';
-
 import logo from './images/SF-logo-nature.png';
 import 'normalize.css';
 import './App.css';
@@ -17,7 +15,7 @@ import AccordionTest from './components/Accordion/old/accordion'
 import Footer from './components/Footer/Footer';
 
 import { Row, Col } from 'react-bootstrap';
-import { Accordion } from 'react-bootstrap';
+import { Accordion, Panel } from 'react-bootstrap';
 
 
 class App extends Component {
@@ -67,7 +65,7 @@ class App extends Component {
         <header className="App-header">
           <Row>
             <Col xs={12} md={8}>
-              <a className="slingfin" href="http://www.slingfin.com/store/Tents/treeline-tents" target="new"><img src={logo} className='SF-logo-main' alt="logo" /></a>
+              <a className="slingfin" href="http://www.slingfin.com/store/Tents/treeline-tents" target="new"><img src={logo} className="App-logo" alt="logo" /></a>
             </Col>
             <Col xs={12} md={4} className="page-title">
               <h2>SlingFin CrossBow2 Tent System Configurator</h2>
@@ -81,8 +79,35 @@ class App extends Component {
           </article>
 
           <Row>
+
             <Col xs={6} lg={4} className='no-padding'>
               <AccordionTest data={this.props.data} partStateUpdate={this.partStateUpdate.bind(this)} partsInCart={this.state.partsInCart}/>
+              <Accordion>
+                <Panel header='WebTruss' eventKey='1'>
+                  <PartCategory data={this.props.data} category='WebTruss' partStateUpdate={this.partStateUpdate.bind(this)} partInCart={this.state.partsInCart} />
+                </Panel>
+
+                <Panel header='Poles' eventKey='2'>
+                  <PartCategory data={this.props.data} category='Poles' partStateUpdate={this.partStateUpdate.bind(this)} partInCart={this.state.partsInCart} />
+                </Panel>
+
+                <Panel header='FootPrints' eventKey='3'>
+                  <PartCategory data={this.props.data} category='FootPrint' partStateUpdate={this.partStateUpdate.bind(this)} partInCart={this.state.partsInCart} />
+                </Panel>
+
+                <Panel header='FlySheets' eventKey='4'>
+                  <PartCategory data={this.props.data} category='Flysheet' partStateUpdate={this.partStateUpdate.bind(this)} partInCart={this.state.partsInCart} />
+                </Panel>
+
+                <Panel header='Inner Tent Bodies' eventKey='5'>
+                  <PartCategory data={this.props.data} category='InnerTentBodies' partStateUpdate={this.partStateUpdate.bind(this)} partInCart={this.state.partsInCart} />
+                </Panel>
+
+                <Panel header='Accessories' eventKey='6'>
+                  <PartCategory data={this.props.data} category='Accessories' partStateUpdate={this.partStateUpdate.bind(this)} partInCart={this.state.partsInCart} />
+                </Panel>
+
+            </Accordion>
             </Col>
             <Col xs={5} lg={6} className="img-carousol bkgrd">
               <h4 className='configuration-title'>Your Configuration Details:</h4>

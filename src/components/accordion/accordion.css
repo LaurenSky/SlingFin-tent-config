@@ -1,17 +1,26 @@
-.accordion-header {
+.panel {
   background-color: #222;
-  border: black 2px solid;
-  color: white;
+  color: white
+}
+
+.custom-panel {
+  background-color: #222;
+  color: white
+}
+
+.accordion-header {
+  /*color: white;*/
   padding: 0 0 0 1%;
-  margin-top: 3%;
+  margin: 2% 0;
 }
 
 .accordion-body {
   border: black 2px solid;
-  padding:1%;
-  margin: 1% 1% 1% 1%;
+  padding:2%;
+  margin-bottom: 2%;
   background-color: white;
   color: #222;
+  border-radius: 5px;
 }
 
 .part-list-accordion {
