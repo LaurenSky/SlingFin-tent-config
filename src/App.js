@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
 import logo from './images/SF-logo-nature.png';
-import 'normalize.css';
+// import 'normalize.css';
 import './App.css';
+import { Row, Col } from 'react-bootstrap';
 
 import PartCategory from './components/Accordion/PartCategory';
 import ImageCarousol from './components/Carousol/carousol';
 import EnvironmentConditions from './components/Conditions/conditions';
-import TentDetails from './components/TentDetails/TentDetails';
 import TentDimensions from './components/TentDimensions/TentDimensions';
 import Cart from './components/Cart/cart';
-
-import AccordionTest from './components/Accordion/old/accordion'
-
+import TrailWeight from './components/TentDetails/trail-weight';
+import NumPoles from './components/TentDetails/num-poles';
+import Cost from './components/TentDetails/cost';
+import AccordionPanelItems from './components/Accordion/accordion'
 import Footer from './components/Footer/Footer';
 
-import { Row, Col } from 'react-bootstrap';
-import { Accordion } from 'react-bootstrap';
 
 
 class App extends Component {
@@ -78,35 +77,47 @@ class App extends Component {
             <p>Design the perfect tent system to fit your needs.</p>
           </article>
 
-          <Row>
-            <Col xs={6} lg={4} className='no-padding'>
-              <AccordionTest data={this.props.data} partStateUpdate={this.partStateUpdate.bind(this)} partsInCart={this.state.partsInCart}/>
-            </Col>
-            <Col xs={5} lg={6} className="img-carousol bkgrd">
-              <h4 className='configuration-title'>Your Configuration Details:</h4>
-              <ImageCarousol partsInCart={this.state.partsInCart} data={this.props.data}/>
-                <Row>
-                  <Col xs={4} md={4} className='bkgrd'>
-                    <EnvironmentConditions partsInCart={this.state.partsInCart} />
-                  </Col>
-                  <Col xs={12} md={12} className='bkgrd'>
-                    <TentDetails partsInCart={this.state.partsInCart}/>
-                  </Col>
-                </Row>
+          <Row className='add-margin'>
+            <Col xs={5} lg={5} className="img-carousol add-margin bkgrd add-padding-bottom">
+              <Row className='tent-details add-margin'>
+                <Col xs={2} md={2}>
+                  <Cost partsInCart={this.state.partsInCart} />
+                </Col>
+                <Col xs={5} md={5}>
+                  <TrailWeight partsInCart={this.state.partsInCart} />
+                </Col>
+                <Col xs={4} md={4}>
+                  <EnvironmentConditions partsInCart={this.state.partsInCart} />
+                </Col>
+              </Row>
+              <Row className='add-margin'>
+                <h4 className='configuration-title'>Your Configuration Details:</h4>
+                <ImageCarousol partsInCart={this.state.partsInCart} data={this.props.data}/>
+              </Row>
+
+              <Row className='tent-details add-margin'>
+                <Col xs={12} md={12}>
+                  <NumPoles partsInCart={this.state.partsInCart} />
+                </Col>
+              </Row>
+              <Row className="parts-selected bkgrd add-margin">
+                  <h3 className='cart-header'>List of Items selected</h3>
+                  <Cart partInCart={this.state.partsInCart} deletePart={this.deletePart.bind(this)} />
+                  <h3 className='cart-header'>List of Accessories selected</h3>
+              </Row>
+              <Row className="add-margin">
+                <Col xs={12} md={12}>
+                  <TentDimensions />
+                </Col>
+              </Row>
             </Col>
 
-            <Col xs={6} md={5} className="parts-selected bkgrd">
-              <h3 className='cart-header'>List of Items selected</h3>
-              <Cart partInCart={this.state.partsInCart} deletePart={this.deletePart.bind(this)} />
-              <h3 className='cart-header'>List of Accessories selected</h3>
-            </Col>
-
-            <Col xs={6} md={5} className="bkgrd">
-              <TentDimensions/>
-            </Col>
-
-            <Col xs={6} md={5} className="alert-box bkgrd">
+            <Col xs={6} md={5} className="alert-box bkgrd add-margin">
               <h4>Alert Box: GOES HERE</h4>
+            </Col>
+
+            <Col xs={6} lg={6} className='no-padding add-margin'>
+              <AccordionPanelItems data={this.props.data} partStateUpdate={this.partStateUpdate.bind(this)} partsInCart={this.state.partsInCart}/>
             </Col>
           </Row>
 
@@ -120,5 +131,6 @@ class App extends Component {
     );
   }
 }
+// <Row><TentDetails partsInCart={this.state.partsInCart}/></Row>
 
 export default App;

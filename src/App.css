@@ -59,8 +59,9 @@ footer {
   border: #222 2px solid;
   padding-left: 1%;
   background-color: white;
+  border-radius: 5px;
+  color: #222;
 }
-
 
 /*BUGS, SNOW, RAIN*/
 .snowflake {
@@ -82,8 +83,7 @@ footer {
 
 .bkgrd {
   background-color: #222;
-  padding: 1%;
-  margin: 1%;
+  border-radius: 5px;
 }
 
 .conditions-protection {
@@ -108,8 +108,15 @@ footer {
 }
 
 .no-padding {
-  margin-left: 3%;
-  padding-left: 1%;
+  padding: 0%;
+}
+
+.add-margin {
+  margin: .6%;
+}
+
+.add-padding-bottom {
+  padding-bottom: 2%;
 }
 
 .page-title {
