@@ -4,7 +4,6 @@ import { Row, Col } from 'react-bootstrap';
 import logo from './images/SF-logo-nature.png';
 // import 'normalize.css';
 import './App.css';
-import { Row, Col } from 'react-bootstrap';
 
 import PartCategory from './components/Accordion/PartCategory';
 import ImageCarousol from './components/Carousol/carousol';
@@ -109,7 +108,7 @@ class App extends Component {
                   <Cart partInCart={this.state.partsInCart} deletePart={this.deletePart.bind(this)} />
                   <h3 className='cart-header'>List of Accessories selected</h3>
               </Row>
-              
+
               <Row className="add-margin">
                 <Col xs={12} md={12}>
                   <TentDimensions />
