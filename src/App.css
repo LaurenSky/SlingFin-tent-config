@@ -87,7 +87,6 @@ footer {
 }
 
 .conditions-protection {
-  border: #222 2px solid;
   text-align: center;
   background-color: white;
 }
@@ -117,6 +116,10 @@ footer {
 
 .add-padding {
   padding: 1%;
+}
+
+.center-text {
+  text-align: center;
 }
 
 .add-padding-bottom {
