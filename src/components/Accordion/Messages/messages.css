@@ -1,0 +1,19 @@
+.warning {
+  color: orangered;
+  text-align: center;
+}
+
+.info {
+  color: black;
+  text-align: center;
+}
+
+.go-next-step {
+  color: white;
+  text-align: center;
+}
+
+.normal {
+  color: white;
+  text-align: center;
+}

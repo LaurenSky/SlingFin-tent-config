@@ -12,7 +12,6 @@ import TentDimensions from './components/TentDimensions/TentDimensions';
 import Cart from './components/Cart/cart';
 import TrailWeight from './components/TentDetails/trail-weight';
 import PackWeight from './components/TentDetails/pack-weight';
-import NumPoles from './components/TentDetails/num-poles';
 import Cost from './components/TentDetails/cost';
 import AccordionPanelItems from './components/Accordion/accordion'
 import Footer from './components/Footer/Footer';
@@ -82,7 +81,7 @@ class App extends Component {
             <Col xs={5} lg={5} className="img-carousol add-margin bkgrd add-padding-bottom">
               <Row className='add-margin'>
                 <Row>
-                  <Col xs={4} md={4} className='tent-details'>
+                  <Col xs={4} md={4} className='tent-details center-text'>
                     <Cost partsInCart={this.state.partsInCart} />
                   </Col>
                   <Col xs={4} md={4} className='tent-details'>
