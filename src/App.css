@@ -63,6 +63,19 @@ footer {
   color: #222;
 }
 
+.options {
+  border: white 2px solid;
+  padding: 2%;
+  /*background-color: white;*/
+  border-radius: 5px;
+  color: white;
+}
+
+.go {
+  font-size: 140%;
+  margin-top: 2%;
+}
+
 /*BUGS, SNOW, RAIN*/
 .snowflake {
   color: #749bdb;
@@ -126,6 +139,10 @@ footer {
 /*.add-margin2 {
   margin: 1%;
 }*/
+
+.add-margin3 {
+  margin: 2%;
+}
 
 .add-padding {
   padding: 1%;

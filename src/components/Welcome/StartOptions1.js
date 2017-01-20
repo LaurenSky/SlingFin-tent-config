@@ -69,8 +69,8 @@ class StartOptions extends Component {
         {customizeButton}
         {options}
         <section style={showMeStyle}>
-
-          <AccordionPanelItems data={this.props.data} partStateUpdate={this.props.partStateUpdate} partsInCart={this.props.partsInCart}/>
+          {instructions}
+          <AccordionPanelItems className='tent-details' data={this.props.data} partStateUpdate={this.props.partStateUpdate} partsInCart={this.props.partsInCart}/>
         </section>
       </div>
     );

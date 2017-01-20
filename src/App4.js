@@ -157,9 +157,13 @@ class App extends Component {
               </div>
             </Col>
 
-            <Col xs={6} md={6} className="bkgrd add-margin add-padding">
+            <Col xs={6} md={6} className="alert-box bkgrd add-margin add-padding">
               <h5 className='configuration-title'>How do you want to start?</h5>
-              <StartOptions data={this.props.data} partStateConfig={this.partStateConfig.bind(this)} partStateUpdate={this.partStateUpdate.bind(this)} partsInCart={this.state.partsInCart}/>
+              <StartOptions data={this.props.data} partStateConfig={this.partStateConfig.bind(this)} />
+            </Col>
+
+            <Col xs={6} lg={6} className='no-padding add-margin'>
+              <AccordionPanelItems data={this.props.data} partStateUpdate={this.partStateUpdate.bind(this)} partsInCart={this.state.partsInCart}/>
             </Col>
           </Row>
 
