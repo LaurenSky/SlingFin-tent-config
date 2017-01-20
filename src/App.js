@@ -14,7 +14,6 @@ import PackWeight from './components/TentDetails/pack-weight';
 import Cost from './components/TentDetails/cost';
 import AccordionPanelItems from './components/Accordion/accordion'
 import Footer from './components/Footer/Footer';
-
 import PreConfigBackpacking from './components/PreConfig/PreConfigBackpacking';
 import PreConfigMountain from './components/PreConfig/PreConfigMountain';
 import PreConfigStormPack from './components/PreConfig/PreConfigStormPack';
