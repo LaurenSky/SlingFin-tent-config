@@ -19,6 +19,9 @@ import PreConfigMountain from './components/PreConfig/PreConfigMountain';
 import PreConfigStormPack from './components/PreConfig/PreConfigStormPack';
 import ClearButton from './components/PreConfig/Clear';
 
+import StartOptions from './components/Welcome/StartOptions';
+
+
 
 
 class App extends Component {
@@ -156,10 +159,10 @@ class App extends Component {
 
             <Col xs={6} md={6} className="alert-box bkgrd add-margin add-padding">
               <h5 className='configuration-title'>Start with a Preconfiguration</h5>
-              <PreConfigBackpacking data={this.props.data} partStateConfig={this.partStateConfig.bind(this)} />
-              <PreConfigMountain data={this.props.data} partStateConfig={this.partStateConfig.bind(this)} />
-              <PreConfigStormPack data={this.props.data} partStateConfig={this.partStateConfig.bind(this)} />
-              <ClearButton data={this.props.data} partStateConfig={this.partStateConfig.bind(this)} />
+              <StartOptions data={this.props.data} partStateConfig={this.partStateConfig.bind(this)} />
+
+
+              <h5 className='configuration-title'>Or Follow the steps below</h5>
             </Col>
 
             <Col xs={6} lg={6} className='no-padding add-margin'>
@@ -177,6 +180,9 @@ class App extends Component {
     );
   }
 }
-// <Row><TentDetails partsInCart={this.state.partsInCart}/></Row>
 
 export default App;
+// <PreConfigBackpacking data={this.props.data} partStateConfig={this.partStateConfig.bind(this)} />
+// <PreConfigMountain data={this.props.data} partStateConfig={this.partStateConfig.bind(this)} />
+// <PreConfigStormPack data={this.props.data} partStateConfig={this.partStateConfig.bind(this)} />
+// <ClearButton data={this.props.data} partStateConfig={this.partStateConfig.bind(this)} />

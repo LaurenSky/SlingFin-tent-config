@@ -10,8 +10,8 @@ class PartButton extends Component {
     this.state = {
       // partInCart: this.currentlyInPartInCart(props.part.id)
       partInCart: props.partInCart
-      }
     }
+  }
 
   // setStateFromProps(parts, partId) {
   //   // if (parts.includes(partId)) {

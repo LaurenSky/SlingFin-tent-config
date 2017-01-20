@@ -42,7 +42,7 @@ class PreConfigButton extends Component {
     let bsStyle='success'
     let buttonText = this.props.name
 
-    const partButton = <Button onClick={this._handleClick.bind(this)} bsStyle={bsStyle}>{buttonText} </Button>
+    const partButton = <Button className='add-margin2' onClick={this._handleClick.bind(this)} bsStyle={bsStyle}>{buttonText} </Button>
 
     return (
       partButton
