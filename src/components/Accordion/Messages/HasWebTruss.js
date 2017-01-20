@@ -13,10 +13,10 @@ class HasWebTruss extends React.Component {
     );
 
     if ( partsInCart.includes('1') ) {
-      return <h4 className='normal'>[ You have a WebTruss in your configuration, click Poles to go to the next section. ]</h4>
+      return <div><h4 className='normal'> You have a WebTruss in your configuration, click Poles to go to the next section.</h4><h4 className='go-next-step'>Click Poles to go to the next section. </h4></div>
 
     } else {
-      return <h4 className='warning'>[ You Need to Add a WebTruss to your configuration. ]</h4>
+      return <h4 className='warning'>You Need to Add a WebTruss to your configuration.</h4>
     }
   }
 

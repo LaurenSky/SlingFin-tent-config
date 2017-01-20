@@ -17,11 +17,11 @@ class NumPoles extends React.Component {
 
     if ( partsInCart.includes('9') && partsInCart.includes('10') ) {
       console.log('return 3')
-      return <div><h5># of Poles Selected: 3 </h5><h4 className='normal'>[ You have all of the poles you need. Click on Flysheets to go to the next section. ]</h4></div>
+      return <div><h5 className=''># of Poles Selected: 3 </h5><h4 className='normal'>You have all of the poles you need.</h4><h4 className='go-next-step'>Click on Flysheets to go to the next section.</h4></div>
 
     } else if ( partsInCart.includes('9') && partsInCart.includes('11') ) {
       console.log('return 2')
-      return <div><h5># of Poles Selected: 2 </h5><h4 className='normal'>[ You have all of the poles you need. Click on Flysheets to go to the next section. ]</h4></div>
+      return <div><h5># of Poles Selected: 2 </h5><h4 className='normal'>You have all of the poles you need.</h4><h4 className='go-next-step'>Click on Flysheets to go to the next section.</h4></div>
 
     } else if ( partsInCart.includes('9') ) {
       console.log('return add a bow pole or use trekking-poles')
