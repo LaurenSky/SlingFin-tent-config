@@ -188,20 +188,20 @@ export default {
       gallery1:require('../images/stakes/stakes.jpg'),
       gallery2:require('../images/stakes/stakesrow.jpg'),
       recommend: null
+    },
+    {
+      id: 13,
+      category: "Accessories",
+      name: "Stake (qty: 1)",
+      description: ".....",
+      price: '1.00',
+      weight: '111111.00',
+      lineDrawing:require('../images/stakes/stakefront.jpg'),
+      thumbnail:require('../images/stakes/stakefront.jpg'),
+      main:require('../images/stakes/stakefront.jpg'),
+      gallery1:require('../images/stakes/stakeback.jpg'),
+      gallery2:require('../images/stakes/stakesrow.jpg'),
+      recommend: null
     }
-    // {
-    //   id: 13,
-    //   category: "Accessories",
-    //   name: "Stake (qty: 1)",
-    //   description: ".....",
-    //   price: '1.00',
-    //   weight: '111111.00',
-    //   lineDrawing:require('../images/stakes/stakefront.jpg'),
-    //   thumbnail:require('../images/stakes/stakefront.jpg'),
-    //   main:require('../images/stakes/stakefront.jpg'),
-    //   gallery1:require('../images/stakes/stakeback.jpg'),
-    //   gallery2:require('../images/stakes/stakesrow.jpg'),
-    //   recommend: null
-    // }
   ]
 }
