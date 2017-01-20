@@ -76,8 +76,17 @@ footer {
   color: brown;
 }
 
+.decrease-opacity {
+  opacity: 0.1;
+}
+
 .increase-icon {
-  font-size: 180%;
+  font-size: 250%;
+  padding: 0 5% 1% 5%;
+}
+
+.increase-footer-icon {
+  font-size: 210%;
   padding: 0 1% 1% 1%;
 }
 

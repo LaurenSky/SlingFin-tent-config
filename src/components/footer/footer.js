@@ -24,19 +24,19 @@ const Footer = () =>
   <Row className='credit'>
     <Col xs={7} md={10}>
       <h5>
-        ©2017 SlingFin, Inc.
+        © 2017 SlingFin, Inc.
         {' '}
         From the Mountain to your trailhead.
       </h5>
     </Col>
     <Col xs={4} md={2} className="social-media-icons">
-        <a href='http://www.slingfin.com/contact.html' target="new"><FontAwesome className="fa fa-envelope increase-icon" name='mail' aria-hidden="true" /></a>
+        <a href='http://www.slingfin.com/contact.html' target="new"><FontAwesome className="fa fa-envelope increase-footer-icon" name='mail' aria-hidden="true" /></a>
 
-        <a className="twitter" href="https://twitter.com/slingfin" target="new"><FontAwesome className="fa fa-twitter-square increase-icon" name='twitter' aria-hidden="true" /></a>
+        <a className="twitter" href="https://twitter.com/slingfin" target="new"><FontAwesome className="fa fa-twitter-square increase-footer-icon" name='twitter' aria-hidden="true" /></a>
 
-        <a className="facebook" href="http://www.facebook.com/slingfin" target="new"><FontAwesome className="fa fa-facebook-square increase-icon" name='facebook' aria-hidden="true" /></a>
+        <a className="facebook" href="http://www.facebook.com/slingfin" target="new"><FontAwesome className="fa fa-facebook-square increase-footer-icon" name='facebook' aria-hidden="true" /></a>
 
-        <a className="instagram" href="http://www.instagram.com/slingfin" target="new"><FontAwesome className="fa fa-instagram increase-icon" name='instagram' aria-hidden="true" /></a>
+        <a className="instagram" href="http://www.instagram.com/slingfin" target="new"><FontAwesome className="fa fa-instagram increase-footer-icon" name='instagram' aria-hidden="true" /></a>
     </Col>
   </Row>
 

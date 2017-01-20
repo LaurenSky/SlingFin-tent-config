@@ -1,0 +1,28 @@
+import React, {Component} from 'react';
+// import './accordion.css';
+import { Button } from 'react-bootstrap';
+
+
+class PreConfigBackpacking extends Component {
+
+  _handleClick() {
+    const parts = false
+
+    console.log('>>>>>> PRE CONFIG: ', parts)
+    this.props.partStateConfig(parts)
+  }
+
+  render () {
+
+    let buttonText = 'Clear'
+    let bsStyle='danger'
+
+    const partButton = <Button onClick={this._handleClick.bind(this)} bsStyle={bsStyle}>{buttonText} </Button>
+
+    return (
+      partButton
+    );
+  }
+}
+
+export default PreConfigBackpacking;

@@ -9,10 +9,6 @@ import '../Accordion/accordion.css';
 class TentDimensions extends React.Component {
 
   render () {
-    let color = {
-          backgroundColor: 'placeholder so i can set my own color'
-        }
-
 
     return (
       <Accordion>

@@ -18,8 +18,7 @@ class EnvironmentConditions extends React.Component {
       // console.log("^^^^^^^^ I'm showing a snowflake")
       return <FontAwesome className="fa fa-snowflake-o increase-icon snowflake" name='snowflake' aria-hidden="true" />
     } else {
-      console.log(false)
-      return false
+      return <FontAwesome className="fa fa-snowflake-o increase-icon snowflake decrease-opacity" name='snowflake' aria-hidden="true" />
     }
   }
 
@@ -39,7 +38,7 @@ class EnvironmentConditions extends React.Component {
       return <FontAwesome className="fa fa-tint increase-icon raindrop" name='raindrop' aria-hidden="true" />
     } else {
       console.log(false)
-      return false
+      return <FontAwesome className="fa fa-tint increase-icon raindrop decrease-opacity" name='raindrop' aria-hidden="true" />
     }
   }
 
@@ -58,7 +57,7 @@ class EnvironmentConditions extends React.Component {
       return <FontAwesome className="fa fa-bug increase-icon bugs" name='bugs' aria-hidden="true" />
     } else {
       console.log(false)
-      return false
+      return <FontAwesome className="fa fa-bug increase-icon bugs decrease-opacity" name='bugs' aria-hidden="true" />
     }
   }
 

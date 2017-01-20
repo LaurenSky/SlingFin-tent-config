@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Mailto from './Mailto'
 
-class SendEmail extends React.Component {
+class SendEmail extends Component {
 
   render() {
     console.log('IN EMAIL RENDER: ', this.props.body)
