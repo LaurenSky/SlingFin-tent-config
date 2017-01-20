@@ -22,12 +22,11 @@ class Item extends React.Component {
     render() {
       let image = this.props.lineDrawing
 
-      const { item, i } = this.props;
-        return (
-            <div onMouseOver={this.mouseOver.bind(this)} onMouseOut={this.mouseOut.bind(this)}>
-              {(this.state.hover) ? (<img className='large-image' src={image} alt='logo'/>) : (<img className='small-image' src={image}/>) }
-            </div>
-        )
+      return (
+        <div onMouseOver={this.mouseOver.bind(this)} onMouseOut={this.mouseOut.bind(this)}>
+          {(this.state.hover) ? (<img className='large-image' src={image} alt='logo'/>) : (<img className='small-image' src={image} alt='logo'/>) }
+        </div>
+      )
     }
 }
 

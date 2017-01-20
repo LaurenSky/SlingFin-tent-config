@@ -85,6 +85,11 @@ footer {
   padding: 0 5% 1% 5%;
 }
 
+.increase-footer-icon {
+  font-size: 210%;
+  padding: 0 1% 1% 1%;
+}
+
 .bkgrd {
   background-color: #222;
   border-radius: 5px;

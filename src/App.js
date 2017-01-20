@@ -4,7 +4,6 @@ import logo from './images/SF-logo-nature.png';
 import './App.css';
 import { Row, Col } from 'react-bootstrap';
 
-import PartCategory from './components/Accordion/PartCategory';
 import ImageCarousol from './components/Carousol/carousol';
 import EnvironmentConditions from './components/Conditions/conditions';
 import TentDimensions from './components/TentDimensions/TentDimensions';
@@ -15,6 +14,11 @@ import Cost from './components/TentDetails/cost';
 import AccordionPanelItems from './components/Accordion/accordion'
 import Footer from './components/Footer/Footer';
 
+import PreConfigBackpacking from './components/PreConfig/PreConfigBackpacking';
+import PreConfigMountain from './components/PreConfig/PreConfigMountain';
+import PreConfigStormPack from './components/PreConfig/PreConfigStormPack';
+import ClearButton from './components/PreConfig/Clear';
+
 
 
 class App extends Component {
@@ -23,6 +27,31 @@ class App extends Component {
     super(props)
     this.state = {
       partsInCart: false
+    }
+
+    this.partStateConfig.bind(this)
+  }
+
+  partStateConfig(parts) {
+    console.log('$$$ Im in partstateconfig')
+    if (parts === false) {
+      this.setState({
+        partsInCart: false
+      });
+    } else {
+      let newState = {}; //Duplicate state.
+      Object.entries(parts).forEach(
+        ([key, value]) => {
+
+          newState[key] = {
+            value: true,
+            partInfo: value
+          }
+        }
+      );
+      this.setState({
+        partsInCart: newState
+      });
     }
   }
 
@@ -39,7 +68,6 @@ class App extends Component {
     } else {
       this.deletePart(part.id)
     }
-
   }
 
   deletePart(partId) {
@@ -87,13 +115,8 @@ class App extends Component {
                   <Col xs={4} md={4} className='tent-details'>
                     <EnvironmentConditions partsInCart={this.state.partsInCart} />
                   </Col>
-                </Row>
-                <Row className='tent-details'>
-                  <Col xs={6} md={6}>
+                  <Col xs={4} md={4} className='tent-details'>
                     <TrailWeight partsInCart={this.state.partsInCart} />
-                  </Col>
-                  <Col xs={6} md={6}>
-                    <PackWeight partsInCart={this.state.partsInCart} />
                   </Col>
                 </Row>
               </Row>
@@ -108,6 +131,15 @@ class App extends Component {
                   <h3 className='cart-header'>List of Accessories selected</h3>
               </Row>
 
+              <Row className='tent-details'>
+                <Col xs={6} md={6}>
+                  <TrailWeight partsInCart={this.state.partsInCart} />
+                </Col>
+                <Col xs={6} md={6}>
+                  <PackWeight partsInCart={this.state.partsInCart} />
+                </Col>
+              </Row>
+
               <Row className="add-margin">
                 <Col xs={12} md={12}>
                   <TentDimensions />
@@ -117,11 +149,18 @@ class App extends Component {
 
             <Col xs={6} md={6} className="alert-box bkgrd add-margin add-padding">
               <div className='tent-details'>
-                <h4>Welcome to the SlingFin CrossBow2 Tent Configurator.</h4>
-                <p>Follow the steps below to add an remove parts and accessories to design a tent system that fits your life.</p>
+                  <h4>Welcome to the SlingFin CrossBow2 Tent Configurator.</h4>
+                  <p>Start with a pre-configuration or follow the steps below starting at (1)WebTruss to add and remove parts to design a tent system that fits your life and adventures.</p>
               </div>
             </Col>
 
+            <Col xs={6} md={6} className="alert-box bkgrd add-margin add-padding">
+              <h5 className='configuration-title'>Start with a Preconfiguration</h5>
+              <PreConfigBackpacking data={this.props.data} partStateConfig={this.partStateConfig.bind(this)} />
+              <PreConfigMountain data={this.props.data} partStateConfig={this.partStateConfig.bind(this)} />
+              <PreConfigStormPack data={this.props.data} partStateConfig={this.partStateConfig.bind(this)} />
+              <ClearButton data={this.props.data} partStateConfig={this.partStateConfig.bind(this)} />
+            </Col>
 
             <Col xs={6} lg={6} className='no-padding add-margin'>
               <AccordionPanelItems data={this.props.data} partStateUpdate={this.partStateUpdate.bind(this)} partsInCart={this.state.partsInCart}/>
