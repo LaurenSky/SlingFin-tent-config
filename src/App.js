@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import logo from './images/SF-logo-nature.png';
-// import 'normalize.css';
 import './App.css';
 import { Row, Col } from 'react-bootstrap';
 
@@ -11,13 +10,7 @@ import Cart from './components/Cart/cart';
 import TrailWeight from './components/TentDetails/trail-weight';
 import PackWeight from './components/TentDetails/pack-weight';
 import Cost from './components/TentDetails/cost';
-import AccordionPanelItems from './components/Accordion/accordion'
 import Footer from './components/Footer/Footer';
-
-import PreConfigBackpacking from './components/PreConfig/PreConfigBackpacking';
-import PreConfigMountain from './components/PreConfig/PreConfigMountain';
-import PreConfigStormPack from './components/PreConfig/PreConfigStormPack';
-import ClearButton from './components/PreConfig/Clear';
 
 import StartOptions from './components/Welcome/StartOptions';
 
@@ -158,7 +151,6 @@ class App extends Component {
             </Col>
 
             <Col xs={6} md={6} className="bkgrd add-margin add-padding">
-              <h5 className='configuration-title'>How do you want to start?</h5>
               <StartOptions data={this.props.data} partStateConfig={this.partStateConfig.bind(this)} partStateUpdate={this.partStateUpdate.bind(this)} partsInCart={this.state.partsInCart}/>
             </Col>
           </Row>

@@ -21,7 +21,7 @@ class PreConfigButton extends Component {
   render () {
 
     let buttonText = 'lightweight StormPack'
-    let bsStyle='success'
+    let bsStyle='info'
 
     const partButton = <Button className='add-margin2' onClick={this._handleClick.bind(this)} bsStyle={bsStyle}>{buttonText} </Button>
 

@@ -14,19 +14,21 @@ class Mailto extends React.Component {
 
   createMailLink(email, headers) {
     // let link = 'mailto:' + email + '?subject=Tent Configurator Order&body=';
-    let link = 'mailto:' + email + '?subject=Tent Configurator Order&body=';
-    link += 'From: ' + '%0D%0A'
-    link += '(Your Name)' + '%0D%0A'
-    link += '(Your Phone #)' + '%0D%0A' + '%0D%0A'
+    // link += 'From: ' + '%0D%0A'
+    // link += '(Your Name)' + '%0D%0A'
+    // link += '(Your Phone #)' + '%0D%0A' + '%0D%0A'
+    //
+    // link += 'To: ' + '%0D%0A'
+    // link += 'SlingFin' + '%0D%0A'
+    // link += '1355 Fourth Street, Suite C' + '%0D%0A'
+    // link += 'Berkeley CA 94710' + '%0D%0A'
+    // link += 'SlingFin.com' + '%0D%0A' + '%0D%0A' + '%0D%0A'
+    //
+    // link += 'SlingFin Order Form:' + '%0D%0A'
+    // link += '(Send Order Request of the following Items from your cart) ' + '%0D%0A' + '%0D%0A'
 
-    link += 'To: ' + '%0D%0A'
-    link += 'SlingFin' + '%0D%0A'
-    link += '1355 Fourth Street, Suite C' + '%0D%0A'
-    link += 'Berkeley CA 94710' + '%0D%0A'
-    link += 'SlingFin.com' + '%0D%0A' + '%0D%0A' + '%0D%0A'
-
-    link += 'SlingFin Order Form:' + '%0D%0A'
-    link += '(Send Order Request of the following Items from your cart) ' + '%0D%0A' + '%0D%0A'
+    
+    let link = 'mailto:' + email + '?subject=Tent Configurator Order&body=From:%0D%0A(Your Name)%0D%0A(Your Phone #)%0D%0A%0D%0ATo:%0D%0ASlingFin%0D%0A1355 Fourth Street, Suite C%0D%0ABerkeley CA 94710%0D%0ASlingFin.com%0D%0A%0D%0A%0D%0ASlingFin Order Form:%0D%0A(Send Order Request of the following Items from your cart) %0D%0A%0D%0A';
 
 
     for (let i = 0 ; i < headers.body.length; i++) {

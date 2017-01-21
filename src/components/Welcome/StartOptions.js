@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import '../../App.css';
 import { Button } from 'react-bootstrap';
-let FontAwesome = require('react-fontawesome');
 
 import AccordionPanelItems from '../Accordion/accordion'
 import PreConfigOptions from './PreConfigOptions';
@@ -23,31 +22,30 @@ class StartOptions extends Component {
       active: false,
       show: false
     };
-    this.setTrue = this.setTrue.bind(this);
-    this.setFalse = this.setFalse.bind(this);
+
+    this.clearPartsInCart = this.clearPartsInCart.bind(this);
   }
 
-  setTrue() {
+  clearPartsInCart() {
+    const parts = false
+    this.props.partStateConfig(parts)
+
+  }
+
+  preConfigHandleClick() {
     console.log('Im in set true')
     this.setState({
       active: true,
-      show: false
+      show: true
     })
   }
 
-  setFalse() {
+  customizeHandleClick() {
     this.setState({
       active: false,
       show: true
     });
-  }
-
-  preConfigHandleClick() {
-    this.setTrue()
-  }
-
-  customizeHandleClick() {
-    this.setFalse()
+    this.clearPartsInCart()
   }
 
   render () {
@@ -61,15 +59,15 @@ class StartOptions extends Component {
 
     const options = <div style={stateStyle}><PreConfigOptions data={this.props.data} partStateConfig={this.props.partStateConfig} /></div>
 
-    const instructions = <div style={showMeStyle} className='go add-padding'><FontAwesome className="fa fa-long-arrow-right" name='go-arrow' aria-hidden="true" /> Go to Next Step: (1)WebTruss.</div>
-
     return (
       <div>
-        {preConfigButton}
-        {customizeButton}
+        <section className='initial-options-buttons'>
+          <h4 className='configuration-title'>How would you like to start?</h4>
+          {preConfigButton}
+          {customizeButton}
+        </section>
         {options}
-        <section style={showMeStyle}>
-
+        <section className='accordion' style={showMeStyle}>
           <AccordionPanelItems data={this.props.data} partStateUpdate={this.props.partStateUpdate} partsInCart={this.props.partsInCart}/>
         </section>
       </div>

@@ -61,7 +61,7 @@ class StartOptions extends Component {
 
     const options = <div style={stateStyle}><PreConfigOptions data={this.props.data} partStateConfig={this.props.partStateConfig} /></div>
 
-    const instructions = <div style={showMeStyle} className='go add-padding'><FontAwesome className="fa fa-long-arrow-right" name='go-arrow' aria-hidden="true" /> Go to Next Step: (1)WebTruss.</div>
+    // const instructions = <div style={showMeStyle} className='go add-padding'><FontAwesome className="fa fa-long-arrow-right" name='go-arrow' aria-hidden="true" /> Go to Next Step: (1)WebTruss.</div>
 
     return (
       <div>
@@ -69,7 +69,6 @@ class StartOptions extends Component {
         {customizeButton}
         {options}
         <section style={showMeStyle}>
-          {instructions}
           <AccordionPanelItems className='tent-details' data={this.props.data} partStateUpdate={this.props.partStateUpdate} partsInCart={this.props.partsInCart}/>
         </section>
       </div>

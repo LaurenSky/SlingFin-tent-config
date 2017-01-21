@@ -21,9 +21,9 @@ class PreConfigMountain extends Component {
   render () {
 
     let buttonText = 'All Season Mountain'
-    let bsStyle='success'
+    let bsStyle='info'
 
-    const partButton = <Button className='add-margin2' onClick={this._handleClick.bind(this)} bsStyle={bsStyle}>{buttonText} </Button>
+    const partButton = <Button className='add-margin2 ' onClick={this._handleClick.bind(this)} bsStyle={bsStyle}>{buttonText} </Button>
 
     return (
       partButton

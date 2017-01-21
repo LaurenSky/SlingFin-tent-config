@@ -21,7 +21,7 @@ class PreConfigBackpacking extends Component {
   render () {
 
     let buttonText = '3 Season Backpacking'
-    let bsStyle='success'
+    let bsStyle='info'
 
     const partButton = <Button className='add-margin2' onClick={this._handleClick.bind(this)} bsStyle={bsStyle}>{buttonText} </Button>
 
