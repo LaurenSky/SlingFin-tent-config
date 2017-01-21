@@ -45,7 +45,7 @@ class ImageCarousol extends React.Component {
         }
       )
 
-      for (let i = 1 ; i < partsInCart.length; i++) {
+      // for (let i = 1 ; i < partsInCart.length; i++) {
         images.push(
           {
             original: meshPics.gallery1,
@@ -84,12 +84,12 @@ class ImageCarousol extends React.Component {
             thumbnail: meshPics.gallery9
           }
         )
-      }
+      // }
     } else {
       images = [
-        { original: 'http://www.slingfin.com/img/products/800/1081_02.jpg',
+        { original: 'http://www.slingfin.com/img/promos/home-promo-2.jpg',
         // original: 'http://lorempixel.com/1000/600/nature/1/',
-        thumbnail: 'http://www.slingfin.com/img/products/800/1081_02.jpg',
+        thumbnail: 'http://www.slingfin.com/img/promos/home-promo-2.jpg',
         originalClass: 'featured-slide',
         thumbnailClass: 'featured-thumb',
         originalAlt: 'original-alt',
@@ -98,18 +98,6 @@ class ImageCarousol extends React.Component {
         description: 'Optional description...',
         // srcSet: 'Optional srcset (responsive images src)',
         sizes: 'Optional sizes (image sizes relative to thebreakpoint)'
-        },
-        {
-          original: 'http://www.slingfin.com/img/products/800/1081_01.jpg',
-          thumbnail: 'http://www.slingfin.com/img/products/800/1081_01.jpg'
-        },
-        {
-          original: 'http://www.slingfin.com/img/products/800/1081_03.jpg',
-          thumbnail: 'http://www.slingfin.com/img/products/800/1081_03.jpg'
-        },
-        {
-          original: 'http://www.slingfin.com/img/products/800/1081_04.jpg',
-          thumbnail: 'http://www.slingfin.com/img/products/800/1081_04.jpg'
         }
       ]
     }

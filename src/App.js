@@ -103,21 +103,19 @@ class App extends Component {
 
           <Row className='add-margin'>
             <Col xs={5} lg={5} className="img-carousol add-margin bkgrd add-padding-bottom">
+              <h4 className='configuration-title'>Your Configuration Details</h4>
               <Row className='add-margin'>
-                <Row>
-                  <Col xs={4} md={4} className='tent-details center-text'>
-                    <Cost partsInCart={this.state.partsInCart} />
-                  </Col>
-                  <Col xs={4} md={4} className='tent-details'>
-                    <EnvironmentConditions partsInCart={this.state.partsInCart} />
-                  </Col>
-                  <Col xs={4} md={4} className='tent-details'>
-                    <TrailWeight partsInCart={this.state.partsInCart} />
-                  </Col>
-                </Row>
+                <Col xs={4} md={4} className='tent-details center-text'>
+                  <Cost partsInCart={this.state.partsInCart} />
+                </Col>
+                <Col xs={4} md={4} className='tent-details'>
+                  <EnvironmentConditions partsInCart={this.state.partsInCart} />
+                </Col>
+                <Col xs={4} md={4} className='tent-details'>
+                  <TrailWeight partsInCart={this.state.partsInCart} />
+                </Col>
               </Row>
               <Row className='add-margin'>
-                <h4 className='configuration-title'>Your Configuration Details:</h4>
                 <ImageCarousol partsInCart={this.state.partsInCart} data={this.props.data} tentConfigPics={this.props.tentConfigPics} />
               </Row>
 
@@ -127,7 +125,7 @@ class App extends Component {
                   <h3 className='cart-header'>List of Accessories selected</h3>
               </Row>
 
-              <Row className='tent-details'>
+              <Row className='tent-details add-margin'>
                 <Col xs={6} md={6}>
                   <TrailWeight partsInCart={this.state.partsInCart} />
                 </Col>

@@ -34,18 +34,14 @@
   margin-bottom: 2%;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
 .configuration-title {
   color: white;
+  text-align: center;
 }
 
-.img-carousol {
-  /*width: 30%;*/
-}
+/*.carousol {
+  margin-bottom: 4%;
+}*/
 
 footer {
   background-color: #222;
