@@ -12,6 +12,7 @@ class PreConfigMountain extends Component {
     parts['5'] = this.props.data.flysheets[0]
     parts['9'] = this.props.data.poles[0]
     parts['10'] = this.props.data.poles[1]
+    parts['12'] = this.props.data.accessories[0]
 
     console.log('>>>>>> PRE CONFIG: ', parts)
     this.props.partStateConfig(parts)
@@ -19,10 +20,10 @@ class PreConfigMountain extends Component {
 
   render () {
 
-    let buttonText = '4 season Mountain'
-    let bsStyle='success'
+    let buttonText = 'All Season Mountain'
+    let bsStyle='info'
 
-    const partButton = <Button onClick={this._handleClick.bind(this)} bsStyle={bsStyle}>{buttonText} </Button>
+    const partButton = <Button className='add-margin2 ' onClick={this._handleClick.bind(this)} bsStyle={bsStyle}>{buttonText} </Button>
 
     return (
       partButton

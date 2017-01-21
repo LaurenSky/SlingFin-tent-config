@@ -23,7 +23,6 @@
 .background-img {
   background-color: white;
   /*background-image: url('./images/background.jpg');*/
-
 }
 
 .App-intro {
@@ -61,6 +60,35 @@ footer {
   background-color: white;
   border-radius: 5px;
   color: #222;
+}
+
+.options {
+  border: white 2px solid;
+  padding: 1%;
+  /*background-color: white;*/
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  margin: 3% 0;
+}
+
+.initial-options-buttons {
+  text-align: center;
+}
+
+.go {
+  font-size: 140%;
+  margin-top: 2%;
+}
+
+/*.preconfig-button {
+  background-color: #f94807
+;
+  color: white;
+}*/
+
+.accordion {
+  margin-top: 3%;
 }
 
 /*BUGS, SNOW, RAIN*/
@@ -121,6 +149,14 @@ footer {
 
 .add-margin {
   margin: .6%;
+}
+
+.add-margin2 {
+  margin: 1%;
+}
+
+.add-margin3 {
+  margin: 2%;
 }
 
 .add-padding {
