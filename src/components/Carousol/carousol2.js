@@ -19,21 +19,20 @@ class ImageCarousol extends React.Component {
     Object.entries(this.props.partsInCart).forEach(
       ([key, value]) => {
         console.log("in iterate!!!!" , key, value.partInfo)
-        partsInCart.push(key)
+        partsInCart.push(value.partInfo)
         console.log('<<<<>>>>>>>>> MY PARTs ARRAY ---- IMAGES :' , partsInCart)
       }
     );
 
     let images = []
-    let imgConfigPics = this.props.tentConfigPics
-    let meshPics = imgConfigPics.meshbody
+
     if (partsInCart.length > 0) {
       console.log('<<<<>>>>>>>>> IN CAROUSOL ---- TOTAL-CAROUSOL :' , images)
       images.push(
         {
-          original: meshPics.main,
+          original: partsInCart[0].main,
           // original: 'http://lorempixel.com/1000/600/nature/1/',
-          thumbnail: meshPics.main,
+          thumbnail: partsInCart[0].thumbnail,
           originalClass: 'featured-slide',
           thumbnailClass: 'featured-thumb',
           originalAlt: 'original-alt',
@@ -48,41 +47,17 @@ class ImageCarousol extends React.Component {
       for (let i = 1 ; i < partsInCart.length; i++) {
         images.push(
           {
-            original: meshPics.gallery1,
-            thumbnail: meshPics.gallery1
+            original: partsInCart[i].main,
+            thumbnail: partsInCart[i].thumbnail
           },
           {
-            original: meshPics.gallery2,
-            thumbnail: meshPics.gallery2
-          },
-          {
-            original: meshPics.gallery3,
-            thumbnail: meshPics.gallery3
-          },
-          {
-            original: meshPics.gallery4,
-            thumbnail: meshPics.gallery4
-          },
-          {
-            original: meshPics.gallery5,
-            thumbnail: meshPics.gallery5
-          },
-          {
-            original: meshPics.gallery6,
-            thumbnail: meshPics.gallery6
-          },
-          {
-            original: meshPics.gallery7,
-            thumbnail: meshPics.gallery7
-          },
-          {
-            original: meshPics.gallery8,
-            thumbnail: meshPics.gallery8
-          },
-          {
-            original: meshPics.gallery9,
-            thumbnail: meshPics.gallery9
+            original: partsInCart[i].gallery1,
+            thumbnail: partsInCart[i].gallery2
           }
+          // {
+          //   original: partsInCart[i].gallery3,
+          //   thumbnail: partsInCart[i].gallery4
+          // }
         )
       }
     } else {

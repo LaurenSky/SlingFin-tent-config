@@ -118,7 +118,7 @@ class App extends Component {
               </Row>
               <Row className='add-margin'>
                 <h4 className='configuration-title'>Your Configuration Details:</h4>
-                <ImageCarousol partsInCart={this.state.partsInCart} data={this.props.data}/>
+                <ImageCarousol partsInCart={this.state.partsInCart} data={this.props.data} tentConfigPics={this.props.tentConfigPics} />
               </Row>
 
               <Row className="parts-selected bkgrd add-margin">
