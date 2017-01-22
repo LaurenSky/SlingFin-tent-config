@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import '../../App.css';
-import { Button, Tooltip, OverlayTrigger, Popover } from 'react-bootstrap';
-let FontAwesome = require('react-fontawesome');
-
+import { Button, Tooltip, OverlayTrigger } from 'react-bootstrap';
 
 import AccordionPanelItems from '../Accordion/accordion'
 import PreConfigOptions from './PreConfigOptions';
@@ -67,8 +65,6 @@ class StartOptions extends Component {
 
     const tooltipPreConfig = ( <Tooltip id="tooltip">Start with 1 of 3 pre-configured system set ups and add / remove parts as you see fit.</Tooltip> );
     const tooltipCustom = ( <Tooltip id="tooltip">Start from scratch and Design a System step by step with helpful hints.</Tooltip> );
-    const popoverHoverFocusConfig = (<Popover id="popover-trigger-hover-focus" title="PreConfig Option:">Start with 1 of our 3 main system set ups and add / remove parts as you see fit.</Popover>);
-    const popoverHoverFocusCustom = (<Popover id="popover-trigger-hover-focus" title="Custom Option:">Start from scratch and Design a System step by step with helpful hints.</Popover>);
 
 
     const preConfigButton = <Button className='add-margin3' onClick={this.preConfigHandleClick.bind(this)} bsStyle='success'>Start with a Pre-Configuration</Button>
@@ -100,6 +96,9 @@ class StartOptions extends Component {
 }
 
 export default StartOptions;
+
+// const popoverHoverFocusConfig = (<Popover id="popover-trigger-hover-focus" title="PreConfig Option:">Start with 1 of our 3 main system set ups and add / remove parts as you see fit.</Popover>);
+// const popoverHoverFocusCustom = (<Popover id="popover-trigger-hover-focus" title="Custom Option:">Start from scratch and Design a System step by step with helpful hints.</Popover>);
 
 // <OverlayTrigger trigger={['hover', 'focus']} placement="left" overlay={popoverHoverFocusConfig}>
 //   {preConfigButton}

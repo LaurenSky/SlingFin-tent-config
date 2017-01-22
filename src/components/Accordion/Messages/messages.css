@@ -1,34 +1,27 @@
 .warning {
   color: orangered;
   text-align: center;
-  /*background-color: ;*/
-  /*opacity: 0.8;*/
-  border: orangered solid 1px;
-  border-radius: 5px;
   padding: 2%;
 }
 
 .info {
-  color: black;
+  color: white;
   text-align: center;
-
+  padding: 2%;
 }
 
 .go-next-step {
-  color: black;
-  background-color: lightgreen;
+  color: lightgreen;
   text-align: center;
-  /*border: lightgreen 2px solid;*/
   opacity: 0.8;
-  border-radius: 5px;
   padding: 2%;
 }
 
 .normal {
   color: white;
   text-align: center;
-  border: 1px solid white;
-  opacity: 0.8;
-  border-radius: 5px;
+  /*border: 1px solid white;*/
+  opacity: 0.9;
+  /*border-radius: 5px;*/
   padding: 2%;
 }

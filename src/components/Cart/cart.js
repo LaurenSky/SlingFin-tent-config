@@ -34,7 +34,7 @@ class Cart extends React.Component {
         <FontAwesome className="fa fa-shopping-cart cart-icon" name='cart' aria-hidden="true" onClick={this.open.bind(this)} />
         <Modal show={this.state.showModal} onHide={this.close.bind(this)} >
           <Modal.Header closeButton>
-            <Modal.Title>Cart: All parts in your Configuration</Modal.Title>
+            <Modal.Title><strong>Cart:</strong> All parts in your Configuration</Modal.Title>
           </Modal.Header>
           <Modal.Body>
 

@@ -1,5 +1,7 @@
 import React from 'react';
 import './messages.css';
+let FontAwesome = require('react-fontawesome');
+
 
 class HasWebTruss extends React.Component {
 
@@ -13,10 +15,19 @@ class HasWebTruss extends React.Component {
     );
 
     if ( partsInCart.includes('1') ) {
-      return <div><h4 className='normal'> You have a WebTruss in your configuration, click Poles to go to the next section.</h4><h4 className='go-next-step'>Click Poles to go to the next section. </h4></div>
+      return (
+        <div className='normal'>
+          <h4><FontAwesome className="fa fa-check" name='checkmark' aria-hidden="true" /> You have a WebTruss in your configuration.</h4>
+          <h4 className='go-next-step'><FontAwesome className="fa fa-arrow-right" name='arrow' aria-hidden="true" /> Click Poles to go to the next section. </h4>
+        </div>
+      )
 
     } else {
-      return <h4 className='warning'>You Need to Add a WebTruss to your configuration.</h4>
+      return (
+        <div className='normal'>
+          <h4 className='warning'><FontAwesome className="fa fa-exclamation-triangle" name='triangle' aria-hidden="true" /> You Need to Add a WebTruss to your configuration.</h4>
+        </div>
+      )
     }
   }
 
@@ -33,3 +44,5 @@ class HasWebTruss extends React.Component {
 }
 
 export default HasWebTruss;
+
+// <div><h4 className='normal'> You have a WebTruss in your configuration, click Poles to go to the next section.</h4><h4 className='go-next-step'>Click Poles to go to the next section. </h4></div>

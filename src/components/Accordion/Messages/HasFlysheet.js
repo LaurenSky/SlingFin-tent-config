@@ -1,5 +1,7 @@
 import React from 'react';
 import './messages.css';
+let FontAwesome = require('react-fontawesome');
+
 
 class HasFlysheet extends React.Component {
 
@@ -13,10 +15,19 @@ class HasFlysheet extends React.Component {
     );
 
     if ( partsInCart.includes('5') ) {
-      return <div><h4 className='normal'>[ You have a Flysheet in your configuration and will be protected from snow and rain.</h4><h4 className='go-next-step'>Click Inner Tent Bodies to go to the next section.</h4></div>
+      return (
+        <div className='normal'>
+          <h4><FontAwesome className="fa fa-check" name='checkmark' aria-hidden="true" /> You have a Flysheet in your configuration and will be protected from snow and rain.</h4>
+          <h4 className='go-next-step'><FontAwesome className="fa fa-arrow-right" name='arrow' aria-hidden="true" /> Click Inner Tent Bodies to go to the next section.</h4>
+        </div>
+      )
 
     } else {
-      return <h4 className='warning'>You Need to Add a Flysheet to your configuration otherwise you will get wet in rain or snow.</h4>
+      return (
+        <div className='normal'>
+          <h4 className='warning'><FontAwesome className="fa fa-exclamation-triangle" name='triangle' aria-hidden="true" /> You Need to Add a Flysheet to your configuration otherwise you will get wet in rain or snow.</h4>
+        </div>
+      )
     }
   }
 
