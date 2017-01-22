@@ -1,34 +1,44 @@
 import React from 'react';
+import { Modal} from 'react-bootstrap';
 import './accordion.css';
 
 
 class Item extends React.Component {
-    constructor(props) {
-        super(props);
+  constructor() {
+    super();
+    this.state = {
+      showModal: false
+    };
+  }
 
-        this.state = {
-            hover: false
-        };
-    }
+  close() {
+    this.setState({
+      showModal: false
+    });
+  };
 
-    mouseOver() {
-        this.setState({hover: true});
-    }
+  open() {
+    this.setState({
+      showModal: true
+    });
+  };
 
-    mouseOut() {
-        this.setState({hover: false});
-    }
+  render() {
+    let image = this.props.lineDrawing
 
-    render() {
-      let image = this.props.lineDrawing
+    return (
+      <div>
+        <img className='small-image' src={image} alt='logo' onClick={this.open.bind(this)}/>
 
-      return (
-        <div onMouseOver={this.mouseOver.bind(this)} onMouseOut={this.mouseOut.bind(this)}>
-          {(this.state.hover) ? (<img className='large-image' src={image} alt='logo'/>) : (<img className='small-image' src={image} alt='logo'/>) }
-        </div>
-      )
-    }
-}
+        <Modal show={this.state.showModal} onHide={this.close.bind(this)} >
+          <Modal.Body>
+            <img className='large-image' src={image} alt='logo'/>
+          </Modal.Body>
+        </Modal>
+      </div>
+    );
+  }
+};
 
-// <img src={part.lineDrawing} onmouseover="this.width=50%; this.height=50%" onmouseout="this.width=10%; this.height=10%"/>
+
 export default Item;

@@ -23,7 +23,7 @@ class AccordionTest extends React.Component {
       <Accordion>
         <Panel bsStyle={color} header='(1) WebTruss' eventKey='1'>
           <HasWebTruss partsInCart={this.props.partsInCart} />
-          <PartCategory data={this.props.data} category='WebTruss' partStateUpdate={this.props.partStateUpdate}partInCart={this.props.partsInCart} />
+          <PartCategory data={this.props.data} category='WebTruss' partStateUpdate={this.props.partStateUpdate} partInCart={this.props.partsInCart} />
         </Panel>
 
         <Panel bsStyle={color} header='(2) Poles' eventKey='2'>

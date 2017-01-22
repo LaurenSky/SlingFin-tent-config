@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import '../../App.css';
-import { Button } from 'react-bootstrap';
+import { Button, Tooltip, OverlayTrigger, Popover } from 'react-bootstrap';
+let FontAwesome = require('react-fontawesome');
+
 
 import AccordionPanelItems from '../Accordion/accordion'
 import PreConfigOptions from './PreConfigOptions';
@@ -63,6 +65,11 @@ class StartOptions extends Component {
     const showMeStyle = this.state.show ? styles.active : styles.inactive;
     const seeMessageStyle = this.state.seeMessage ? styles.active : styles.inactive;
 
+    const tooltipPreConfig = ( <Tooltip id="tooltip">Start with 1 of our 3 main system set ups and add / remove parts as you see fit.</Tooltip> );
+    const tooltipCustom = ( <Tooltip id="tooltip">Start from scratch and Design a System step by step with helpful hints.</Tooltip> );
+    const popoverHoverFocusConfig = (<Popover id="popover-trigger-hover-focus" title="PreConfig Option:">Start with 1 of our 3 main system set ups and add / remove parts as you see fit.</Popover>);
+    const popoverHoverFocusCustom = (<Popover id="popover-trigger-hover-focus" title="Custom Option:">Start from scratch and Design a System step by step with helpful hints.</Popover>);
+
 
     const preConfigButton = <Button className='add-margin3' onClick={this.preConfigHandleClick.bind(this)} bsStyle='success'>Start with a Pre-Configuration</Button>
 
@@ -74,8 +81,13 @@ class StartOptions extends Component {
       <div>
         <section className='initial-options-buttons'>
           <h4 className='configuration-title'>How would you like to start?</h4>
-          {preConfigButton}
-          {customizeButton}
+          <OverlayTrigger placement="left" overlay={tooltipPreConfig}>
+            {preConfigButton}
+          </OverlayTrigger>
+
+          <OverlayTrigger placement="right" overlay={tooltipCustom}>
+            {customizeButton}
+          </OverlayTrigger>
         </section>
         {options}
         <h4 className='intro-subtitle' style={seeMessageStyle}>Follow the steps below to add items to your Configuration </h4>
@@ -88,3 +100,11 @@ class StartOptions extends Component {
 }
 
 export default StartOptions;
+
+// <OverlayTrigger trigger={['hover', 'focus']} placement="left" overlay={popoverHoverFocusConfig}>
+//   {preConfigButton}
+// </OverlayTrigger>
+//
+// <OverlayTrigger trigger={['hover', 'focus']} placement="right" overlay={popoverHoverFocusCustom}>
+//   {customizeButton}
+// </OverlayTrigger>

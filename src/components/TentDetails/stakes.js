@@ -42,7 +42,7 @@ class Stakes extends React.Component {
 
   render () {
 
-    this.countPoles.bind(this)
+    this.countStakes.bind(this)
 
     return (
       <div>

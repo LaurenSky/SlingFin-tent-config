@@ -17,22 +17,55 @@ const styles = {
 };
 
 class PartCategory extends Component {
-  constructor() {
+  constructor(props) {
     super();
     this.state = {
-      show: false
+      show: true,
+      partsInCart: props.partInCart,
+      myParts: []
     };
   }
 
   showRecommended() {
-    this.setState({
-      show: !this.state.show,
-    })
+  //   console.log('>>>>><<<<<<< SHOW RECOMMENDED: ' , this.state.partsInCart)
+  //   let keys = Object.keys(this.state.partsInCart)
+  //   console.log(keys)
+  //   // if ( keys.include('3') || keys.include('8') ) {
+  //   //   this.setState({
+  //   //     show: true,
+  //   //   })
+  //   // } else {
+  //   //   this.setState({
+  //   //     show: false,
+  //   //   })
+  //   // }
+  //   this.setState({
+  //     show: true,
+  //   })
   }
+
+  // checkInCart() {
+  //   console.log('>>>>><<<<<<< SHOW RECOMMENDED: ' , this.props.partInCart)
+  //   if (this.props.partInCart !== false) {
+  //     let keys = Object.keys(this.props.partInCart)
+  //
+  //     if ( keys.include('3') || keys.include('8') ) {
+  //       this.setState({
+  //         show: true,
+  //       })
+  //     } else {
+  //       this.setState({
+  //         show: false,
+  //       })
+  //     }
+  //   }
+  // }
 
 
   render () {
     const showStyle = this.state.show ? styles.active : styles.inactive;
+
+    // this.checkInCart.bind(this)
 
     const categoryData = function(category, data) {
       if(category==='WebTruss') {
@@ -79,7 +112,7 @@ class PartCategory extends Component {
 
               <Row>
                 <Col xs={8} md={8}>
-                  <PartButton part={part} type='normal' showRecommended={this.showRecommended.bind(this)} partStateUpdate={this.props.partStateUpdate}partInCart={this.props.partInCart} />
+                  <PartButton part={part} type='normal' showRecommended={this.showRecommended.bind(this)} partStateUpdate={this.props.partStateUpdate} partInCart={this.props.partInCart} />
                 </Col>
 
                 <Col xs={4} md={4}>
@@ -92,7 +125,7 @@ class PartCategory extends Component {
           </Row>
           <Row style={showStyle}>
             <Col xs={10} md={10} className='recommended-part-container'>
-              <RecommendPart  part={part.recommend} partStateUpdate={this.props.partStateUpdate} partInCart={this.props.partInCart} />
+              <RecommendPart  part={part.recommend} partStateUpdate={this.props.partStateUpdate} partInCart={this.props.partInCart} showRecommended={this.showRecommended.bind(this)} />
             </Col>
           </Row>
         </li>

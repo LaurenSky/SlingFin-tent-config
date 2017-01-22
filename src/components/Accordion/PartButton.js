@@ -41,18 +41,17 @@ class PartButton extends Component {
 
 
   _handleClick() {
-    console.log("in handle_click--- before switch, value is ", this.state.partInCart);
+    // console.log("in handle_click--- before switch, value is ", this.state.partInCart);
     this.setState(
       {
         partInCart: !this.state.partInCart
       },
         function() {
-          console.log("in handle_click--- after switch, value is ", this.state.partInCart);
+          // console.log("in handle_click--- after switch, value is ", this.state.partInCart);
           this.partStateUpdate()
       }
     );
-
-    this.props.showRecommended();
+      // this.props.showRecommended();
   }
 
   currentlyInPartInCart(partId) {
@@ -61,9 +60,9 @@ class PartButton extends Component {
     if (!this.props.partInCart === false) {
       Object.entries(this.props.partInCart).forEach(
         ([key, value]) => {
-          console.log("in button iterate!!!! -- key:" , key)
+          // console.log("in button iterate!!!! -- key:" , key)
           parts.push(value.partInfo.id)
-          console.log('in button iterate!!!! -- MY button PART ARRAY:' , parts)
+          // console.log('in button iterate!!!! -- MY button PART ARRAY:' , parts)
         }
       );
     }
@@ -79,9 +78,9 @@ class PartButton extends Component {
 
   render () {
     const part = this.props.part;
-    console.log('in PartButton ---- *****PartInCart props', this.props.partInCart)
-    console.log('in PartButton ---- partName: ', part.name)
-    console.log('partInCart state -- in button :', part.name, this.state.partInCart)
+    // console.log('in PartButton ---- *****PartInCart props', this.props.partInCart)
+    // console.log('in PartButton ---- partName: ', part.name)
+    // console.log('partInCart state -- in button :', part.name, this.state.partInCart)
 
 
 

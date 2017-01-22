@@ -5,35 +5,11 @@ import Hover from '../hover';
 
 import { Row, Col } from 'react-bootstrap';
 
-// const styles = {
-//   active: {
-//     display: 'inherit'
-//   },
-//
-//   inactive: {
-//     display: 'none'
-//   }
-// };
 
 class RecommendedPart extends Component {
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     show: false
-  //   };
-  //
-  //   this.clearPartsInCart = this.clearPartsInCart.bind(this);
-  // }
-  //
-  // showRecommended() {
-  //   this.setState({
-  //     show: true,
-  //   })
-  // }
 
   render () {
     const part = this.props.part;
-    // const showStyle = this.state.show ? styles.active : styles.inactive;
 
     const decideHeader = function(part) {
       if(part ==='Tub Footprint') {
@@ -57,7 +33,7 @@ class RecommendedPart extends Component {
           </Col>
             <Row>
               <Col xs={7} md={7} className='recommended-part-button'>
-                <PartButton part={part} type='recommend' partStateUpdate={this.props.partStateUpdate} partInCart={this.props.partInCart}/>
+                <PartButton part={part} type='recommend' partStateUpdate={this.props.partStateUpdate} partInCart={this.props.partInCart} showRecommended={this.props.showRecommended} />
               </Col>
               <Col xs={4} md={4}>
                 <h4 className='text-right'>
