@@ -159,6 +159,12 @@ footer {
   padding: 1%;
 }
 
+.intro-subtitle {
+  padding: 3% 0 1% 0;
+  text-align: center;
+  color: white;
+}
+
 .center-text {
   text-align: center;
 }
