@@ -5,35 +5,11 @@ import Hover from '../hover';
 
 import { Row, Col } from 'react-bootstrap';
 
-// const styles = {
-//   active: {
-//     display: 'inherit'
-//   },
-//
-//   inactive: {
-//     display: 'none'
-//   }
-// };
 
 class RecommendedPart extends Component {
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     show: false
-  //   };
-  //
-  //   this.clearPartsInCart = this.clearPartsInCart.bind(this);
-  // }
-  //
-  // showRecommended() {
-  //   this.setState({
-  //     show: true,
-  //   })
-  // }
 
   render () {
     const part = this.props.part;
-    // const showStyle = this.state.show ? styles.active : styles.inactive;
 
     const decideHeader = function(part) {
       if(part ==='Tub Footprint') {

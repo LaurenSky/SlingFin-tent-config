@@ -42,15 +42,17 @@ class PartButton extends Component {
 
   _handleClick() {
     console.log("in handle_click--- before switch, value is ", this.state.partInCart);
-    this.setState({
-      partInCart: !this.state.partInCart
-    },
-    function() {
-      console.log("in handle_click--- after switch, value is ", this.state.partInCart);
-      this.partStateUpdate()
-    }
-  );
+    this.setState(
+      {
+        partInCart: !this.state.partInCart
+      },
+        function() {
+          console.log("in handle_click--- after switch, value is ", this.state.partInCart);
+          this.partStateUpdate()
+      }
+    );
 
+    this.props.showRecommended();
   }
 
   currentlyInPartInCart(partId) {

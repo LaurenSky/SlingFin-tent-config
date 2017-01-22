@@ -5,34 +5,11 @@ import RecommendPart from './RecommendPart/RecommendPart';
 import PartButton from './PartButton';
 import Hover from './hover';
 
-
-const styles = {
-  active: {
-    display: 'inherit'
-  },
-
-  inactive: {
-    display: 'none'
-  }
-};
+// <img src={part.lineDrawing} className="part-image" alt="Part" />
 
 class PartCategory extends Component {
-  constructor() {
-    super();
-    this.state = {
-      show: false
-    };
-  }
-
-  showRecommended() {
-    this.setState({
-      show: !this.state.show,
-    })
-  }
-
 
   render () {
-    const showStyle = this.state.show ? styles.active : styles.inactive;
 
     const categoryData = function(category, data) {
       if(category==='WebTruss') {
@@ -79,7 +56,7 @@ class PartCategory extends Component {
 
               <Row>
                 <Col xs={8} md={8}>
-                  <PartButton part={part} type='normal' showRecommended={this.showRecommended.bind(this)} partStateUpdate={this.props.partStateUpdate}partInCart={this.props.partInCart} />
+                  <PartButton part={part} type='normal' partStateUpdate={this.props.partStateUpdate}partInCart={this.props.partInCart} />
                 </Col>
 
                 <Col xs={4} md={4}>
@@ -90,7 +67,7 @@ class PartCategory extends Component {
               </Row>
             </Col>
           </Row>
-          <Row style={showStyle}>
+          <Row>
             <Col xs={10} md={10} className='recommended-part-container'>
               <RecommendPart  part={part.recommend} partStateUpdate={this.props.partStateUpdate} partInCart={this.props.partInCart} />
             </Col>
