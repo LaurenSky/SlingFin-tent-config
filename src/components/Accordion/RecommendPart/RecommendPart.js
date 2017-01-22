@@ -14,7 +14,7 @@ class RecommendedPart extends Component {
     const decideHeader = function(part) {
       if(part ==='Tub Footprint') {
         return (
-          "This Requires a Tub Footprint. (please order one if you don't own one)"
+          "This Requires a Tub Footprint to be functional."
         )
       } else if(part ==='Drop-in Mesh Body') {
         return (
@@ -32,25 +32,26 @@ class RecommendedPart extends Component {
             <h4>{decideHeader(part.name)}</h4>
           </Col>
             <Row>
-              <Col xs={9} md={9}>
+              <Col xs={7} md={7} className='recommended-part-button'>
                 <PartButton part={part} type='recommend' partStateUpdate={this.props.partStateUpdate} partInCart={this.props.partInCart}/>
               </Col>
-              <Col xs={3} md={3}>
-                <h4>
+              <Col xs={4} md={4}>
+                <h4 className='text-right'>
                   ${part.price}
                 </h4>
               </Col>
             </Row>
-          <Col xs={12} md={12} className='recommended-part-body'>
+          <Col xs={11} md={11} className='recommended-part-body'>
             <Row>
-              <Col xs={12} md={12}>
-                <Hover lineDrawing={part.lineDrawing} lassName="part-image" alt="Part" />
-
+              <Col xs={12} md={12} className="recommended-part-image">
+                <Hover lineDrawing={part.lineDrawing} alt={part.name} />
               </Col>
             </Row>
             <Row>
               <Col xs={12} md={12}>
                 {part.description}
+              </Col>
+              <Col xs={12} md={12}>
                 ( {part.weight}oz )
               </Col>
             </Row>

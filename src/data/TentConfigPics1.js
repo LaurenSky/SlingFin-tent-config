@@ -27,6 +27,16 @@ export default {
   },
 
   stormpack: [
+    'http://www.slingfin.com/img/products/800/1080_02.jpg',
+    'http://www.slingfin.com/img/products/800/1080_01.jpg',
+    'http://www.slingfin.com/img/products/800/1080_03.jpg',
+    'http://www.slingfin.com/img/products/800/1080_04.jpg',
+    'http://www.slingfin.com/img/products/800/1080_05.jpg',
+    'http://www.slingfin.com/img/products/800/1080_06.jpg',
+    'http://www.slingfin.com/img/products/800/1080_07.jpg',
+    'http://www.slingfin.com/img/products/800/1080_08.jpg',
+    'http://www.slingfin.com/img/products/800/1080_09.jpg',
+    'http://www.slingfin.com/img/products/800/1080---spec-sheet-summary.jpg'
 
   ]
 }

@@ -5,7 +5,7 @@ import { Row, Col } from 'react-bootstrap';
 
 import ImageCarousol from './components/Carousol/carousol';
 import EnvironmentConditions from './components/Conditions/conditions';
-import TentDimensions from './components/TentDimensions/TentDimensions1';
+import TentDimensions from './components/TentDimensions/TentDimensions';
 import Cart from './components/Cart/cart';
 import TrailWeight from './components/TentDetails/trail-weight';
 import PackWeight from './components/TentDetails/pack-weight';
@@ -105,13 +105,13 @@ class App extends Component {
             <Col xs={5} lg={5} className="img-carousol add-margin bkgrd add-padding-bottom">
               <h4 className='configuration-title'>Your Configuration Details</h4>
               <Row className='add-margin'>
-                <Col xs={4} md={4} className='tent-details center-text'>
+                <Col xs={4} md={4} className='tent-details center-text cost-bug-weight'>
                   <Cost partsInCart={this.state.partsInCart} />
                 </Col>
-                <Col xs={4} md={4} className='tent-details'>
+                <Col xs={4} md={4} className='tent-details cost-bug-weight'>
                   <EnvironmentConditions partsInCart={this.state.partsInCart} />
                 </Col>
-                <Col xs={4} md={4} className='tent-details'>
+                <Col xs={4} md={4} className='tent-details cost-bug-weight'>
                   <TrailWeight partsInCart={this.state.partsInCart} />
                 </Col>
               </Row>
