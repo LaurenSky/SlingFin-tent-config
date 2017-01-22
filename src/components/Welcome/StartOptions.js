@@ -20,7 +20,8 @@ class StartOptions extends Component {
     super();
     this.state = {
       active: false,
-      show: false
+      show: false,
+      seeMessage: false
     };
 
     this.clearPartsInCart = this.clearPartsInCart.bind(this);
