@@ -104,13 +104,13 @@ class App extends Component {
             <Col xs={5} lg={5} className="img-carousol add-margin bkgrd add-padding-bottom">
               <h4 className='configuration-title'>Your Configuration Details</h4>
               <Row className='add-margin'>
-                <Col xs={4} md={4} className='tent-details center-text'>
+                <Col xs={4} md={4} className='tent-details center-text cost-bug-weight'>
                   <Cost partsInCart={this.state.partsInCart} />
                 </Col>
-                <Col xs={4} md={4} className='tent-details'>
+                <Col xs={4} md={4} className='tent-details cost-bug-weight'>
                   <EnvironmentConditions partsInCart={this.state.partsInCart} />
                 </Col>
-                <Col xs={4} md={4} className='tent-details'>
+                <Col xs={4} md={4} className='tent-details cost-bug-weight'>
                   <TrailWeight partsInCart={this.state.partsInCart} />
                 </Col>
               </Row>
@@ -134,7 +134,7 @@ class App extends Component {
               </Row>
 
               <Row className="add-margin">
-                <Col xs={12} md={12}>
+                <Col xs={12} md={12} className='no-padding'>
                   <TentDimensions />
                 </Col>
               </Row>
@@ -143,7 +143,6 @@ class App extends Component {
             <Col xs={6} md={6} className="alert-box bkgrd add-margin add-padding">
               <div className='tent-details'>
                   <h4>Welcome to the SlingFin CrossBow2 Tent Configurator.</h4>
-                  <p>Start with a pre-configuration or follow the steps below to add and remove parts to design a tent system that fits your life and adventures.</p>
               </div>
             </Col>
 

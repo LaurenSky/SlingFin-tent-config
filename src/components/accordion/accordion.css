@@ -50,19 +50,31 @@
   width: 100%;
 }
 
+.recommended-part-image {
+  width: 80%;
+}
+
+.recommended-part-container {
+  margin-left: 16%;
+}
+
 .recommended-part-header {
-  background-color: orange;
+  background-color: #222;
   border: 1px black solid;
   padding: 1%;
   margin-top: 3%;
+  border-radius: 5px;
+  color: white
 }
 
 .recommended-part-body {
   background-color: white;
   border: black 2px solid;
   padding:1%;
-  background-color: white;
   color: #222;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0 0 2% 3%;
 }
 
 .part-name {
@@ -70,5 +82,10 @@
 }
 
 .recommended-part-name {
-  color: #222;
+  color: white;
+}
+
+.recommended-part-button {
+  padding: 2%;
+  margin-left: 4%;
 }

@@ -42,36 +42,34 @@ class PartCategory extends Component {
           </Row>
 
           <Row>
-            <Col xs={4} md={4}>
+            <Col xs={5} md={5}>
               <Hover lineDrawing={part.lineDrawing} className="part-image" alt="Part" />
             </Col>
 
-            <Col xs={8} md={8}>
+            <Col xs={7} md={7}>
               <Row>
                 <Col xs={12} md={12}>
                   {part.description}
                   ( {part.weight}oz )
                 </Col>
-
-                <Row>
-                  <Col xs={8} md={8}>
-                    {/* Indicates a successful or positive action */}
-                    <PartButton part={part} type='normal' partStateUpdate={this.props.partStateUpdate} partInCart={this.props.partInCart} />
-                  </Col>
-
-                  <Col xs={4} md={4}>
-                    <h4>
-                      ${part.price}
-                    </h4>
-                  </Col>
-                </Row>
               </Row>
 
               <Row>
-                <Col xs={12} md={12}>
-                  <RecommendPart  part={part.recommend} partStateUpdate={this.props.partStateUpdate} partInCart={this.props.partInCart} />
+                <Col xs={8} md={8}>
+                  <PartButton part={part} type='normal' partStateUpdate={this.props.partStateUpdate}partInCart={this.props.partInCart} />
+                </Col>
+
+                <Col xs={4} md={4}>
+                  <h4>
+                    ${part.price}
+                  </h4>
                 </Col>
               </Row>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={10} md={10} className='recommended-part-container'>
+              <RecommendPart  part={part.recommend} partStateUpdate={this.props.partStateUpdate} partInCart={this.props.partInCart} />
             </Col>
           </Row>
         </li>

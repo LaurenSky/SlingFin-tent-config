@@ -58,6 +58,11 @@ footer {
   color: #222;
 }
 
+.cost-bug-weight {
+  height: 80px;
+  margin-bottom: 5%;
+}
+
 .options {
   border: white 2px solid;
   padding: 1%;
