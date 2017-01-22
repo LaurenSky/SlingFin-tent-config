@@ -17,7 +17,7 @@ class SendEmail extends Component {
 
     return (
       <Mailto email={slingFinAddress} headers={headerItems}>
-        Email Order to Shop!
+        Email Intent to Order to Shop!
       </Mailto>
     );
   }

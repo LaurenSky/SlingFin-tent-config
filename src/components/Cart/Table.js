@@ -59,16 +59,19 @@ class NewTable extends Component {
     }
 
     return (
-      <div>
-        <SendEmail className='send-email' body={orderItems} prices={orderItemsPrices} total={total} partsInCart={this.props.partsInCart} />
-
-      <BootstrapTable data={ partsInCart } options={ options} bordered={ false }>
-          <TableHeaderColumn dataField='name'>Part</TableHeaderColumn>
-          <TableHeaderColumn dataField='weight'>Weight(grams)</TableHeaderColumn>
-          <TableHeaderColumn dataField='price'>Price($)</TableHeaderColumn>
-          <TableHeaderColumn dataField='id' isKey={ true } dataFormat={ addDeleteIcon }></TableHeaderColumn>
-        </BootstrapTable>
-      </div>
+      <section>
+        <article>
+          <BootstrapTable data={ partsInCart } options={ options} bordered={ false }>
+            <TableHeaderColumn dataField='name'>Part</TableHeaderColumn>
+            <TableHeaderColumn dataField='weight'>Weight(grams)</TableHeaderColumn>
+            <TableHeaderColumn dataField='price'>Price($)</TableHeaderColumn>
+            <TableHeaderColumn dataField='id' isKey={ true } dataFormat={ addDeleteIcon }></TableHeaderColumn>
+          </BootstrapTable>
+        </article>
+        <article>
+          <SendEmail className='send-email' body={orderItems} prices={orderItemsPrices} total={total} partsInCart={this.props.partsInCart} />
+        </article>
+      </section>
     );
   }
 };

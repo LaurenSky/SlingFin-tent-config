@@ -188,6 +188,12 @@ footer {
   text-align: left;
 }
 
+.cart-icon {
+  font-size: 250%;
+  padding: 0;
+  text-align: right;
+}
+
 .send-email {
   background-color: green;
   color: white;

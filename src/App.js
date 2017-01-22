@@ -96,9 +96,14 @@ class App extends Component {
           </Row>
         </header>
         <section className='background-img'>
-          <article className="App-intro">
-            <p>Design the perfect tent system to fit your needs.</p>
-          </article>
+          <Row className="App-intro">
+            <Col xs={10} lg={10} className="">
+              <p>Design the perfect tent system to fit your needs.</p>
+            </Col>
+            <Col xs={1} lg={1} className="pull-right">
+              <Cart partInCart={this.state.partsInCart} deletePart={this.deletePart.bind(this)} />
+            </Col>
+          </Row>
 
           <Row className='add-margin'>
             <Col xs={5} lg={5} className="img-carousol add-margin bkgrd add-padding-bottom">
@@ -120,7 +125,6 @@ class App extends Component {
 
               <Row className="parts-selected bkgrd add-margin">
                   <h3 className='cart-header'>List of Items selected</h3>
-                  <Cart partInCart={this.state.partsInCart} deletePart={this.deletePart.bind(this)} />
                   <h3 className='cart-header'>List of Accessories selected</h3>
               </Row>
 
