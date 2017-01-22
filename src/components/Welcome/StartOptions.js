@@ -65,7 +65,7 @@ class StartOptions extends Component {
     const showMeStyle = this.state.show ? styles.active : styles.inactive;
     const seeMessageStyle = this.state.seeMessage ? styles.active : styles.inactive;
 
-    const tooltipPreConfig = ( <Tooltip id="tooltip">Start with 1 of our 3 main system set ups and add / remove parts as you see fit.</Tooltip> );
+    const tooltipPreConfig = ( <Tooltip id="tooltip">Start with 1 of 3 pre-configured system set ups and add / remove parts as you see fit.</Tooltip> );
     const tooltipCustom = ( <Tooltip id="tooltip">Start from scratch and Design a System step by step with helpful hints.</Tooltip> );
     const popoverHoverFocusConfig = (<Popover id="popover-trigger-hover-focus" title="PreConfig Option:">Start with 1 of our 3 main system set ups and add / remove parts as you see fit.</Popover>);
     const popoverHoverFocusCustom = (<Popover id="popover-trigger-hover-focus" title="Custom Option:">Start from scratch and Design a System step by step with helpful hints.</Popover>);

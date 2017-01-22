@@ -123,10 +123,8 @@ class App extends Component {
                 <ImageCarousol partsInCart={this.state.partsInCart} data={this.props.data} tentConfigPics={this.props.tentConfigPics} />
               </Row>
 
-              <Row className="parts-selected bkgrd add-margin">
-                  <h3 className='cart-header'>List of Items selected</h3>
-                  <h3 className='cart-header'>List of Accessories selected</h3>
-              </Row>
+
+
 
               <Row className='tent-details add-margin'>
                 <Col xs={6} md={6}>
@@ -167,7 +165,8 @@ class App extends Component {
 }
 
 export default App;
-// <PreConfigBackpacking data={this.props.data} partStateConfig={this.partStateConfig.bind(this)} />
-// <PreConfigMountain data={this.props.data} partStateConfig={this.partStateConfig.bind(this)} />
-// <PreConfigStormPack data={this.props.data} partStateConfig={this.partStateConfig.bind(this)} />
-// <ClearButton data={this.props.data} partStateConfig={this.partStateConfig.bind(this)} />
+
+// <Row className="parts-selected bkgrd add-margin">
+//     <h3 className='cart-header'>List of Items selected</h3>
+//     <h3 className='cart-header'>List of Accessories selected</h3>
+// </Row>
