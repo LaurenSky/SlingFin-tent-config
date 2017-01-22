@@ -2,34 +2,43 @@ import React from 'react';
 
 import Volume from './volume';
 import PackSize from './pack-size';
-
-
 // import './accordion.css';
 
+
+const styles = {
+  active: {
+    display: 'inherit'
+  },
+
+  inactive: {
+    display: 'none'
+  }
+};
 
 class TentDimensions extends React.Component {
 
   constructor() {
     super();
     this.state = {
-      // active: false
+      active: false
     };
-    // this.toggle = this.toggle.bind(this);
+    this.toggle = this.toggle.bind(this);
   }
 
-  // toggle() {
-  //   this.setState({
-  //     active:!this.state.active
-  //   });
-  // }
+  toggle() {
+    this.setState({
+      active:!this.state.active
+    });
+  }
+
 
   render () {
-    // const stateStyle = this.state.active ? styles.active : styles.inactive;
+    const stateStyle = this.state.active ? styles.active : styles.inactive;
 
     return (
       <div>
-        <h3>Dimensions</h3>
-        <ul>
+        <h3 onClick={this.toggle} className='cart-header'>CrossBow2 Dimensions</h3>
+        <ul style={stateStyle}  className='tent-details'>
           <li><h5>2 Person Tent</h5></li>
           <li><h5>2 Side Doors with Dry Entries</h5></li>
           <li><h5>Length: 92.25" long</h5></li>

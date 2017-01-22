@@ -5,7 +5,7 @@ import { Row, Col } from 'react-bootstrap';
 
 import ImageCarousol from './components/Carousol/carousol';
 import EnvironmentConditions from './components/Conditions/conditions';
-import TentDimensions from './components/TentDimensions/TentDimensions';
+import TentDimensions from './components/TentDimensions/TentDimensions1';
 import Cart from './components/Cart/cart';
 import TrailWeight from './components/TentDetails/trail-weight';
 import PackWeight from './components/TentDetails/pack-weight';
@@ -135,7 +135,7 @@ class App extends Component {
               </Row>
 
               <Row className="add-margin">
-                <Col xs={12} md={12}>
+                <Col xs={12} md={12} className='no-padding'>
                   <TentDimensions />
                 </Col>
               </Row>
@@ -144,7 +144,6 @@ class App extends Component {
             <Col xs={6} md={6} className="alert-box bkgrd add-margin add-padding">
               <div className='tent-details'>
                   <h4>Welcome to the SlingFin CrossBow2 Tent Configurator.</h4>
-                  <p>Start with a pre-configuration or follow the steps below to add and remove parts to design a tent system that fits your life and adventures.</p>
               </div>
             </Col>
 
