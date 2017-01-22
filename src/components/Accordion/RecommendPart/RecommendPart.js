@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import '../accordion.css';
 import PartButton from '../PartButton';
-import Hover from '../hover';
+import EnlargeImage from '../enlargeImage';
 
 import { Row, Col } from 'react-bootstrap';
 
@@ -44,7 +44,7 @@ class RecommendedPart extends Component {
           <Col xs={11} md={11} className='recommended-part-body'>
             <Row>
               <Col xs={12} md={12} className="recommended-part-image">
-                <Hover lineDrawing={part.lineDrawing} alt={part.name} />
+                <EnlargeImage lineDrawing={part.lineDrawing} alt={part.name} />
               </Col>
             </Row>
             <Row>

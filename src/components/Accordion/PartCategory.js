@@ -3,7 +3,7 @@ import './accordion.css';
 import { Row, Col } from 'react-bootstrap';
 import RecommendPart from './RecommendPart/RecommendPart';
 import PartButton from './PartButton';
-import Hover from './hover';
+import EnlargeImage from './enlargeImage';
 
 
 const styles = {
@@ -99,7 +99,7 @@ class PartCategory extends Component {
 
           <Row>
             <Col xs={5} md={5}>
-              <Hover lineDrawing={part.lineDrawing} className="part-image" alt="Part" />
+              <EnlargeImage lineDrawing={part.lineDrawing} className="part-image" alt="Part" />
             </Col>
 
             <Col xs={7} md={7}>

@@ -3,7 +3,7 @@ import { Modal} from 'react-bootstrap';
 import './accordion.css';
 
 
-class Item extends React.Component {
+class EnlargeImage extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -41,4 +41,4 @@ class Item extends React.Component {
 };
 
 
-export default Item;
+export default EnlargeImage;
