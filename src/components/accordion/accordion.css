@@ -1,5 +1,5 @@
 .small-image {
-  width: 80%;
+  width: 100%;
 }
 
 .large-image {
@@ -51,7 +51,7 @@
 }
 
 .recommended-part-image {
-  width: 80%;
+  width: 50%;
 }
 
 .recommended-part-container {

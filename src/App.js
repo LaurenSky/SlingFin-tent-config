@@ -7,6 +7,7 @@ import './App.css';
 import ImageCarousol from './components/Carousol/carousol';
 import EnvironmentConditions from './components/Conditions/conditions';
 import TentDimensions from './components/TentDimensions/TentDimensions';
+import CartModal from './components/Cart/cartmodal';
 import Cart from './components/Cart/cart';
 import TrailWeight from './components/TentDetails/trail-weight';
 import PackWeight from './components/TentDetails/pack-weight';
@@ -101,7 +102,7 @@ class App extends Component {
               <p>Design the perfect tent system to fit your needs.</p>
             </Col>
             <Col xs={1} lg={1} className="pull-right">
-              <Cart partInCart={this.state.partsInCart} deletePart={this.deletePart.bind(this)} />
+              <CartModal partInCart={this.state.partsInCart} deletePart={this.deletePart.bind(this)} />
             </Col>
           </Row>
 
@@ -123,8 +124,11 @@ class App extends Component {
                 <ImageCarousol partsInCart={this.state.partsInCart} data={this.props.data} tentConfigPics={this.props.tentConfigPics} />
               </Row>
 
-
-
+              <Row className="parts-selected bkgrd add-margin">
+                  <h3 className='cart-header'>List of Items selected</h3>
+                  <Cart partInCart={this.state.partsInCart} deletePart={this.deletePart.bind(this)} />
+                  <h3 className='cart-header'>List of Accessories selected</h3>
+              </Row>
 
               <Row className='tent-details add-margin'>
                 <Col xs={6} md={6}>
@@ -165,8 +169,3 @@ class App extends Component {
 }
 
 export default App;
-
-// <Row className="parts-selected bkgrd add-margin">
-//     <h3 className='cart-header'>List of Items selected</h3>
-//     <h3 className='cart-header'>List of Accessories selected</h3>
-// </Row>

@@ -15,7 +15,7 @@ class PackSize extends React.Component {
 
     return (
       <div>
-        <h5>Packed Size: _____</h5>
+        <h5>Packed Size: 14" x 6"</h5>
       </div>
     );
   }

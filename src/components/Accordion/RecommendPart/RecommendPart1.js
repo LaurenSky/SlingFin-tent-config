@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import '../accordion.css';
 import PartButton from '../PartButton';
 import EnlargeImage from '../enlargeImage';
-let FontAwesome = require('react-fontawesome');
+
 import { Row, Col } from 'react-bootstrap';
 
 
@@ -14,11 +14,11 @@ class RecommendedPart extends Component {
     const decideHeader = function(part) {
       if(part ==='Tub Footprint') {
         return (
-          <h4 className='warning'><FontAwesome className="fa fa-exclamation-triangle" name='triangle' aria-hidden="true" /> This Requires a Tub Footprint to be functional.</h4>
+          "This Requires a Tub Footprint to be functional."
         )
       } else if(part ==='Drop-in Mesh Body') {
         return (
-          <h4><FontAwesome className="fa fa-plus" name='plus' aria-hidden="true" /> Add a Drop-in Mesh Body to have a 3-season tent.</h4>
+          "Add a Drop-in Mesh Body to have a 3-season tent"
         )
       }
     }
@@ -29,20 +29,25 @@ class RecommendedPart extends Component {
       return (
         <Row className='recommended-part-header'>
           <Col xs={12} md={12} className='recommended-part-name'>
-            {decideHeader(part.name)}
+            <h4>{decideHeader(part.name)}</h4>
           </Col>
-
-          <Col xs={11} md={11} className='recommended-part-body'>
             <Row>
-              <Col xs={8} md={8} className="recommended-part-image">
-                <EnlargeImage lineDrawing={part.lineDrawing} alt={part.name} />
+              <Col xs={7} md={7} className='recommended-part-button'>
+                <PartButton part={part} type='recommend' partStateUpdate={this.props.partStateUpdate} partInCart={this.props.partInCart} showRecommended={this.props.showRecommended} />
               </Col>
               <Col xs={4} md={4}>
                 <h4 className='text-right'>
                   ${part.price}
                 </h4>
-                <PartButton part={part} type='recommend' partStateUpdate={this.props.partStateUpdate} partInCart={this.props.partInCart} showRecommended={this.props.showRecommended} />
               </Col>
+            </Row>
+          <Col xs={11} md={11} className='recommended-part-body'>
+            <Row>
+              <Col xs={12} md={12} className="recommended-part-image">
+                <EnlargeImage lineDrawing={part.lineDrawing} alt={part.name} />
+              </Col>
+            </Row>
+            <Row>
               <Col xs={12} md={12}>
                 {part.description}
               </Col>

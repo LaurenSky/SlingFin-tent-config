@@ -27,14 +27,14 @@ export default {
       weight: '245.00',
       lineDrawing:require('../images/line-drawings/sized-images/Tub-Footprint-only.png'),
       thumbnail:require('../images/line-drawings/sized-images/Tub-Footprint-only.png'),
-      main:require('../images/line-drawings/Tub-Footprint-only.png'),
-      gallery1:require('../images/line-drawings/Tub-Footprint-only.jpg'),
-      gallery2:require('../images/line-drawings/Tub-Footprint-only.jpg'),
+      main:require('../images/line-drawings/sized-images/Tub-Footprint-only.png'),
+      gallery1:require('../images/line-drawings/sized-images/Tub-Footprint-only.png'),
+      gallery2:require('../images/line-drawings/sized-images/Tub-Footprint-only.png'),
       recommend: {
         id: 8,
         category: "InnerTentBodies",
         name: "Drop-in Mesh Body",
-        description: "Mesh drop-in to be used with the Tub Footprint. It provides bug protection without the weight of a a traditional tent body. Just lift up the mesh and crawl in (quick and easy access via a shock cord system). Or, if you prefer zippers, one side also has a zippered entrance.",
+        description: "Mesh drop-in to be used with the Tub Footprint. It provides bug protection without the weight of a a traditional tent body. Just lift up the mesh and crawl in (quick and easy access via a shock cord system). Or, if you prefer zippers, one side also has a zippered entrance. ** THIS NEEDS A TUB FOOTPRINT TO BE FUNCTIONAL.",
         price: '34.95',
         weight: '292.00',
         lineDrawing:require('../images/line-drawings/MeshDropIn.png'),
@@ -51,9 +51,9 @@ export default {
       weight: '161.59',
       lineDrawing:require('../images/line-drawings/sized-images/Flat-Footprint-only.png'),
       thumbnail:require('../images/line-drawings/sized-images/Flat-Footprint-only.png'),
-      main:require('../images/line-drawings/Flat-Footprint-only.png'),
+      main:require('../images/line-drawings/sized-images/Flat-Footprint-only.png'),
       gallery1:"http://www.slingfin.com/img/products/1800/083_02.jpg",
-      gallery2:require('../images/line-drawings/Flat-Footprint-only.jpg'),
+      gallery2:require('../images/line-drawings/sized-images/Flat-Footprint-only.png'),
       recommend: null
     }
   ],
@@ -82,7 +82,7 @@ export default {
       description: "This is the 4-season full Ripstop (R/S) inner tent body. It was designed to create an extremely lightweight, yet solid, 4-season tent configuration.",
       price: '98.65',
       weight: '679.00',
-      lineDrawing:require('../images/line-drawings/RS-body-only.jpg'),
+      lineDrawing:require('../images/line-drawings/sized-images/RS-body-only.png'),
       thumbnail:'http://www.slingfin.com/img/products/800/1082_02.jpg',
       main:"http://www.slingfin.com/img/products/800/1082_02.jpg",
       gallery1:"http://www.slingfin.com/img/products/800/1082_09.jpg",
@@ -107,7 +107,7 @@ export default {
       id: 8,
       category: "InnerTentBodies",
       name: "Drop-in Mesh Body",
-      description: "Mesh drop-in was designed to be used with the Tub Footprint. Made of 15D No-See-Um Mesh, it provides bug protection without the weight of a a traditional tent body. Just lift up the mesh and crawl in (quick and easy access via a shock cord system). Or, if you prefer zippers, one side also has a zippered entrance.",
+      description: "Mesh drop-in was designed to be used with the Tub Footprint. Made of 15D No-See-Um Mesh, it provides bug protection without the weight of a a traditional tent body. Just lift up the mesh and crawl in (quick and easy access via a shock cord system). Or, if you prefer zippers, one side also has a zippered entrance. ** THIS NEEDS A TUB FOOTPRINT TO BE FUNCTIONAL.",
       price: '34.95',
       weight: '292.00',
       lineDrawing:require('../images/line-drawings/MeshDropIn.png'),
@@ -124,7 +124,7 @@ export default {
         weight: '245.00',
         lineDrawing:require('../images/line-drawings/sized-images/Tub-Footprint-only.png'),
         thumbnail:require('../images/line-drawings/sized-images/Tub-Footprint-only.png'),
-        main:require('../images/line-drawings/Tub-Footprint-only.png')
+        main:require('../images/line-drawings/sized-images/Tub-Footprint-only.png')
       }
     }
   ],
@@ -186,22 +186,22 @@ export default {
       thumbnail:require('../images/stakes/stakes.jpg'),
       main:require('../images/stakes/stakes.jpg'),
       gallery1:require('../images/stakes/stakes.jpg'),
-      gallery2:require('../images/stakes/stakesrow.jpg'),
-      recommend: null
-    },
-    {
-      id: 13,
-      category: "Accessories",
-      name: "Stake (qty: 1)",
-      description: ".....",
-      price: '1.00',
-      weight: '111111.00',
-      lineDrawing:require('../images/stakes/stakefront.jpg'),
-      thumbnail:require('../images/stakes/stakefront.jpg'),
-      main:require('../images/stakes/stakefront.jpg'),
-      gallery1:require('../images/stakes/stakeback.jpg'),
-      gallery2:require('../images/stakes/stakesrow.jpg'),
+      gallery2:require('../images/stakes/stakes.jpg'),
       recommend: null
     }
+    // {
+    //   id: 13,
+    //   category: "Accessories",
+    //   name: "Stake (qty: 1)",
+    //   description: ".....",
+    //   price: '1.00',
+    //   weight: '111111.00',
+    //   lineDrawing:require('../images/stakes/stakefront.jpg'),
+    //   thumbnail:require('../images/stakes/stakefront.jpg'),
+    //   main:require('../images/stakes/stakefront.jpg'),
+    //   gallery1:require('../images/stakes/stakeback.jpg'),
+    //   gallery2:require('../images/stakes/stakesrow.jpg'),
+    //   recommend: null
+    // }
   ]
 }
