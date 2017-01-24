@@ -2,6 +2,7 @@
 import React from 'react';
 import './messages.css';
 let FontAwesome = require('react-fontawesome');
+require('core-js/fn/object/entries');
 
 
 class HasInnerTentBodies extends React.Component {

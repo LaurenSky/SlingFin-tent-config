@@ -1,5 +1,6 @@
 import React from 'react';
 import ImageGallery from 'react-image-gallery';
+require('core-js/fn/object/entries');
 // SCSS
 import "../../../node_modules/react-image-gallery/styles/scss/image-gallery.scss";
 // CSS
@@ -19,7 +20,7 @@ class ImageCarousol extends React.Component {
     console.log('=========== I just wanna fly === ')
     console.log('=========== CArosol props === ', props)
 
-    if ( (props !== false) || (Object.getOwnPropertyNames(props).length = 0) ) {
+    if ( (props !== false) || (Object.keys(props).length > 0) ) {
       Object.entries(props).forEach(
         ([key, value]) => {
           console.log("in iterate!!!!" , key, value.partInfo)

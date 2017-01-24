@@ -1,5 +1,6 @@
 import React from 'react';
 import './messages.css';
+require('core-js/fn/object/entries');
 let FontAwesome = require('react-fontawesome');
 
 

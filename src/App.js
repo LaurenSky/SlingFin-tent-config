@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
+require('core-js/fn/object/entries');
+
 
 import logo from './images/SF-logo-nature.png';
 import './App.css';
@@ -48,8 +50,6 @@ class App extends Component {
       let newState = {}; //Duplicate state.
       console.log("+++", parts)
       console.log("+++", Object.keys(parts))
-      console.log("+++", Object.values(parts))
-      console.log("+++", Object.entries(parts))
       // for (var [key, value] of Object.entries(parts)) {
       //   newState[key] = {
       //     value: true,
