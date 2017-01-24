@@ -104,6 +104,16 @@ class HasInnerTentBodies extends React.Component {
         </div>
 
       )
+    } else if ( partsInCart.includes('3') ) {
+      return (
+        <div className='normal'>
+          <h4><FontAwesome className="fa fa-check" name='checkmark' aria-hidden="true" /> You have a Tub Footprint in your configuration.</h4>
+          <h4 className='add-something'><FontAwesome className="fa fa-plus" name='plus' aria-hidden="true" /> Add a DropIn Mesh Body to have a 3-season tent too. </h4>
+          <h4 className='add-something'><FontAwesome className="fa fa-plus" name='plus' aria-hidden="true" /> Add a RipStop Body to have a 4-season tent too. </h4>
+          <h4 className='go-next-step'><FontAwesome className="fa fa-arrow-right" name='arrow' aria-hidden="true" /> Click on Footprints to go to the next step. </h4>
+        </div>
+
+      )
     } else {
       return (
         <div className='normal'>

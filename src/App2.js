@@ -110,10 +110,6 @@ class App extends Component {
             <Col xs={5} lg={5} className="img-carousol add-margin bkgrd add-padding-bottom">
               <h4 className='configuration-title'>Your Configuration Details</h4>
               <Row className='add-margin'>
-                <ImageCarousol partsInCart={this.state.partsInCart} data={this.props.data} tentConfigPics={this.props.tentConfigPics} />
-              </Row>
-
-              <Row className='add-margin'>
                 <Col xs={4} md={4} className='tent-details center-text cost-bug-weight'>
                   <Cost partsInCart={this.state.partsInCart} />
                 </Col>
@@ -124,11 +120,23 @@ class App extends Component {
                   <TrailWeight partsInCart={this.state.partsInCart} />
                 </Col>
               </Row>
-              
+              <Row className='add-margin'>
+                <ImageCarousol partsInCart={this.state.partsInCart} data={this.props.data} tentConfigPics={this.props.tentConfigPics} />
+              </Row>
+
               <Row className="parts-selected bkgrd add-margin">
                   <h3 className='cart-header'>List of Items selected</h3>
                   <Cart partInCart={this.state.partsInCart} deletePart={this.deletePart.bind(this)} />
                   <h3 className='cart-header'>List of Accessories selected</h3>
+              </Row>
+
+              <Row className='tent-details add-margin'>
+                <Col xs={6} md={6}>
+                  <TrailWeight partsInCart={this.state.partsInCart} />
+                </Col>
+                <Col xs={6} md={6}>
+                  <PackWeight partsInCart={this.state.partsInCart} />
+                </Col>
               </Row>
 
               <Row className="add-margin">
