@@ -99,7 +99,7 @@ class App extends Component {
         <section className='background-img'>
           <Row className="App-intro">
             <Col xs={10} lg={10} className="">
-              <p>Design the perfect tent system to fit your needs.</p>
+              <p>Design a tent system to fit your needs.</p>
             </Col>
             <Col xs={1} lg={1} className="pull-right">
               <CartModal partInCart={this.state.partsInCart} deletePart={this.deletePart.bind(this)} />

@@ -3,7 +3,7 @@ import './accordion.css';
 import { Row, Col } from 'react-bootstrap';
 import RecommendPart from './RecommendPart/RecommendPart';
 import PartButton from './PartButton';
-import EnlargeImage from './enlargeImage';
+import EnlargeImage from './enlargeImage1';
 
 
 const styles = {

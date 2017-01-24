@@ -9,7 +9,8 @@ class CartModal extends React.Component {
   constructor() {
     super();
     this.state = {
-      showModal: false
+      showModal: false,
+      hover: false
     };
   }
 
@@ -31,7 +32,7 @@ class CartModal extends React.Component {
 
     return (
       <div>
-        <FontAwesome className="fa fa-shopping-cart cart-icon" name='cart' aria-hidden="true" onClick={this.open.bind(this)} />
+        <FontAwesome className="fa fa-shopping-cart cart-icon" name='cart' aria-hidden="true"  onClick={this.open.bind(this)} />
         <Modal show={this.state.showModal} onHide={this.close.bind(this)} >
           <Modal.Header closeButton>
             <Modal.Title><strong>Cart:</strong> All parts in your Configuration</Modal.Title>

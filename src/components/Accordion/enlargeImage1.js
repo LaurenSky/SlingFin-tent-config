@@ -11,25 +11,13 @@ class EnlargeImage extends React.Component {
     };
   }
 
-  // close() {
-  //   this.setState({
-  //     showModal: false
-  //   });
-  // };
-  //
-  // open() {
-  //   this.setState({
-  //     showModal: true
-  //   });
-  // };
-
-  mouseOut() {
+  close() {
     this.setState({
       showModal: false
     });
   };
 
-  mouseOver() {
+  open() {
     this.setState({
       showModal: true
     });
@@ -40,9 +28,9 @@ class EnlargeImage extends React.Component {
 
     return (
       <div>
-        <img className='small-image' src={image} alt='logo' onMouseOver={this.mouseOver.bind(this)}/>
+        <img className='small-image' src={image} alt='logo' onClick={this.open.bind(this)}/>
 
-        <Modal show={this.state.showModal} onMouseOut={this.mouseOut.bind(this)} >
+        <Modal show={this.state.showModal} onHide={this.close.bind(this)} >
           <Modal.Body>
             <img className='large-image' src={image} alt='logo'/>
           </Modal.Body>

@@ -8,12 +8,12 @@ class EnvironmentConditions extends React.Component {
  // flysheetID = 5
  // webtruss and cross-poles: 1 & 9
 
-  showSnowflake(partsInCart) {
+  showSnowflake(selectedParts) {
     // needs webtruss, cross-poles, ripstopBody, flysheet, and (bow-pole / trekking-poles)
     // snowflake1 = '1' && '9' && '6' && '5' && '10'
     // snowflake2 = '1' && '9' && '6' && '5' && '11'
 
-    if ( (Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('6') && Object.keys(partsInCart).includes('5') && Object.keys(partsInCart).includes('10')) || (Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('6') && Object.keys(partsInCart).includes('5') && Object.keys(partsInCart).includes('11')) ){
+    if ( (selectedParts.includes('1') && selectedParts.includes('9') && selectedParts.includes('6') && selectedParts.includes('5') && selectedParts.includes('10')) || (selectedParts.includes('1') && selectedParts.includes('9') && selectedParts.includes('6') && selectedParts.includes('5') && selectedParts.includes('11')) ){
       // console.log(true)
       // console.log("^^^^^^^^ I'm showing a snowflake")
       return <FontAwesome className="fa fa-snowflake-o increase-icon snowflake" name='snowflake' aria-hidden="true" />
@@ -22,8 +22,8 @@ class EnvironmentConditions extends React.Component {
     }
   }
 
-  showRaindrop(partsInCart) {
-    // needs webtruss, cross-poles, flysheet, and (bow-pole / trekking-poles) && ( tub footprint / flatfootprint / meshBody / ripstopBody)
+  showRaindrop(selectedParts) {
+    // needs webtruss, cross-poles, flysheet, and (bow-pole / trekking-poles) && ( tub footprint / meshBody / ripstopBody)
     // raindrop1 = '1' && '9' && '5' && '10' && '3'
     // raindrop2 = '1' && '9' && '5' && '11' && '3'
 
@@ -32,7 +32,7 @@ class EnvironmentConditions extends React.Component {
 
     // raindrop5 = '1' && '9' && '5' && '10' && '6'
     // raindrop6 = '1' && '9' && '5' && '11' && '6'
-    if ( ( Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('5') && Object.keys(partsInCart).includes('10') && Object.keys(partsInCart).includes('3') ) || ( Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('5') && Object.keys(partsInCart).includes('11') && Object.keys(partsInCart).includes('3') ) || ( Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('5') && Object.keys(partsInCart).includes('10') && Object.keys(partsInCart).includes('7') ) || ( Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('5') && Object.keys(partsInCart).includes('11') && Object.keys(partsInCart).includes('7') ) || ( Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('5') && Object.keys(partsInCart).includes('10') && Object.keys(partsInCart).includes('6') ) || ( Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('5') && Object.keys(partsInCart).includes('11') && Object.keys(partsInCart).includes('6') ) ){
+    if ( ( selectedParts.includes('1') && selectedParts.includes('9') && selectedParts.includes('5') && selectedParts.includes('10') && selectedParts.includes('3') ) || ( selectedParts.includes('1') && selectedParts.includes('9') && selectedParts.includes('5') && selectedParts.includes('11') && selectedParts.includes('3') ) || ( selectedParts.includes('1') && selectedParts.includes('9') && selectedParts.includes('5') && selectedParts.includes('10') && selectedParts.includes('7') ) || ( selectedParts.includes('1') && selectedParts.includes('9') && selectedParts.includes('5') && selectedParts.includes('11') && selectedParts.includes('7') ) || ( selectedParts.includes('1') && selectedParts.includes('9') && selectedParts.includes('5') && selectedParts.includes('10') && selectedParts.includes('6') ) || ( selectedParts.includes('1') && selectedParts.includes('9') && selectedParts.includes('5') && selectedParts.includes('11') && selectedParts.includes('6') ) ){
       // console.log(true)
       // console.log("^^^^^^^^ I'm showing a raindrop")
       return <FontAwesome className="fa fa-tint increase-icon raindrop" name='raindrop' aria-hidden="true" />
@@ -42,7 +42,7 @@ class EnvironmentConditions extends React.Component {
     }
   }
 
-  showBug(partsInCart) {
+  showBug(selectedParts) {
     // needs webtruss, cross-poles, (ripstopBody / meshBody / DropIn mesh Body), (bow-pole / trekking-poles)
     // bug-bow1 = '1' && '9' && '6' && '10'
     // bug-bow2 = '1' && '9' && '7' && '10'
@@ -51,7 +51,7 @@ class EnvironmentConditions extends React.Component {
     // bug-trek1 = '1' && '9' && '6' && '11'
     // bug-trek2 = '1' && '9' && '7' && '11'
     // bug-trek3 = '1' && '9' && '8' && '11'
-    if ( (Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('6') && Object.keys(partsInCart).includes('10')) || (Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('7') && Object.keys(partsInCart).includes('10')) || (Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('8') && Object.keys(partsInCart).includes('3') && Object.keys(partsInCart).includes('10')) || (Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('6') && Object.keys(partsInCart).includes('11')) || (Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('7') && Object.keys(partsInCart).includes('11')) || (Object.keys(partsInCart).includes('1') && Object.keys(partsInCart).includes('9') && Object.keys(partsInCart).includes('8') && Object.keys(partsInCart).includes('3') && Object.keys(partsInCart).includes('11'))) {
+    if ( (selectedParts.includes('1') && selectedParts.includes('9') && selectedParts.includes('6') && selectedParts.includes('10')) || (selectedParts.includes('1') && selectedParts.includes('9') && selectedParts.includes('7') && selectedParts.includes('10')) || (selectedParts.includes('1') && selectedParts.includes('9') && selectedParts.includes('8') && selectedParts.includes('3') && selectedParts.includes('10')) || (selectedParts.includes('1') && selectedParts.includes('9') && selectedParts.includes('6') && selectedParts.includes('11')) || (selectedParts.includes('1') && selectedParts.includes('9') && selectedParts.includes('7') && selectedParts.includes('11')) || (selectedParts.includes('1') && selectedParts.includes('9') && selectedParts.includes('8') && selectedParts.includes('3') && selectedParts.includes('11'))) {
       // console.log(true)
       // console.log("^^^^^^^^ I'm showing a bug")
       return <FontAwesome className="fa fa-bug increase-icon bugs" name='bugs' aria-hidden="true" />
@@ -63,14 +63,14 @@ class EnvironmentConditions extends React.Component {
 
   render () {
     // console.log("^^^^^^^keys in conditions: ----" , Object.keys(partsInCart))
-
+    let selectedParts = Object.keys(this.props.partsInCart);
 
     return (
       <div className='conditions-protection'>
         <h5>Protects you from:</h5>
-        {this.showSnowflake(this.props.partsInCart)}
-        {this.showRaindrop(this.props.partsInCart)}
-        {this.showBug(this.props.partsInCart)}
+        {this.showSnowflake(selectedParts)}
+        {this.showRaindrop(selectedParts)}
+        {this.showBug(selectedParts)}
       </div>
     );
   }
