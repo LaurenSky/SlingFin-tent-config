@@ -57,6 +57,50 @@ class ImageCarousol extends React.Component {
             }
           )
         }
+      } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('11') && partsInCart.includes('6') ) {
+        // RipstopTrek)
+
+        for (let i = 0 ; i < ripstopPicsTrek.length; i++) {
+          images.push(
+            {
+              original: ripstopPicsTrek[i],
+              thumbnail: ripstopPicsTrek[i]
+            }
+          )
+        }
+      } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('10') && partsInCart.includes('6') ) {
+        // RipstopBow)
+
+        for (let i = 0 ; i < ripstopPicsBow.length; i++) {
+          images.push(
+            {
+              original: ripstopPicsBow[i],
+              thumbnail: ripstopPicsBow[i]
+            }
+          )
+        }
+      } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('11') && partsInCart.includes('3') ) {
+        // StormpackTrek)
+
+        for (let i = 0 ; i < stormpackPicsTrek.length; i++) {
+          images.push(
+            {
+              original: stormpackPicsTrek[i],
+              thumbnail: stormpackPicsTrek[i]
+            }
+          )
+        }
+      }  else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('10') && partsInCart.includes('3') ) {
+        // StormpackBow)
+
+        for (let i = 0 ; i < stormpackPicsBow.length; i++) {
+          images.push(
+            {
+              original: stormpackPicsBow[i],
+              thumbnail: stormpackPicsBow[i]
+            }
+          )
+        }
       } else {
         images.push (
           {
