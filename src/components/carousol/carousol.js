@@ -32,6 +32,8 @@ class ImageCarousol extends React.Component {
     let stormpackPicsBow = imgConfigPics.stormpack.bow
     let ripstopPicsTrek = imgConfigPics.ripstop.trek
     let ripstopPicsBow = imgConfigPics.ripstop.bow
+    let meshDropInPicsTrek = imgConfigPics.meshDropIn.trek
+    let meshDropInPicsBow = imgConfigPics.meshDropIn.bow
 
 
     if (partsInCart.length > 0) {
@@ -79,6 +81,28 @@ class ImageCarousol extends React.Component {
             }
           )
         }
+      } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('11') && partsInCart.includes('3') && partsInCart.includes('8') ) {
+        // MeshDropInTrek)
+
+        for (let i = 0 ; i < meshDropInPicsTrek.length; i++) {
+          images.push(
+            {
+              original: meshDropInPicsTrek[i],
+              thumbnail: meshDropInPicsTrek[i]
+            }
+          )
+        }
+      }  else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('10') && partsInCart.includes('3') && partsInCart.includes('8') ) {
+        // meshDropInBow)
+
+        for (let i = 0 ; i < meshDropInPicsBow.length; i++) {
+          images.push(
+            {
+              original: meshDropInPicsBow[i],
+              thumbnail: meshDropInPicsBow[i]
+            }
+          )
+        }
       } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('11') && partsInCart.includes('3') ) {
         // StormpackTrek)
 
@@ -90,7 +114,7 @@ class ImageCarousol extends React.Component {
             }
           )
         }
-      }  else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('10') && partsInCart.includes('3') ) {
+      } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('10') && partsInCart.includes('3') ) {
         // StormpackBow)
 
         for (let i = 0 ; i < stormpackPicsBow.length; i++) {

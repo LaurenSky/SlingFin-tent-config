@@ -63,5 +63,23 @@ export default {
       'http://www.slingfin.com/img/products/800/1080_07.jpg',
       'http://www.slingfin.com/img/products/800/1080---spec-sheet-summary.jpg'
     ]
+  },
+  meshDropIn: {
+    trek: [
+      'http://www.slingfin.com/img/products/800/1086_01.jpg',
+      'http://www.slingfin.com/img/products/800/1086_02.jpg',
+      'http://www.slingfin.com/img/products/800/1086_04.jpg',
+      'http://www.slingfin.com/img/products/800/1086_05.jpg',
+      'http://www.slingfin.com/img/products/800/1086_06.jpg',
+      'http://www.slingfin.com/img/products/800/1086_07.jpg'
+    ],
+    bow: [
+      'http://www.slingfin.com/img/products/800/1086_01.jpg',
+      'http://www.slingfin.com/img/products/800/1086_02.jpg',
+      'http://www.slingfin.com/img/products/800/1086_04.jpg',
+      'http://www.slingfin.com/img/products/800/1086_05.jpg',
+      'http://www.slingfin.com/img/products/800/1086_06.jpg',
+      'http://www.slingfin.com/img/products/800/1086_07.jpg'
+    ]
   }
 }
