@@ -20,7 +20,7 @@ class ImageCarousol extends React.Component {
     console.log('=========== I just wanna fly === ')
     console.log('=========== CArosol props === ', props)
 
-    if ( (props !== false) || (Object.keys(props).length > 0) ) {
+    if ( (props !== false) ) {
       Object.entries(props).forEach(
         ([key, value]) => {
           console.log("in iterate!!!!" , key, value.partInfo)

@@ -4,8 +4,6 @@ import { Row, Col } from 'react-bootstrap';
 import RecommendPart from './RecommendPart/RecommendPart';
 import PartButton from './PartButton';
 import EnlargeImage from './enlargeImage1';
-let FontAwesome = require('react-fontawesome');
-
 
 
 const styles = {

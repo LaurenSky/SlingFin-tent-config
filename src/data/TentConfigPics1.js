@@ -81,5 +81,14 @@ export default {
       'http://www.slingfin.com/img/products/800/1086_06.jpg',
       'http://www.slingfin.com/img/products/800/1086_07.jpg'
     ]
+  },
+  accessories: {
+    3:[],
+    4:[],
+    6:[],
+    7:[],
+    8:[],
+    10:[],
+    11:[],
   }
 }

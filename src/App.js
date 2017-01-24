@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
 require('core-js/fn/object/entries');
-
-
 import logo from './images/SF-logo-nature.png';
 import './App.css';
 
-import ImageCarousol from './components/Carousol/carousol';
+import ImageCarousol from './components/Carousol/carousol1';
 import EnvironmentConditions from './components/Conditions/conditions';
 import TentDimensions from './components/TentDimensions/TentDimensions';
 import CartModal from './components/Cart/cartmodal';
@@ -15,7 +13,6 @@ import TrailWeight from './components/TentDetails/trail-weight';
 import PackWeight from './components/TentDetails/pack-weight';
 import Cost from './components/TentDetails/cost';
 import Footer from './components/Footer/Footer';
-
 import StartOptions from './components/Welcome/StartOptions';
 
 const styles = {
@@ -48,14 +45,7 @@ class App extends Component {
       });
     } else {
       let newState = {}; //Duplicate state.
-      console.log("+++", parts)
-      console.log("+++", Object.keys(parts))
-      // for (var [key, value] of Object.entries(parts)) {
-      //   newState[key] = {
-      //     value: true,
-      //     partInfo: value
-      //   }
-      // }
+
       Object.entries(parts).forEach(
         ([key, value]) => {
           newState[key] = {
