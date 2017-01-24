@@ -142,6 +142,10 @@ class App extends Component {
                 <ImageCarousol partsInCart={this.state.partsInCart} data={this.props.data} tentConfigPics={this.props.tentConfigPics} />
               </Row>
 
+              <Row className="parts-selected bkgrd add-margin">
+                  <h3 className='cart-header'>List of Items selected</h3>
+              </Row>
+
               <Row className='add-margin' style={stateStyle}>
                 <Col xs={4} md={4} className='tent-details center-text cost-bug-weight'>
                   <Cost partsInCart={this.state.partsInCart} />
@@ -155,7 +159,6 @@ class App extends Component {
               </Row>
 
               <Row className="parts-selected bkgrd add-margin">
-                  <h3 className='cart-header'>List of Items selected</h3>
                   <Cart partInCart={this.state.partsInCart} deletePart={this.deletePart.bind(this)} />
                   <h3 className='cart-header'>List of Accessories selected</h3>
               </Row>
