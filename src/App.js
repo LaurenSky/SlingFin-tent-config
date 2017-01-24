@@ -16,6 +16,16 @@ import Footer from './components/Footer/Footer';
 
 import StartOptions from './components/Welcome/StartOptions';
 
+const styles = {
+  active: {
+    display: 'inherit'
+  },
+
+  inactive: {
+    display: 'none'
+  }
+};
+
 
 class App extends Component {
 
@@ -78,10 +88,29 @@ class App extends Component {
     })
   }
 
+  // showConfigInfo() {
+  //   if (this.state.partsInCart === false) {
+  //     return (
+  //       <div>
+  //         <Col xs={4} md={4} className='tent-details center-text cost-bug-weight'>
+  //           <Cost partsInCart={this.state.partsInCart} />
+  //         </Col>
+  //         <Col xs={4} md={4} className='tent-details cost-bug-weight'>
+  //           <EnvironmentConditions partsInCart={this.state.partsInCart} />
+  //         </Col>
+  //         <Col xs={4} md={4} className='tent-details cost-bug-weight'>
+  //           <TrailWeight partsInCart={this.state.partsInCart} />
+  //         </Col>
+  //       </div>
+  //     )
+  //   } else {
+  //     return null
+  //   }
+  // }
 
   render() {
     console.log("partInCart value in render APP: ", this.state.partsInCart)
-
+    const stateStyle = (!this.state.partsInCart) ? styles.inactive : styles.active;
 
     return (
       <section className="App">
@@ -113,7 +142,7 @@ class App extends Component {
                 <ImageCarousol partsInCart={this.state.partsInCart} data={this.props.data} tentConfigPics={this.props.tentConfigPics} />
               </Row>
 
-              <Row className='add-margin'>
+              <Row className='add-margin' style={stateStyle}>
                 <Col xs={4} md={4} className='tent-details center-text cost-bug-weight'>
                   <Cost partsInCart={this.state.partsInCart} />
                 </Col>
@@ -124,7 +153,7 @@ class App extends Component {
                   <TrailWeight partsInCart={this.state.partsInCart} />
                 </Col>
               </Row>
-              
+
               <Row className="parts-selected bkgrd add-margin">
                   <h3 className='cart-header'>List of Items selected</h3>
                   <Cart partInCart={this.state.partsInCart} deletePart={this.deletePart.bind(this)} />
