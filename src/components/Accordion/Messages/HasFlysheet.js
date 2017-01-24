@@ -8,11 +8,14 @@ class HasFlysheet extends React.Component {
   checkFlysheet(props) {
     let partsInCart = [];
 
-    Object.entries(props).forEach(
-      ([key, value]) => {
-        partsInCart.push(key)
-      }
-    );
+    if (props !== false) {
+      Object.entries(props).forEach(
+        ([key, value]) => {
+          partsInCart.push(key)
+        }
+      );
+    }
+
 
     if ( partsInCart.includes('5') ) {
       return (

@@ -13,14 +13,18 @@ class TrailWeight extends React.Component {
 
   render () {
     let partWeightsInCart = [];
+    let props = this.props.partsInCart
 
-    Object.entries(this.props.partsInCart).forEach(
-      ([key, value]) => {
-        console.log("in iterate!!!!" , key, value.partInfo)
-        partWeightsInCart.push(value.partInfo.weight)
-        console.log('<<<<>>>>>>>>> MY PARTs ARRAY ---- WEIGHT :' , partWeightsInCart)
-      }
-    );
+    if (props !== false) {
+      Object.entries(props).forEach(
+        ([key, value]) => {
+          console.log("in iterate!!!!" , key, value.partInfo)
+          partWeightsInCart.push(value.partInfo.weight)
+          console.log('<<<<>>>>>>>>> MY PARTs ARRAY ---- WEIGHT :' , partWeightsInCart)
+        }
+      );
+    }
+
 
     let totalGrams = '0.00'
 

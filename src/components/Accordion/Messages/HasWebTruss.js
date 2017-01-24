@@ -8,11 +8,14 @@ class HasWebTruss extends React.Component {
   checkForWebTruss(props) {
     let partsInCart = [];
 
-    Object.entries(props).forEach(
-      ([key, value]) => {
-        partsInCart.push(key)
-      }
-    );
+    if (props !== false) {
+      Object.entries(props).forEach(
+        ([key, value]) => {
+          partsInCart.push(key)
+        }
+      );
+    }
+
 
     if ( partsInCart.includes('1') ) {
       return (

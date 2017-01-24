@@ -8,11 +8,14 @@ class HasFootprint extends React.Component {
   checkForFootprint(props) {
     let partsInCart = [];
 
-    Object.entries(props).forEach(
-      ([key, value]) => {
-        partsInCart.push(key)
-      }
-    );
+    if (props !== false) {
+      Object.entries(props).forEach(
+        ([key, value]) => {
+          partsInCart.push(key)
+        }
+      );
+    }
+
 
     if ( partsInCart.includes('3') && partsInCart.includes('4') && partsInCart.includes('8')) {
       return (

@@ -29,6 +29,8 @@ class StartOptions extends Component {
 
   clearPartsInCart() {
     const parts = false
+    console.log('>>>>>> PRE CONFIG: ', parts);
+
     this.props.partStateConfig(parts)
 
   }

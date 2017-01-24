@@ -7,11 +7,13 @@ class HasAccessories extends React.Component {
   checkAccessories(props) {
     let partsInCart = [];
 
-    Object.entries(props).forEach(
-      ([key, value]) => {
-        partsInCart.push(key)
-      }
-    );
+    if (props !== false) {
+      Object.entries(props).forEach(
+        ([key, value]) => {
+          partsInCart.push(key)
+        }
+      );
+    }
 
     if ( partsInCart.includes('12') ) {
       return (

@@ -15,29 +15,33 @@ class ImageCarousol extends React.Component {
 
   render() {
     let partsInCart = [];
+    let props = this.props.partsInCart
 
-    Object.entries(this.props.partsInCart).forEach(
-      ([key, value]) => {
-        console.log("in iterate!!!!" , key, value.partInfo)
-        partsInCart.push(key)
-        console.log('<<<<>>>>>>>>> MY PARTs ARRAY ---- IMAGES :' , partsInCart)
-      }
-    );
+    if (props !== false) {
+      Object.entries(props).forEach(
+        ([key, value]) => {
+          console.log("in iterate!!!!" , key, value.partInfo)
+          partsInCart.push(key)
+          console.log('<<<<>>>>>>>>> MY PARTs ARRAY ---- IMAGES :' , partsInCart)
+        }
+      );
+    }
 
     let images = []
-    let imgConfigPics = this.props.tentConfigPics
-    let meshPicsTrek = imgConfigPics.meshbody.trek
-    let meshPicsBow = imgConfigPics.meshbody.bow
-    let stormpackPicsTrek = imgConfigPics.stormpack.trek
-    let stormpackPicsBow = imgConfigPics.stormpack.bow
-    let ripstopPicsTrek = imgConfigPics.ripstop.trek
-    let ripstopPicsBow = imgConfigPics.ripstop.bow
-    let meshDropInPicsTrek = imgConfigPics.meshDropIn.trek
-    let meshDropInPicsBow = imgConfigPics.meshDropIn.bow
+    const imgConfigPics = this.props.tentConfigPics
+    const meshPicsTrek = imgConfigPics.meshbody.trek
+    const meshPicsBow = imgConfigPics.meshbody.bow
+    const stormpackPicsTrek = imgConfigPics.stormpack.trek
+    const stormpackPicsBow = imgConfigPics.stormpack.bow
+    const ripstopPicsTrek = imgConfigPics.ripstop.trek
+    const ripstopPicsBow = imgConfigPics.ripstop.bow
+    const meshDropInPicsTrek = imgConfigPics.meshDropIn.trek
+    const meshDropInPicsBow = imgConfigPics.meshDropIn.bow
 
 
     if (partsInCart.length > 0) {
-      if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('11') && partsInCart.includes('7') ) {
+
+      if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('11') && partsInCart.includes('7') && partsInCart.includes('12') ) {
         // MeshTrek
 
         for (let i = 0 ; i < meshPicsTrek.length; i++) {
@@ -48,7 +52,7 @@ class ImageCarousol extends React.Component {
             }
           )
         }
-      } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('10') && partsInCart.includes('7') ) {
+      } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('10') && partsInCart.includes('7') && partsInCart.includes('12') ) {
         // MeshBow)
 
         for (let i = 0 ; i < meshPicsBow.length; i++) {
@@ -59,7 +63,7 @@ class ImageCarousol extends React.Component {
             }
           )
         }
-      } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('11') && partsInCart.includes('6') ) {
+      } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('11') && partsInCart.includes('6') && partsInCart.includes('12') ) {
         // RipstopTrek)
 
         for (let i = 0 ; i < ripstopPicsTrek.length; i++) {
@@ -70,7 +74,7 @@ class ImageCarousol extends React.Component {
             }
           )
         }
-      } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('10') && partsInCart.includes('6') ) {
+      } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('10') && partsInCart.includes('6') && partsInCart.includes('12') ) {
         // RipstopBow)
 
         for (let i = 0 ; i < ripstopPicsBow.length; i++) {
@@ -81,7 +85,7 @@ class ImageCarousol extends React.Component {
             }
           )
         }
-      } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('11') && partsInCart.includes('3') && partsInCart.includes('8') ) {
+      } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('11') && partsInCart.includes('3') && partsInCart.includes('8') && partsInCart.includes('12') ) {
         // MeshDropInTrek)
 
         for (let i = 0 ; i < meshDropInPicsTrek.length; i++) {
@@ -92,7 +96,7 @@ class ImageCarousol extends React.Component {
             }
           )
         }
-      }  else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('10') && partsInCart.includes('3') && partsInCart.includes('8') ) {
+      }  else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('10') && partsInCart.includes('3') && partsInCart.includes('8') && partsInCart.includes('12') ) {
         // meshDropInBow)
 
         for (let i = 0 ; i < meshDropInPicsBow.length; i++) {
@@ -103,7 +107,7 @@ class ImageCarousol extends React.Component {
             }
           )
         }
-      } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('11') && partsInCart.includes('3') ) {
+      } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('11') && partsInCart.includes('3') && partsInCart.includes('12') ) {
         // StormpackTrek)
 
         for (let i = 0 ; i < stormpackPicsTrek.length; i++) {
@@ -114,7 +118,7 @@ class ImageCarousol extends React.Component {
             }
           )
         }
-      } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('10') && partsInCart.includes('3') ) {
+      } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('10') && partsInCart.includes('3') && partsInCart.includes('12') ) {
         // StormpackBow)
 
         for (let i = 0 ; i < stormpackPicsBow.length; i++) {

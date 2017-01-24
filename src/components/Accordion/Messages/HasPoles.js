@@ -8,13 +8,16 @@ class NumPoles extends React.Component {
   countPoles(props) {
     let partsInCart = [];
 
-    Object.entries(props).forEach(
-      ([key, value]) => {
-        console.log("in iterate!!!!" , key, value.partInfo)
-        partsInCart.push(key)
-        // console.log('<<<<>>>>>>>>> MY PARTs ARRAY ---- NUM POLES :' , partsInCart)
-      }
-    );
+    if (props !== false) {
+      Object.entries(props).forEach(
+        ([key, value]) => {
+          // console.log("in iterate!!!!" , key, value.partInfo)
+          partsInCart.push(key)
+          // console.log('<<<<>>>>>>>>> MY PARTs ARRAY ---- NUM POLES :' , partsInCart)
+        }
+      );
+    }
+
 
     if ( partsInCart.includes('9') && partsInCart.includes('10') ) {
       // console.log('return 3')

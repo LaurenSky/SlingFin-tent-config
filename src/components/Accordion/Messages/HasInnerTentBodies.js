@@ -8,11 +8,14 @@ class HasInnerTentBodies extends React.Component {
   checkForInnerTentBodies(props) {
     let partsInCart = [];
 
-    Object.entries(props).forEach(
-      ([key, value]) => {
-        partsInCart.push(key)
-      }
-    );
+    if (props !== false) {
+      Object.entries(props).forEach(
+        ([key, value]) => {
+          partsInCart.push(key)
+        }
+      );
+    }
+
 
     if ( partsInCart.includes('6') && partsInCart.includes('7') && partsInCart.includes('8') && partsInCart.includes('3')) {
       return (

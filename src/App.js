@@ -39,22 +39,32 @@ class App extends Component {
   }
 
   partStateConfig(parts) {
-    console.log('$$$ Im in partstateconfig')
+    console.log('$$$ Im in partstateconfig', parts)
     if (parts === false) {
       this.setState({
         partsInCart: false
       });
     } else {
       let newState = {}; //Duplicate state.
+      console.log("+++", parts)
+      console.log("+++", Object.keys(parts))
+      console.log("+++", Object.values(parts))
+      console.log("+++", Object.entries(parts))
+      // for (var [key, value] of Object.entries(parts)) {
+      //   newState[key] = {
+      //     value: true,
+      //     partInfo: value
+      //   }
+      // }
       Object.entries(parts).forEach(
         ([key, value]) => {
-
           newState[key] = {
             value: true,
             partInfo: value
           }
         }
       );
+
       this.setState({
         partsInCart: newState
       });
@@ -87,26 +97,6 @@ class App extends Component {
       partsInCart: newState
     })
   }
-
-  // showConfigInfo() {
-  //   if (this.state.partsInCart === false) {
-  //     return (
-  //       <div>
-  //         <Col xs={4} md={4} className='tent-details center-text cost-bug-weight'>
-  //           <Cost partsInCart={this.state.partsInCart} />
-  //         </Col>
-  //         <Col xs={4} md={4} className='tent-details cost-bug-weight'>
-  //           <EnvironmentConditions partsInCart={this.state.partsInCart} />
-  //         </Col>
-  //         <Col xs={4} md={4} className='tent-details cost-bug-weight'>
-  //           <TrailWeight partsInCart={this.state.partsInCart} />
-  //         </Col>
-  //       </div>
-  //     )
-  //   } else {
-  //     return null
-  //   }
-  // }
 
   render() {
     console.log("partInCart value in render APP: ", this.state.partsInCart)

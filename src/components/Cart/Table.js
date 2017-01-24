@@ -28,16 +28,20 @@ class NewTable extends Component {
     let orderItems = [];
     let orderItemsPrices = [];
     let total = '0.00';
+    let props = this.props.parts
 
-    Object.entries(this.props.parts).forEach(
-      ([key, value]) => {
-        console.log("in iterate!!!!" , key, value.partInfo)
-        partsInCart.push(value.partInfo)
-        // console.log('MY PART ARRAY:' , partsInCart)
-        orderItems.push(value.partInfo.name)
-        orderItemsPrices.push(value.partInfo.price)
-      }
-    );
+    if (props !== false) {
+      Object.entries(props).forEach(
+        ([key, value]) => {
+          console.log("in iterate!!!!" , key, value.partInfo)
+          partsInCart.push(value.partInfo)
+          // console.log('MY PART ARRAY:' , partsInCart)
+          orderItems.push(value.partInfo.name)
+          orderItemsPrices.push(value.partInfo.price)
+        }
+      );
+    }
+
 
     for (let i = 0 ; i < orderItemsPrices.length; i++) {
       total = money.add(total, orderItemsPrices[i])
