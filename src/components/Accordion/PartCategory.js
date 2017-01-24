@@ -4,6 +4,8 @@ import { Row, Col } from 'react-bootstrap';
 import RecommendPart from './RecommendPart/RecommendPart';
 import PartButton from './PartButton';
 import EnlargeImage from './enlargeImage1';
+let FontAwesome = require('react-fontawesome');
+
 
 
 const styles = {
@@ -98,7 +100,7 @@ class PartCategory extends Component {
           </Row>
 
           <Row>
-            <Col xs={4} md={4}>
+            <Col xs={4} md={4} className='text-right'>
               <EnlargeImage lineDrawing={part.lineDrawing} className="part-image" alt="Part" />
             </Col>
 

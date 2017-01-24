@@ -10,14 +10,16 @@ import "../../../node_modules/react-image-gallery/styles/css/image-gallery.css";
 
 class ImageCarousol extends React.Component {
   handleImageLoad(event) {
-    console.log('Image loaded ', event.target)
+    // console.log('Image loaded ', event.target)
   }
 
   render() {
     let partsInCart = [];
     let props = this.props.partsInCart
+    console.log('=========== I just wanna fly === ')
+    console.log('=========== CArosol props === ', props)
 
-    if (props !== false) {
+    if ( (props !== false) || (Object.getOwnPropertyNames(props).length = 0) ) {
       Object.entries(props).forEach(
         ([key, value]) => {
           console.log("in iterate!!!!" , key, value.partInfo)
