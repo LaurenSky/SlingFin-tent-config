@@ -3,7 +3,7 @@ import './accordion.css';
 import { Row, Col } from 'react-bootstrap';
 import RecommendPart from './RecommendPart/RecommendPart';
 import PartButton from './PartButton';
-import EnlargeImage from './enlargeImage1';
+import EnlargeImage from './enlargeImage';
 
 
 const styles = {
@@ -20,46 +20,19 @@ class PartCategory extends Component {
   constructor(props) {
     super();
     this.state = {
-      show: true,
+      show: false,
       partsInCart: props.partInCart,
-      myParts: []
+      // myParts: []
     };
   }
 
   showRecommended() {
-  //   console.log('>>>>><<<<<<< SHOW RECOMMENDED: ' , this.state.partsInCart)
-  //   let keys = Object.keys(this.state.partsInCart)
-  //   console.log(keys)
-  //   // if ( keys.include('3') || keys.include('8') ) {
-  //   //   this.setState({
-  //   //     show: true,
-  //   //   })
-  //   // } else {
-  //   //   this.setState({
-  //   //     show: false,
-  //   //   })
-  //   // }
-  //   this.setState({
-  //     show: true,
-  //   })
-  }
+    console.log('>>>>><<<<<<< SHOW RECOMMENDED: ' , this.state.show)
 
-  // checkInCart() {
-  //   console.log('>>>>><<<<<<< SHOW RECOMMENDED: ' , this.props.partInCart)
-  //   if (this.props.partInCart !== false) {
-  //     let keys = Object.keys(this.props.partInCart)
-  //
-  //     if ( keys.include('3') || keys.include('8') ) {
-  //       this.setState({
-  //         show: true,
-  //       })
-  //     } else {
-  //       this.setState({
-  //         show: false,
-  //       })
-  //     }
-  //   }
-  // }
+    this.setState({
+      show: !this.state.show
+    })
+  }
 
 
   render () {
@@ -125,7 +98,7 @@ class PartCategory extends Component {
           </Row>
           <Row style={showStyle}>
             <Col xs={10} md={10} className='recommended-part-container'>
-              <RecommendPart  part={part.recommend} partStateUpdate={this.props.partStateUpdate} partInCart={this.props.partInCart} showRecommended={this.showRecommended.bind(this)} />
+              <RecommendPart  part={part.recommend} partStateUpdate={this.props.partStateUpdate} partInCart={this.props.partInCart} showRecommended={null} />
             </Col>
           </Row>
         </li>

@@ -280,7 +280,8 @@ class ImageCarousol extends React.Component {
             images.push(
               {
                 original: image.trek,
-                thumbnail: image.trek
+                thumbnail: image.trek,
+                // description: 'Optional SetUp with accessory selected'
               }
             )
           } else if (basePole === '10') {
@@ -289,7 +290,9 @@ class ImageCarousol extends React.Component {
             images.push(
               {
                 original: image.bow,
-                thumbnail: image.bow
+                thumbnail: image.bow,
+                // description: 'Optional SetUp with accessory selected'
+
               }
             )
           }

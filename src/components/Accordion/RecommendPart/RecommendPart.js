@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import '../accordion.css';
 import PartButton from '../PartButton';
-import EnlargeImage from '../enlargeImage1';
+import EnlargeImage from '../enlargeImage';
 let FontAwesome = require('react-fontawesome');
 import { Row, Col } from 'react-bootstrap';
 

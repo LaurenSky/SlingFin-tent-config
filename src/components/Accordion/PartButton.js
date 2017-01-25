@@ -51,7 +51,9 @@ class PartButton extends Component {
           this.partStateUpdate()
       }
     );
-      // this.props.showRecommended();
+    if (this.props.showRecommended !== null) {
+      this.props.showRecommended();
+    }
   }
 
   currentlyInPartInCart(partId) {

@@ -30,17 +30,18 @@ export default {
       main:require('../images/line-drawings/sized-images/Tub-Footprint-only.png'),
       gallery1:require('../images/line-drawings/sized-images/Tub-Footprint-only.png'),
       gallery2:require('../images/line-drawings/sized-images/Tub-Footprint-only.png'),
-      recommend: {
-        id: 8,
-        category: "InnerTentBodies",
-        name: "Drop-in Mesh Body",
-        description: "Mesh drop-in to be used with the Tub Footprint. It provides bug protection without the weight of a a traditional tent body. Just lift up the mesh and crawl in (quick and easy access via a shock cord system). Or, if you prefer zippers, one side also has a zippered entrance. ** THIS NEEDS A TUB FOOTPRINT TO BE FUNCTIONAL.",
-        price: '34.95',
-        weight: '292.00',
-        lineDrawing:require('../images/line-drawings/MeshDropIn.png'),
-        thumbnail:"http://www.slingfin.com/img/products/800/1086_01.jpg",
-        main:"http://www.slingfin.com/img/products/800/1086_01.jpg"
-      }
+      recommend: null
+      // {
+      //   id: 8,
+      //   category: "InnerTentBodies",
+      //   name: "Drop-in Mesh Body",
+      //   description: "Mesh drop-in to be used with the Tub Footprint. It provides bug protection without the weight of a a traditional tent body. Just lift up the mesh and crawl in (quick and easy access via a shock cord system). Or, if you prefer zippers, one side also has a zippered entrance. ** THIS NEEDS A TUB FOOTPRINT TO BE FUNCTIONAL.",
+      //   price: '34.95',
+      //   weight: '292.00',
+      //   lineDrawing:require('../images/line-drawings/MeshDropIn.png'),
+      //   thumbnail:"http://www.slingfin.com/img/products/800/1086_01.jpg",
+      //   main:"http://www.slingfin.com/img/products/800/1086_01.jpg"
+      // }
     },
     {
       id: 4,
