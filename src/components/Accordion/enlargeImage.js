@@ -24,15 +24,16 @@ class EnlargeImage extends React.Component {
   };
 
   render() {
-    let image = this.props.lineDrawing
+    let smImage = this.props.thumbnail
+    let lgImage = this.props.lineDrawing
 
     return (
       <div>
-        <img className='small-image' src={image} alt='logo' onClick={this.open.bind(this)}/>
+        <img className='small-image' src={smImage} alt='logo' onClick={this.open.bind(this)}/>
 
         <Modal show={this.state.showModal} onHide={this.close.bind(this)} >
           <Modal.Body>
-            <img className='large-image' src={image} alt='logo'/>
+            <img className='large-image' src={lgImage} alt='logo'/>
           </Modal.Body>
         </Modal>
       </div>

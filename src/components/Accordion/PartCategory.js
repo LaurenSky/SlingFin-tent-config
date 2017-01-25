@@ -72,7 +72,7 @@ class PartCategory extends Component {
 
           <Row>
             <Col xs={4} md={4} className='text-right'>
-              <EnlargeImage lineDrawing={part.lineDrawing} className="part-image" alt="Part" />
+              <EnlargeImage lineDrawing={part.lineDrawing} thumbnail={part.thumbnail} className="part-image" alt="Part" />
             </Col>
 
             <Col xs={8} md={8}>
