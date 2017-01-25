@@ -27,7 +27,7 @@ class PartCategory extends Component {
   }
 
   showRecommended() {
-    console.log('>>>>><<<<<<< SHOW RECOMMENDED: ' , this.state.show)
+    // console.log('>>>>><<<<<<< SHOW RECOMMENDED: ' , this.state.show)
 
     this.setState({
       show: !this.state.show

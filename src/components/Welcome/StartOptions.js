@@ -29,14 +29,14 @@ class StartOptions extends Component {
 
   clearPartsInCart() {
     const parts = false
-    console.log('>>>>>> PRE CONFIG: ', parts);
+    // console.log('>>>>>> PRE CONFIG: ', parts);
 
     this.props.partStateConfig(parts)
 
   }
 
   preConfigHandleClick() {
-    console.log('Im in set true')
+    // console.log('Im in set true')
     this.setState({
       active: true,
       show: false,

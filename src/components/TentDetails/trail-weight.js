@@ -30,10 +30,10 @@ class TrailWeight extends React.Component {
     if (props !== false) {
       Object.entries(props).forEach(
         ([key, value]) => {
-          console.log("in iterate!!!!" , key, value.partInfo)
+          // console.log("in iterate!!!!" , key, value.partInfo)
           // partWeightsInCart.push(value.partInfo.weight)
           parts[key] = value.partInfo.weight
-          console.log('<<<<>>>>>>>>> MY PARTs ARRAY ---- WEIGHT :' , parts[key])
+          // console.log('<<<<>>>>>>>>> MY PARTs ARRAY ---- WEIGHT :' , parts[key])
         }
       );
     }

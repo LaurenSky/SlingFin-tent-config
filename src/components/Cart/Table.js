@@ -33,7 +33,7 @@ class NewTable extends Component {
     if (props !== false) {
       Object.entries(props).forEach(
         ([key, value]) => {
-          console.log("in iterate!!!!" , key, value.partInfo)
+          // console.log("in iterate!!!!" , key, value.partInfo)
           partsInCart.push(value.partInfo)
           // console.log('MY PART ARRAY:' , partsInCart)
           orderItems.push(value.partInfo.name)
@@ -57,8 +57,8 @@ class NewTable extends Component {
     const deleteFunction = this.props.deletePart
 
     function addDeleteIcon(cell, row) {
-      console.log('cell: ', cell)
-      console.log('row: ', row)
+      // console.log('cell: ', cell)
+      // console.log('row: ', row)
       return <DeleteButton row={row} deletePart={deleteFunction}/>
     }
 

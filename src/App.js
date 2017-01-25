@@ -38,7 +38,7 @@ class App extends Component {
   }
 
   partStateConfig(parts) {
-    console.log('$$$ Im in partstateconfig', parts)
+    // console.log('$$$ Im in partstateconfig', parts)
     if (parts === false) {
       this.setState({
         partsInCart: false
@@ -77,9 +77,7 @@ class App extends Component {
   }
 
   deletePart(partId) {
-    console.log('>>>>>In APP ready to delete Part: ', partId)
-    // delete this.state.parts[partName]
-    // this.props.partStateUpdate(false, part, partName)
+    // console.log('>>>>>In APP ready to delete Part: ', partId)
 
     const newState = {...this.state.partsInCart}; //Duplicate state.
     delete newState[partId];                  //remove Item form stateCopy.
@@ -89,7 +87,7 @@ class App extends Component {
   }
 
   render() {
-    console.log("partInCart value in render APP: ", this.state.partsInCart)
+    // console.log("partInCart value in render APP: ", this.state.partsInCart)
     const stateStyle = (!this.state.partsInCart) ? styles.inactive : styles.active;
 
     return (

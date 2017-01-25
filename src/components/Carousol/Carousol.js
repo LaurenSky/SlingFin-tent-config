@@ -43,15 +43,15 @@ class ImageCarousol extends React.Component {
     this.indexOf.bind(this)
     let partsInCart = [];
     let props = this.props.partsInCart
-    console.log('=========== I just wanna fly === ')
-    console.log('=========== CArosol props === ', props)
+    // console.log('=========== I just wanna fly === ')
+    // console.log('=========== CArosol props === ', props)
 
     if ( (props !== false) || (Object.keys(props).length > 0) ) {
       Object.entries(props).forEach(
         ([key, value]) => {
-          console.log("in iterate!!!!" , key, value.partInfo)
+          // console.log("in iterate!!!!" , key, value.partInfo)
           partsInCart.push(key)
-          console.log('<<<<>>>>>>>>> MY PARTs ARRAY ---- IMAGES :' , partsInCart)
+          // console.log('<<<<>>>>>>>>> MY PARTs ARRAY ---- IMAGES :' , partsInCart)
         }
       );
     }
