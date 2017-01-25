@@ -52,59 +52,7 @@ class ImageCarousol extends React.Component {
 
     if (partsInCart.length > 0) {
 
-      if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('11') && partsInCart.includes('3') && partsInCart.includes('12') ) {
-        // StormpackTrek)
-
-        let partIds = ['1', '9', '5', '11', '3', '12']
-        // console.log('~~~~~~ part Ids Array: B4', partsInCart )
-
-        for (let i = 0 ; i < stormpackPicsTrek.length; i++) {
-          images.push(
-            {
-              original: stormpackPicsTrek[i],
-              thumbnail: stormpackPicsTrek[i]
-            }
-          )
-        }
-
-        for (let i=0; i < partIds.length; i++) {
-          let index = this.indexOf(partsInCart, partIds[i])
-          if (index > -1) {
-             partsInCart.splice(index, 1);
-          }
-        }
-
-        basePole = '11'
-        // console.log('~~~~~~ part Ids Array: AFTER', partsInCart )
-
-
-      } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('10') && partsInCart.includes('3') && partsInCart.includes('12') ) {
-        // StormpackBow)
-
-        let partIds = ['1', '9', '5', '10', '3', '12']
-        // console.log('~~~~~~ part Ids Array: B4', partsInCart )
-
-        for (let i = 0 ; i < stormpackPicsBow.length; i++) {
-          images.push(
-            {
-              original: stormpackPicsBow[i],
-              thumbnail: stormpackPicsBow[i]
-            }
-          )
-        }
-
-        for (let i=0; i < partIds.length; i++) {
-          let index = this.indexOf(partsInCart, partIds[i])
-          if (index > -1) {
-             partsInCart.splice(index, 1);
-          }
-        }
-
-        basePole = '10'
-        // console.log('~~~~~~ part Ids Array: AFTER', partsInCart )
-
-
-      } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('11') && partsInCart.includes('3') && partsInCart.includes('8') && partsInCart.includes('12') ) {
+      if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('11') && partsInCart.includes('3') && partsInCart.includes('8') && partsInCart.includes('12') ) {
         // MeshDropInTrek
 
         let partIds = ['1', '9', '5', '11', '3', '8', '12']
@@ -141,6 +89,58 @@ class ImageCarousol extends React.Component {
             {
               original: meshDropInPicsBow[i],
               thumbnail: meshDropInPicsBow[i]
+            }
+          )
+        }
+
+        for (let i=0; i < partIds.length; i++) {
+          let index = this.indexOf(partsInCart, partIds[i])
+          if (index > -1) {
+             partsInCart.splice(index, 1);
+          }
+        }
+
+        basePole = '10'
+        // console.log('~~~~~~ part Ids Array: AFTER', partsInCart )
+
+
+      } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('11') && partsInCart.includes('3') && partsInCart.includes('12') ) {
+        // StormpackTrek)
+
+        let partIds = ['1', '9', '5', '11', '3', '12']
+        // console.log('~~~~~~ part Ids Array: B4', partsInCart )
+
+        for (let i = 0 ; i < stormpackPicsTrek.length; i++) {
+          images.push(
+            {
+              original: stormpackPicsTrek[i],
+              thumbnail: stormpackPicsTrek[i]
+            }
+          )
+        }
+
+        for (let i=0; i < partIds.length; i++) {
+          let index = this.indexOf(partsInCart, partIds[i])
+          if (index > -1) {
+             partsInCart.splice(index, 1);
+          }
+        }
+
+        basePole = '11'
+        // console.log('~~~~~~ part Ids Array: AFTER', partsInCart )
+
+
+      } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('10') && partsInCart.includes('3') && partsInCart.includes('12') ) {
+        // StormpackBow)
+
+        let partIds = ['1', '9', '5', '10', '3', '12']
+        // console.log('~~~~~~ part Ids Array: B4', partsInCart )
+
+        for (let i = 0 ; i < stormpackPicsBow.length; i++) {
+          images.push(
+            {
+              original: stormpackPicsBow[i],
+              thumbnail: stormpackPicsBow[i]
             }
           )
         }
