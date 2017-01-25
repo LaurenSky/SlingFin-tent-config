@@ -191,15 +191,24 @@ footer {
 .cart-icon {
   font-size: 250%;
   padding: 0;
-  text-align: right;
+}
+
+.cart-item-count {
+  margin: 0%;
+  text-align: center;
+}
+
+.rolling-cart {
   position: fixed;
   color: white;
   background-color: #222;
   padding: 1%;
   border-radius: 5px;
+  text-align: center;
+  margin: 0;
 }
 
-.cart-icon:hover {
+.rolling-cart:hover {
   color: orangered;
   /*background-color: grey;*/
 }

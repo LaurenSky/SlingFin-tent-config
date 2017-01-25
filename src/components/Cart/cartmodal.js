@@ -26,13 +26,35 @@ class CartModal extends React.Component {
     });
   };
 
+  cartItemNum() {
+    let numParts = 0
+    let partsInCart = this.props.partInCart
+    console.log("In Cart state passed: ", this.props.partInCart)
+    if (partsInCart !== false) {
+      numParts = Object.keys(partsInCart).length
+      console.log("11111111-----In Cart state passed: ", numParts)
+      if(numParts > 1) {
+        return (
+          <p className='cart-item-count'>{numParts} Items</p>
+        )
+      } else if (numParts === 1) { 
+        return (
+          <p className='cart-item-count'>{numParts} Item</p>
+        )
+      }
+    }
+  }
 
   render () {
     // console.log("11111111-----In Cart state passed: ", this.props.partInCart)
+    this.cartItemNum.bind(this);
 
     return (
       <div>
-        <FontAwesome className="fa fa-shopping-cart cart-icon" name='cart' aria-hidden="true"  onClick={this.open.bind(this)} />
+        <section className="rolling-cart">
+          <FontAwesome className="fa fa-shopping-cart cart-icon" name='cart' aria-hidden="true"  onClick={this.open.bind(this)} />
+          {this.cartItemNum()}
+        </section>
         <Modal show={this.state.showModal} onHide={this.close.bind(this)} >
           <Modal.Header closeButton>
             <Modal.Title><strong>Parts in your Configuration</strong></Modal.Title>
