@@ -12,13 +12,10 @@ class TrailWeight extends React.Component {
   }
 
   addIfIncludesAll(partIds, parts, totalGrams) {
-
     for (let i = 0; i < partIds.length; i++) {
-      console.log('<<<<>>>>>>>>> MY PARTs ARRAY ---- PartWEIGHT :', partIds[i],' : ' , parts[partIds[i]])
-
+      // console.log('<<<<>>>>>>>>> MY PARTs ARRAY ---- PartWEIGHT :', partIds[i],' : ' , parts[partIds[i]])
       totalGrams = money.add(totalGrams, parts[partIds[i]])
-      console.log('<<<<>>>>>>>>> IN WEIGHT ---- TOTAL-WEIGHT :' , totalGrams)
-
+      // console.log('<<<<>>>>>>>>> IN WEIGHT ---- TOTAL-WEIGHT :' , totalGrams)
     }
     return totalGrams;
   }
@@ -26,11 +23,8 @@ class TrailWeight extends React.Component {
   render () {
     this.addIfIncludesAll.bind(this)
     let props = this.props.partsInCart
-    // let partWeightsInCart = [];
     let parts = {}
     let partIds
-    // let partsInCart = Object.entries(parts)
-
     let totalGrams = '0.00'
 
     if (props !== false) {
@@ -46,9 +40,9 @@ class TrailWeight extends React.Component {
 
     let partsInCart = Object.keys(parts)
 
-    console.log('<<<<>>>>>>>>> MY PARTs ARRAY ---- PartWEIGHT1 :' , parts)
-    console.log('<<<<>>>>>>>>> MY PARTs ARRAY ---- PartWEIGHT1 :' , Object.keys(parts))
-    console.log('<<<<>>>>>>>>> MY PARTs ARRAY ---- PartWEIGHT1 :' , partsInCart)
+    // console.log('<<<<>>>>>>>>> MY PARTs ARRAY ---- PartWEIGHT1 :' , parts)
+    // console.log('<<<<>>>>>>>>> MY PARTs ARRAY ---- PartWEIGHT1 :' , Object.keys(parts))
+    // console.log('<<<<>>>>>>>>> MY PARTs ARRAY ---- PartWEIGHT1 :' , partsInCart)
 
     if (partsInCart.length > 0) {
 
@@ -59,7 +53,6 @@ class TrailWeight extends React.Component {
 
       } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('10') && partsInCart.includes('3') && partsInCart.includes('8') && partsInCart.includes('12') ) {
         // MeshDropInBow
-
         partIds = ['1', '9', '5', '10', '3', '8', '12']
         totalGrams = this.addIfIncludesAll(partIds, parts, totalGrams)
 
@@ -75,43 +68,25 @@ class TrailWeight extends React.Component {
 
       } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('11') && partsInCart.includes('7') && partsInCart.includes('12') ) {
         // MeshTrek
-
         partIds = ['1', '9', '5', '11', '7', '12']
         totalGrams = this.addIfIncludesAll(partIds, parts, totalGrams)
 
       } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('10') && partsInCart.includes('7') && partsInCart.includes('12') ) {
         // MeshBow
-
         partIds = ['1', '9', '5', '10', '7', '12']
         totalGrams = this.addIfIncludesAll(partIds, parts, totalGrams)
 
       } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('11') && partsInCart.includes('6') && partsInCart.includes('12') ) {
         // RipstopTrek
-
         partIds = ['1', '9', '5', '11', '6', '12']
         totalGrams = this.addIfIncludesAll(partIds, parts, totalGrams)
 
       } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('10') && partsInCart.includes('6') && partsInCart.includes('12') ) {
         // RipstopBow
-
         partIds = ['1', '9', '5', '10', '6', '12']
         totalGrams = this.addIfIncludesAll(partIds, parts, totalGrams)
-
       }
     }
-
-
-//-----------------------------------------------
-
-    // let totalGrams = '0.00'
-    //
-    // for (let i = 0 ; i < partWeightsInCart.length; i++) {
-    //   console.log('<<<<>>>>>>>>> IN WEIGHT ---- TOTAL-WEIGHT :' , totalGrams)
-    //   console.log('<<<<>>>>>>>>> IN WEIGHT ---- TOTAL-WEIGHT :' , partWeightsInCart[i])
-    //   totalGrams = money.add(totalGrams, partWeightsInCart[i])
-    // }
-
-    console.log('<<<<>>>>>>>>> IN WEIGHT ---- TOTAL-WEIGHT :' , totalGrams)
 
     this.convertToOunces.bind(this)
     let totalOunces = this.convertToOunces(totalGrams);
