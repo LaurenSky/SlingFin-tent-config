@@ -22,14 +22,14 @@ import { Row, Col } from 'react-bootstrap';
 // same this but stateless component
 const Footer = () =>
   <Row className='credit'>
-    <Col xs={7} md={10}>
+    <Col xs={6} md={10}>
       <h5>
         © 2017 SlingFin, Inc.
         {' '}
         From the Mountain to your trailhead.
       </h5>
     </Col>
-    <Col xs={4} md={2} className="social-media-icons">
+    <Col xs={6} md={2} className="social-media-icons text-right">
         <a href='http://www.slingfin.com/contact.html' target="new"><FontAwesome className="fa fa-envelope increase-footer-icon" name='mail' aria-hidden="true" /></a>
 
         <a className="twitter" href="https://twitter.com/slingfin" target="new"><FontAwesome className="fa fa-twitter-square increase-footer-icon" name='twitter' aria-hidden="true" /></a>
