@@ -56,7 +56,7 @@ class ImageCarousol extends React.Component {
         // StormpackTrek)
 
         let partIds = ['1', '9', '5', '11', '3', '12']
-        console.log('~~~~~~ part Ids Array: B4', partsInCart )
+        // console.log('~~~~~~ part Ids Array: B4', partsInCart )
 
         for (let i = 0 ; i < stormpackPicsTrek.length; i++) {
           images.push(
@@ -75,14 +75,14 @@ class ImageCarousol extends React.Component {
         }
 
         basePole = '11'
-        console.log('~~~~~~ part Ids Array: AFTER', partsInCart )
+        // console.log('~~~~~~ part Ids Array: AFTER', partsInCart )
 
 
       } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('10') && partsInCart.includes('3') && partsInCart.includes('12') ) {
         // StormpackBow)
 
         let partIds = ['1', '9', '5', '10', '3', '12']
-        console.log('~~~~~~ part Ids Array: B4', partsInCart )
+        // console.log('~~~~~~ part Ids Array: B4', partsInCart )
 
         for (let i = 0 ; i < stormpackPicsBow.length; i++) {
           images.push(
@@ -101,14 +101,14 @@ class ImageCarousol extends React.Component {
         }
 
         basePole = '10'
-        console.log('~~~~~~ part Ids Array: AFTER', partsInCart )
+        // console.log('~~~~~~ part Ids Array: AFTER', partsInCart )
 
 
       } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('11') && partsInCart.includes('3') && partsInCart.includes('8') && partsInCart.includes('12') ) {
-        // MeshDropInTrek)
+        // MeshDropInTrek
 
         let partIds = ['1', '9', '5', '11', '3', '8', '12']
-        console.log('~~~~~~ part Ids Array: B4', partsInCart )
+        // console.log('~~~~~~ part Ids Array: B4', partsInCart )
 
         for (let i = 0 ; i < meshDropInPicsTrek.length; i++) {
           images.push(
@@ -127,14 +127,14 @@ class ImageCarousol extends React.Component {
         }
 
         basePole = '11'
-        console.log('~~~~~~ part Ids Array: AFTER', partsInCart )
+        // console.log('~~~~~~ part Ids Array: AFTER', partsInCart )
 
 
       }  else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('10') && partsInCart.includes('3') && partsInCart.includes('8') && partsInCart.includes('12') ) {
         // meshDropInBow)
 
         let partIds = ['1', '9', '5', '10', '3', '8', '12']
-        console.log('~~~~~~ part Ids Array: B4', partsInCart )
+        // console.log('~~~~~~ part Ids Array: B4', partsInCart )
 
         for (let i = 0 ; i < meshDropInPicsBow.length; i++) {
           images.push(
@@ -153,13 +153,13 @@ class ImageCarousol extends React.Component {
         }
 
         basePole = '10'
-        console.log('~~~~~~ part Ids Array: AFTER', partsInCart )
+        // console.log('~~~~~~ part Ids Array: AFTER', partsInCart )
 
 
       } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('11') && partsInCart.includes('7') && partsInCart.includes('12') ) {
         // MeshTrek
         let partIds = ['1', '9', '5', '11', '7', '12']
-        console.log('~~~~~~ part Ids Array: B4', partsInCart )
+        // console.log('~~~~~~ part Ids Array: B4', partsInCart )
 
         for (let i = 0 ; i < meshPicsTrek.length; i++) {
           images.push(
@@ -177,13 +177,13 @@ class ImageCarousol extends React.Component {
           }
         }
         basePole = '11'
-        console.log('~~~~~~ part Ids Array: AFTER', partsInCart )
+        // console.log('~~~~~~ part Ids Array: AFTER', partsInCart )
 
 
       } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('10') && partsInCart.includes('7') && partsInCart.includes('12') ) {
         // MeshBow)
         let partIds = ['1', '9', '5', '10', '7', '12']
-        console.log('~~~~~~ part Ids Array: B4', partsInCart )
+        // console.log('~~~~~~ part Ids Array: B4', partsInCart )
 
         for (let i = 0 ; i < meshPicsBow.length; i++) {
           images.push(
@@ -202,13 +202,13 @@ class ImageCarousol extends React.Component {
         }
 
         basePole = '10'
-        console.log('~~~~~~ part Ids Array: AFTER', partsInCart )
+        // console.log('~~~~~~ part Ids Array: AFTER', partsInCart )
 
       } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('11') && partsInCart.includes('6') && partsInCart.includes('12') ) {
         // RipstopTrek)
 
         let partIds = ['1', '9', '5', '11', '6', '12']
-        console.log('~~~~~~ part Ids Array: B4', partsInCart )
+        // console.log('~~~~~~ part Ids Array: B4', partsInCart )
 
         for (let i = 0 ; i < ripstopPicsTrek.length; i++) {
           images.push(
@@ -227,14 +227,14 @@ class ImageCarousol extends React.Component {
         }
 
         basePole = '11'
-        console.log('~~~~~~ part Ids Array: AFTER', partsInCart )
+        // console.log('~~~~~~ part Ids Array: AFTER', partsInCart )
 
 
       } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('10') && partsInCart.includes('6') && partsInCart.includes('12') ) {
         // RipstopBow)
 
         let partIds = ['1', '9', '5', '10', '6', '12']
-        console.log('~~~~~~ part Ids Array: B4', partsInCart )
+        // console.log('~~~~~~ part Ids Array: B4', partsInCart )
 
         for (let i = 0 ; i < ripstopPicsBow.length; i++) {
           images.push(
@@ -253,7 +253,7 @@ class ImageCarousol extends React.Component {
         }
 
         basePole = '10'
-        console.log('~~~~~~ part Ids Array: AFTER', partsInCart )
+        // console.log('~~~~~~ part Ids Array: AFTER', partsInCart )
 
 
       } else {
@@ -265,18 +265,18 @@ class ImageCarousol extends React.Component {
         )
       }
 
-      console.log('~~~~~~ basePole: accessories', basePole )
-      console.log('~~~~~~ part Ids Array: accessories', partsInCart )
-      console.log('~~~~~~ part Ids Array: accessoriesPics', accessoryPics['3'] )
+      // console.log('~~~~~~ basePole: accessories', basePole )
+      // console.log('~~~~~~ part Ids Array: accessories', partsInCart )
+      // console.log('~~~~~~ part Ids Array: accessoriesPics', accessoryPics['3'] )
 
 
       for (let i = 0; i < partsInCart.length; i++) {
         if ( Object.keys(accessoryPics).includes(partsInCart[i]) ) {
           let partId = partsInCart[i]
-          console.log('~~~~~~ part Ids Array: accessories ID', partId )
+          // console.log('~~~~~~ part Ids Array: accessories ID', partId )
           if (basePole === '11') {
             let image = accessoryPics[partId]
-            console.log('~~~~~~ part Ids Array: accessories image', image )
+            // console.log('~~~~~~ part Ids Array: accessories image', image )
             images.push(
               {
                 original: image.trek,
@@ -286,13 +286,12 @@ class ImageCarousol extends React.Component {
             )
           } else if (basePole === '10') {
             let image = accessoryPics[partId]
-            console.log('~~~~~~ part Ids Array: accessories image', image )
+            // console.log('~~~~~~ part Ids Array: accessories image', image )
             images.push(
               {
                 original: image.bow,
                 thumbnail: image.bow,
                 // description: 'Optional SetUp with accessory selected'
-
               }
             )
           }

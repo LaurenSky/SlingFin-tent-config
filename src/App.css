@@ -192,10 +192,16 @@ footer {
   font-size: 250%;
   padding: 0;
   text-align: right;
+  position: fixed;
+  color: white;
+  background-color: #222;
+  padding: 1%;
+  border-radius: 5px;
 }
 
 .cart-icon:hover {
   color: orangered;
+  /*background-color: grey;*/
 }
 
 .send-email {
