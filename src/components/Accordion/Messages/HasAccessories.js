@@ -21,7 +21,11 @@ class HasAccessories extends React.Component {
       return (
         <div>
           <h4 className='normal'><FontAwesome className="fa fa-check" name='checkmark' aria-hidden="true" /> You have a stakes in your configuration and will be able to pitch your tent properly.</h4>
-          <p className='go-next-step'><FontAwesome className="fa fa-arrow-right" name='arrow' aria-hidden="true" /> Congrats, you are done with your configuration now! <br/><br/> Feel free to go back to different sections and play around until you find your perfect system. When finished, click the CART icon at the top of the page to review & email your configuration to the shop to get your order started. <br/><br/> Have a great Day and can't wait to see you on the trail!</p></div>
+          <h4 className='go-next-step'>Congrats, you are done with your configuration now!</h4>
+          <h4 className='go-next-step'><FontAwesome className="fa fa-arrow-left" name='arrow' aria-hidden="true" /> Go back to Add or Remove parts.</h4>
+          <h4 className='go-next-step'><FontAwesome className="fa fa-arrow-right" name='arrow' aria-hidden="true" /> Click the CART icon to review configuration & email shop.</h4>
+          <h4 className='go-next-step'>Have a great Day and can't wait to see you on the trail!</h4>
+        </div>
       )
 
     } else {

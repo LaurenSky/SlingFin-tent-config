@@ -34,10 +34,10 @@ class RecommendedPart extends Component {
 
           <Col xs={11} md={11} className='recommended-part-body'>
             <Row>
-              <Col xs={8} md={8} className="recommended-part-image">
+              <Col xs={9} md={9} className="recommended-part-image">
                 <EnlargeImage lineDrawing={part.lineDrawing} alt={part.name} />
               </Col>
-              <Col xs={4} md={4}>
+              <Col xs={3} md={3}>
                 <h4 className='text-right'>
                   ${part.price}
                 </h4>
