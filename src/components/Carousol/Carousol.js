@@ -74,14 +74,16 @@ class ImageCarousol extends React.Component {
       if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('11') && partsInCart.includes('3') && partsInCart.includes('8') && partsInCart.includes('12') ) {
         // MeshDropInTrek
 
-        let partIds = ['1', '9', '5', '11', '3', '8', '12']
+        let partIds = ['1', '9', '5', '11', '8', '12']
+        // let partIds = ['1', '9', '5', '11', '3', '8', '12'] //with tub footprint
         this.addIfIncludesAll(partIds, meshDropInPicsTrek, partsInCart, images)
         basePole = '11'
 
       }  else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('10') && partsInCart.includes('3') && partsInCart.includes('8') && partsInCart.includes('12') ) {
         // meshDropInBow)
 
-        let partIds = ['1', '9', '5', '10', '3', '8', '12']
+        let partIds = ['1', '9', '5', '10', '8', '12']
+        // let partIds = ['1', '9', '5', '10', '3', '8', '12'] //with tub footprint
         this.addIfIncludesAll(partIds, meshDropInPicsBow, partsInCart, images)
         basePole = '10'
 

@@ -8,8 +8,8 @@ export default {
       'http://www.slingfin.com/img/products/800/1081_06.jpg',
       'http://www.slingfin.com/img/products/800/1081_07.jpg',
       'http://www.slingfin.com/img/products/800/1081_08.jpg',
-      'http://www.slingfin.com/img/products/800/1081_09.jpg',
-      'http://www.slingfin.com/img/products/800/1081---spec-sheet-summary.jpg'
+      'http://www.slingfin.com/img/products/800/1081_09.jpg'
+      // 'http://www.slingfin.com/img/products/800/1081---spec-sheet-summary.jpg'
     ],
     bow: [
       'http://www.slingfin.com/img/products/800/1081_02.jpg',
@@ -17,8 +17,8 @@ export default {
       'http://www.slingfin.com/img/products/800/1081_06.jpg',
       'http://www.slingfin.com/img/products/800/1081_07.jpg',
       'http://www.slingfin.com/img/products/800/1081_08.jpg',
-      'http://www.slingfin.com/img/products/800/1081_09.jpg',
-      'http://www.slingfin.com/img/products/800/1081---spec-sheet-summary.jpg'
+      'http://www.slingfin.com/img/products/800/1081_09.jpg'
+      // 'http://www.slingfin.com/img/products/800/1081---spec-sheet-summary.jpg'
     ]
   },
 
@@ -30,8 +30,8 @@ export default {
       'http://www.slingfin.com/img/products/800/1082_09.jpg',
       'http://www.slingfin.com/img/products/800/1082_06.jpg',
       'http://www.slingfin.com/img/products/800/1082_07.jpg',
-      'http://www.slingfin.com/img/products/800/1082_08.jpg',
-      'http://www.slingfin.com/img/products/800/1082----spec-sheet-summary.jpg'
+      'http://www.slingfin.com/img/products/800/1082_08.jpg'
+      // 'http://www.slingfin.com/img/products/800/1082----spec-sheet-summary.jpg'
     ],
     bow: [
       'http://www.slingfin.com/img/products/800/1082_02.jpg',
@@ -39,8 +39,7 @@ export default {
       'http://www.slingfin.com/img/products/800/1082_05.jpg',
       'http://www.slingfin.com/img/products/800/1082_06.jpg',
       'http://www.slingfin.com/img/products/800/1082_07.jpg',
-      'http://www.slingfin.com/img/products/800/1082_08.jpg',
-      'http://www.slingfin.com/img/products/800/1082----spec-sheet-summary.jpg'
+      'http://www.slingfin.com/img/products/800/1082_08.jpg'
     ]
   },
 
@@ -53,16 +52,16 @@ export default {
       'http://www.slingfin.com/img/products/800/1080_04.jpg',
       'http://www.slingfin.com/img/products/800/1080_05.jpg',
       'http://www.slingfin.com/img/products/800/1080_06.jpg',
-      'http://www.slingfin.com/img/products/800/1080_07.jpg',
-      'http://www.slingfin.com/img/products/800/1080---spec-sheet-summary.jpg'
+      'http://www.slingfin.com/img/products/800/1080_07.jpg'
+      // 'http://www.slingfin.com/img/products/800/1080---spec-sheet-summary.jpg'
     ],
     bow: [
-      require('../images/stormpack-bow.jpg'),
+      require('../images/config-pics/stormpack-bow.jpg'),
       'http://www.slingfin.com/img/products/800/1080_09.jpg',
       'http://www.slingfin.com/img/products/800/1080_05.jpg',
       'http://www.slingfin.com/img/products/800/1080_06.jpg',
-      'http://www.slingfin.com/img/products/800/1080_07.jpg',
-      'http://www.slingfin.com/img/products/800/1080---spec-sheet-summary.jpg'
+      'http://www.slingfin.com/img/products/800/1080_07.jpg'
+      // 'http://www.slingfin.com/img/products/800/1080---spec-sheet-summary.jpg'
     ]
   },
   meshDropIn: {
@@ -85,32 +84,32 @@ export default {
   },
   accessories: {
     '3': { //tub footprint
-      trek: 'http://www.slingfin.com/img/products/800/1080_02.jpg',
-      bow: require('../images/stormpack-bow.jpg')
+      trek: require('../images/config-pics/stormpack-trek-accessory.png'),
+      bow: require('../images/config-pics/stormpack-bow-accessory.png')
     },
     '4': { //flat footprint
-      trek: 'http://www.slingfin.com/img/products/800/1083_01.jpg',
-      bow: 'http://www.slingfin.com/img/products/800/1083_01.jpg'
+      trek: require('../images/config-pics/flat-footprint-accessory.jpg'),
+      bow: require('../images/config-pics/flat-footprint-accessory.jpg')
     },
     '6': { //ripstop body
-      trek: 'http://www.slingfin.com/img/products/800/1082_01.jpg',
-      bow: 'http://www.slingfin.com/img/products/800/1082_02.jpg'
+      trek: require('../images/config-pics/ripstop-trek-accessory.jpg'),
+      bow: require('../images/config-pics/ripstop-bow-accessory.jpg')
     },
     '7': { //mesh body
-      trek: 'http://www.slingfin.com/img/products/800/1081_03.jpg',
-      bow: 'http://www.slingfin.com/img/products/800/1081_02.jpg'
+      trek: require('../images/config-pics/mesh-trek-accessory.jpg'),
+      bow: require('../images/config-pics/mesh-bow-accessory.jpg'),
     },
     '8': { //mesh drop-in
-      trek: 'http://www.slingfin.com/img/products/800/1086_01.jpg',
-      bow: 'http://www.slingfin.com/img/products/800/1086_01.jpg'
+      trek: require('../images/config-pics/meshdropin-trek-accessory.jpg'),
+      bow: require('../images/config-pics/meshdropin-bow-accessory.jpg'),
     },
     '10': { //bowpole
-      trek: require('../images/line-drawings/bow-pole.png'),
-      bow: require('../images/line-drawings/bow-pole.png')
+      trek: require('../images/config-pics/bow-pole-accessory.png'),
+      bow: require('../images/config-pics/bow-pole-accessory.png')
     },
     '11': { //trekpole
-      trek: require('../images/poles/trekking-poles.png'),
-      bow: require('../images/poles/trekking-poles.png')
+      trek: require('../images/line-drawings/trekking-poles.png'),
+      bow: require('../images/line-drawings/trekking-poles.png')
     },
   }
 }
