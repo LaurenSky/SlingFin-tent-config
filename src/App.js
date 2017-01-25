@@ -4,7 +4,7 @@ require('core-js/fn/object/entries');
 import logo from './images/SF-logo-nature.png';
 import './App.css';
 
-import ImageCarousol from './components/Carousol/carousol1';
+import ImageCarousol from './components/Carousol/Carousol1';
 import EnvironmentConditions from './components/Conditions/conditions';
 import TentDimensions from './components/TentDimensions/TentDimensions';
 import CartModal from './components/Cart/cartmodal';
