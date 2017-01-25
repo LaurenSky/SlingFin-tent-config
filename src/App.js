@@ -140,7 +140,6 @@ class App extends Component {
 
               <Row className="parts-selected bkgrd add-margin">
                   <Cart partInCart={this.state.partsInCart} deletePart={this.deletePart.bind(this)} />
-                  <h3 className='cart-header'>List of Accessories selected</h3>
               </Row>
 
               <Row className="add-margin">
