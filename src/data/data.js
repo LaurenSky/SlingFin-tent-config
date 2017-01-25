@@ -182,7 +182,7 @@ export default {
       name: "Stakes (qty 6)",
       description: "You need 6 of these to stake out your fly in wet conditions.",
       price: '7.25',
-      weight: '111111.00',
+      weight: '0.00',
       lineDrawing:require('../images/stakes/stakes.jpg'),
       thumbnail:require('../images/stakes/stakes.jpg'),
       main:require('../images/stakes/stakes.jpg'),

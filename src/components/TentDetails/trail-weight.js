@@ -5,10 +5,19 @@ let money = require("money-math");
 class TrailWeight extends React.Component {
 
   convertToOunces(grams) {
-    let ounces = money.mul(grams, "00.035274");
-    let ounces1 = money.div(ounces, "10000.00");
-
+    let holder = money.mul(grams, "00.035274");
+    let ounces1 = money.div(holder, "10000.00");
     return ounces1;
+  }
+
+  convertToPounds(ounces) {
+    let pounds = money.div(ounces, "16.00");
+    return pounds;
+  }
+
+  convertToKiligrams(grams) {
+    let kiligrams = money.div(grams, "1000.00");
+    return kiligrams;
   }
 
   addIfIncludesAll(partIds, parts, totalGrams) {
@@ -20,8 +29,24 @@ class TrailWeight extends React.Component {
     return totalGrams;
   }
 
+  determineDisplay(totalGrams, totalOunces) {
+    if(totalGrams !== '0.00') {
+      let totalKiligrams = this.convertToKiligrams(totalGrams);
+      let totalPounds = this.convertToPounds(totalOunces);
+
+      return (<h7>{ totalKiligrams } kg ({ totalPounds } lb)</h7>)
+    } else {
+      return (<h7>Add More Parts</h7>)
+    }
+  }
+
+
   render () {
+    this.determineDisplay.bind(this)
     this.addIfIncludesAll.bind(this)
+    this.convertToKiligrams.bind(this)
+    this.convertToPounds.bind(this)
+
     let props = this.props.partsInCart
     let parts = {}
     let partIds
@@ -94,7 +119,7 @@ class TrailWeight extends React.Component {
     return (
       <div>
         <h5>Minimum Trail Weight:</h5>
-        <h7>{ totalGrams } grams ({ totalOunces } oz)</h7>
+        { this.determineDisplay(totalGrams, totalOunces) }
       </div>
     );
   }
