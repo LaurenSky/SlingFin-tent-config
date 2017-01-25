@@ -10,7 +10,7 @@ import TentDimensions from './components/TentDimensions/TentDimensions';
 import CartModal from './components/Cart/cartmodal';
 import Cart from './components/Cart/cart';
 import TrailWeight from './components/TentDetails/trail-weight';
-import PackWeight from './components/TentDetails/pack-weight';
+// import PackWeight from './components/TentDetails/pack-weight';
 import Cost from './components/TentDetails/cost';
 import Footer from './components/Footer/Footer';
 import StartOptions from './components/Welcome/StartOptions';
