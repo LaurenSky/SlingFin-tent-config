@@ -33,7 +33,6 @@ class PreConfigButton extends Component {
     this.defineParts.bind(this)
     let parts = this.defineParts(this.props.name)
 
-    console.log('>>>>>> PRE CONFIG: ', parts)
     this.props.partStateConfig(parts)
   }
 
