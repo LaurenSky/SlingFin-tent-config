@@ -36,7 +36,7 @@ class TrailWeight extends React.Component {
 
       return (<h7>{ totalKiligrams } kg ({ totalPounds } lb)</h7>)
     } else {
-      return (<h7>Add More Parts</h7>)
+      return (<h7>( Add More Parts )</h7>)
     }
   }
 
@@ -73,42 +73,50 @@ class TrailWeight extends React.Component {
 
       if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('11') && partsInCart.includes('3') && partsInCart.includes('8') && partsInCart.includes('12') ) {
         // MeshDropInTrek
-        partIds = ['1', '9', '5', '11', '3', '8', '12']
+        // partIds = ['1', '9', '5', '11', '3', '8', '12'] w/stakes
+        partIds = ['1', '9', '5', '11', '3', '8'] //w/o stakes
         totalGrams = this.addIfIncludesAll(partIds, parts, totalGrams)
 
       } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('10') && partsInCart.includes('3') && partsInCart.includes('8') && partsInCart.includes('12') ) {
         // MeshDropInBow
-        partIds = ['1', '9', '5', '10', '3', '8', '12']
+        // partIds = ['1', '9', '5', '10', '3', '8', '12'] w/stakes
+        partIds = ['1', '9', '5', '10', '3', '8'] //w/o stakes
         totalGrams = this.addIfIncludesAll(partIds, parts, totalGrams)
 
       } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('11') && partsInCart.includes('3') && partsInCart.includes('12') ) {
         // StormpackTrek)
-        partIds = ['1', '9', '5', '11', '3', '12']
+        // partIds = ['1', '9', '5', '11', '3', '12']
+        partIds = ['1', '9', '5', '11', '3'] //w/o stakes
         totalGrams = this.addIfIncludesAll(partIds, parts, totalGrams)
 
       } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('10') && partsInCart.includes('3') && partsInCart.includes('12') ) {
         // StormpackBow)
-        partIds = ['1', '9', '5', '10', '3', '12']
+        // partIds = ['1', '9', '5', '10', '3', '12']
+        partIds = ['1', '9', '5', '10', '3']  //w/o stakes
         totalGrams = this.addIfIncludesAll(partIds, parts, totalGrams)
 
       } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('11') && partsInCart.includes('7') && partsInCart.includes('12') ) {
         // MeshTrek
-        partIds = ['1', '9', '5', '11', '7', '12']
+        // partIds = ['1', '9', '5', '11', '7', '12']
+        partIds = ['1', '9', '5', '11', '7'] //w/o stakes
         totalGrams = this.addIfIncludesAll(partIds, parts, totalGrams)
 
       } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('10') && partsInCart.includes('7') && partsInCart.includes('12') ) {
         // MeshBow
-        partIds = ['1', '9', '5', '10', '7', '12']
+        // partIds = ['1', '9', '5', '10', '7', '12']
+        partIds = ['1', '9', '5', '10', '7'] //w/o stakes
         totalGrams = this.addIfIncludesAll(partIds, parts, totalGrams)
 
       } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('11') && partsInCart.includes('6') && partsInCart.includes('12') ) {
         // RipstopTrek
-        partIds = ['1', '9', '5', '11', '6', '12']
+        // partIds = ['1', '9', '5', '11', '6', '12']
+        partIds = ['1', '9', '5', '11', '6'] //w/o stakes
         totalGrams = this.addIfIncludesAll(partIds, parts, totalGrams)
 
       } else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('10') && partsInCart.includes('6') && partsInCart.includes('12') ) {
         // RipstopBow
-        partIds = ['1', '9', '5', '10', '6', '12']
+        // partIds = ['1', '9', '5', '10', '6', '12']
+        partIds = ['1', '9', '5', '10', '6'] //w/o stakes
         totalGrams = this.addIfIncludesAll(partIds, parts, totalGrams)
       }
     }
@@ -118,7 +126,7 @@ class TrailWeight extends React.Component {
 
     return (
       <div>
-        <h5>Minimum Trail Weight:</h5>
+        <h5>Min. Trail Weight:</h5>
         { this.determineDisplay(totalGrams, totalOunces) }
       </div>
     );

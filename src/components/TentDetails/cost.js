@@ -30,8 +30,8 @@ class Cost extends React.Component {
 
     return (
       <div>
-        <h4>Your Price:</h4>
-        <h5> ${ total } </h5>
+        <h5>Your Price:</h5>
+        <h4> ${ total } </h4>
       </div>
     );
   }
