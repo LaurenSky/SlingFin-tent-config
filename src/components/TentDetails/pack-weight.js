@@ -16,21 +16,15 @@ class PackWeight extends React.Component {
 
     Object.entries(this.props.partsInCart).forEach(
       ([key, value]) => {
-        // console.log("in iterate!!!!" , key, value.partInfo)
         partWeightsInCart.push(value.partInfo.weight)
-        // console.log('<<<<>>>>>>>>> MY PARTs ARRAY ---- WEIGHT :' , partWeightsInCart)
       }
     );
 
     let totalGrams = '0.00'
 
     for (let i = 0 ; i < partWeightsInCart.length; i++) {
-      // console.log('<<<<>>>>>>>>> IN WEIGHT ---- TOTAL-WEIGHT :' , totalGrams)
-      // console.log('<<<<>>>>>>>>> IN WEIGHT ---- TOTAL-WEIGHT :' , partWeightsInCart[i])
       totalGrams = money.add(totalGrams, partWeightsInCart[i])
     }
-
-    // console.log('<<<<>>>>>>>>> IN WEIGHT ---- TOTAL-WEIGHT :' , totalGrams)
 
     this.convertToOunces.bind(this)
     let totalOunces = this.convertToOunces(totalGrams);

@@ -10,7 +10,6 @@ import TentDimensions from './components/TentDimensions/TentDimensions';
 import CartModal from './components/Cart/cartmodal';
 import Cart from './components/Cart/cart';
 import TrailWeight from './components/TentDetails/trail-weight';
-// import PackWeight from './components/TentDetails/pack-weight';
 import Cost from './components/TentDetails/cost';
 import Footer from './components/Footer/Footer';
 import StartOptions from './components/Welcome/StartOptions';
@@ -38,7 +37,6 @@ class App extends Component {
   }
 
   partStateConfig(parts) {
-    // console.log('$$$ Im in partstateconfig', parts)
     if (parts === false) {
       this.setState({
         partsInCart: false
@@ -77,8 +75,6 @@ class App extends Component {
   }
 
   deletePart(partId) {
-    // console.log('>>>>>In APP ready to delete Part: ', partId)
-
     const newState = {...this.state.partsInCart}; //Duplicate state.
     delete newState[partId];                  //remove Item form stateCopy.
     this.setState({
@@ -87,7 +83,6 @@ class App extends Component {
   }
 
   render() {
-    // console.log("partInCart value in render APP: ", this.state.partsInCart)
     const stateStyle = (!this.state.partsInCart) ? styles.inactive : styles.active;
 
     return (

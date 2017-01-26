@@ -22,13 +22,10 @@ class PartCategory extends Component {
     this.state = {
       show: false,
       partsInCart: props.partInCart,
-      // myParts: []
     };
   }
 
   showRecommended() {
-    // console.log('>>>>><<<<<<< SHOW RECOMMENDED: ' , this.state.show)
-
     this.setState({
       show: !this.state.show
     })
@@ -37,8 +34,6 @@ class PartCategory extends Component {
 
   render () {
     const showStyle = this.state.show ? styles.active : styles.inactive;
-
-    // this.checkInCart.bind(this)
 
     const categoryData = function(category, data) {
       if(category==='WebTruss') {
@@ -59,7 +54,6 @@ class PartCategory extends Component {
     const data = categoryData(this.props.category, this.props.data);
 
     const partList = data.map(part => {
-      // console.log(part.category, part.name)
       return(
         <li key={part.id} className='accordion-body'>
           <Row>
@@ -114,6 +108,5 @@ class PartCategory extends Component {
     );
   }
 }
-// <img src={part.lineDrawing} className="part-image" alt="Part"/>
 
 export default PartCategory;

@@ -221,6 +221,11 @@ footer {
   padding: 1.5%;
 }
 
+.send-email-background {
+  background-color: white;
+  margin-bottom: 5%;
+}
+
 a.send-email:hover {
   background-color: darkgreen;
   color: white;

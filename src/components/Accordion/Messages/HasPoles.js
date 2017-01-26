@@ -12,16 +12,13 @@ class NumPoles extends React.Component {
     if (props !== false) {
       Object.entries(props).forEach(
         ([key, value]) => {
-          // console.log("in iterate!!!!" , key, value.partInfo)
           partsInCart.push(key)
-          // console.log('<<<<>>>>>>>>> MY PARTs ARRAY ---- NUM POLES :' , partsInCart)
         }
       );
     }
 
 
     if ( partsInCart.includes('9') && partsInCart.includes('10') ) {
-      // console.log('return 3')
       return (
         <div className='normal'>
           <h5># of Poles Selected: 3 </h5>
@@ -30,7 +27,6 @@ class NumPoles extends React.Component {
         </div>
       )
     } else if ( partsInCart.includes('9') && partsInCart.includes('11') ) {
-      // console.log('return 2')
       return (
         <div className='normal'>
           <h5># of Poles Selected: 2 </h5>
@@ -40,7 +36,6 @@ class NumPoles extends React.Component {
       )
 
     } else if ( partsInCart.includes('9') ) {
-      // console.log('return add a bow pole or use trekking-poles')
       return (
         <div className='normal'>
           <h5># of Poles Selected: 2 </h5>
@@ -49,7 +44,6 @@ class NumPoles extends React.Component {
       )
 
     } else if ( partsInCart.includes('10') ) {
-      // console.log('return add cross-poles')
       return (
         <div className='normal'>
           <h5># of Poles Selected: 1 </h5>
@@ -58,7 +52,6 @@ class NumPoles extends React.Component {
       )
 
     } else if ( partsInCart.includes('11') ) {
-      // console.log('return add cross-poles')
       return (
         <div className='normal'>
           <h5># of Poles Selected: 0 </h5>
@@ -67,7 +60,6 @@ class NumPoles extends React.Component {
       )
 
     } else {
-      // console.log('return add cross poles and a (bow pole / trekking poles)')
       return (
         <div className='normal'>
           <h5># of Poles Selected: 0 </h5>

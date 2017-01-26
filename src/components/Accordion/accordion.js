@@ -55,5 +55,4 @@ class AccordionTest extends React.Component {
   }
 }
 
-  // ReactDOM.render(accordionInstance, mountNode);
 export default AccordionTest;

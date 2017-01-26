@@ -4,13 +4,6 @@ import React from 'react';
 
 class Volume extends React.Component {
 
-  constructor() {
-    super();
-    this.state = {
-      // active: false
-    };
-  }
-
   render () {
 
     return (

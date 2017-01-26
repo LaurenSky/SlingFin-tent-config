@@ -1,8 +1,6 @@
 import React from 'react';
-
 import Volume from './volume';
 import PackSize from './pack-size';
-// import './accordion.css';
 
 
 const styles = {

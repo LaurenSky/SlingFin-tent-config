@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import '../../App.css';
 import { Button, Tooltip, OverlayTrigger } from 'react-bootstrap';
-
 import AccordionPanelItems from '../Accordion/accordion'
 import PreConfigOptions from './PreConfigOptions';
 
@@ -29,14 +28,12 @@ class StartOptions extends Component {
 
   clearPartsInCart() {
     const parts = false
-    // console.log('>>>>>> PRE CONFIG: ', parts);
 
     this.props.partStateConfig(parts)
 
   }
 
   preConfigHandleClick() {
-    // console.log('Im in set true')
     this.setState({
       active: true,
       show: false,
@@ -75,6 +72,18 @@ class StartOptions extends Component {
 
     const options = <div style={stateStyle}><PreConfigOptions data={this.props.data} partStateConfig={this.props.partStateConfig} showAccordion={this.showAccordion.bind(this)} styles={styles}/></div>
 
+    // OR for popover :
+    // const popoverHoverFocusConfig = (<Popover id="popover-trigger-hover-focus" title="PreConfig Option:">Start with 1 of our 3 main system set ups and add / remove parts as you see fit.</Popover>);
+    // const popoverHoverFocusCustom = (<Popover id="popover-trigger-hover-focus" title="Custom Option:">Start from scratch and Design a System step by step with helpful hints.</Popover>);
+
+    // <OverlayTrigger trigger={['hover', 'focus']} placement="left" overlay={popoverHoverFocusConfig}>
+    //   {preConfigButton}
+    // </OverlayTrigger>
+    //
+    // <OverlayTrigger trigger={['hover', 'focus']} placement="right" overlay={popoverHoverFocusCustom}>
+    //   {customizeButton}
+    // </OverlayTrigger>
+
     return (
       <div>
         <section className='initial-options-buttons'>
@@ -98,14 +107,3 @@ class StartOptions extends Component {
 }
 
 export default StartOptions;
-
-// const popoverHoverFocusConfig = (<Popover id="popover-trigger-hover-focus" title="PreConfig Option:">Start with 1 of our 3 main system set ups and add / remove parts as you see fit.</Popover>);
-// const popoverHoverFocusCustom = (<Popover id="popover-trigger-hover-focus" title="Custom Option:">Start from scratch and Design a System step by step with helpful hints.</Popover>);
-
-// <OverlayTrigger trigger={['hover', 'focus']} placement="left" overlay={popoverHoverFocusConfig}>
-//   {preConfigButton}
-// </OverlayTrigger>
-//
-// <OverlayTrigger trigger={['hover', 'focus']} placement="right" overlay={popoverHoverFocusCustom}>
-//   {customizeButton}
-// </OverlayTrigger>

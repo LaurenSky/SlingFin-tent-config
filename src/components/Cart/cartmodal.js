@@ -29,15 +29,14 @@ class CartModal extends React.Component {
   cartItemNum() {
     let numParts = 0
     let partsInCart = this.props.partInCart
-    console.log("In Cart state passed: ", this.props.partInCart)
+
     if (partsInCart !== false) {
       numParts = Object.keys(partsInCart).length
-      console.log("11111111-----In Cart state passed: ", numParts)
       if(numParts > 1) {
         return (
           <p className='cart-item-count'>{numParts} Items</p>
         )
-      } else if (numParts === 1) { 
+      } else if (numParts === 1) {
         return (
           <p className='cart-item-count'>{numParts} Item</p>
         )
@@ -46,7 +45,6 @@ class CartModal extends React.Component {
   }
 
   render () {
-    // console.log("11111111-----In Cart state passed: ", this.props.partInCart)
     this.cartItemNum.bind(this);
 
     return (

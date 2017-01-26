@@ -48,5 +48,3 @@ class HasWebTruss extends React.Component {
 }
 
 export default HasWebTruss;
-
-// <div><h4 className='normal'> You have a WebTruss in your configuration, click Poles to go to the next section.</h4><h4 className='go-next-step'>Click Poles to go to the next section. </h4></div>

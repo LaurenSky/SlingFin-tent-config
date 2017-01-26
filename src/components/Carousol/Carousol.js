@@ -5,15 +5,9 @@ require('core-js/fn/object/entries');
 import "../../../node_modules/react-image-gallery/styles/scss/image-gallery.scss";
 // CSS
 import "../../../node_modules/react-image-gallery/styles/css/image-gallery.css";
-// Webpack
-// import "react-image-gallery/styles/css/image-gallery";
 
 
 class ImageCarousol extends React.Component {
-
-  handleImageLoad(event) {
-    // console.log('Image loaded ', event.target)
-  }
 
   indexOf(array, partId) {
     let index = array.indexOf(partId);
@@ -29,29 +23,23 @@ class ImageCarousol extends React.Component {
         }
       )
     }
-    // console.log('~~~~~~ part Ids Array: B4', partsInCart )
     for (let i=0; i < partIds.length; i++) {
       let index = this.indexOf(partsInCart, partIds[i])
       if (index > -1) {
          partsInCart.splice(index, 1);
       }
     }
-    // console.log('~~~~~~ part Ids Array: AFTER', partsInCart )
   }
 
   render() {
     this.indexOf.bind(this)
     let partsInCart = [];
     let props = this.props.partsInCart
-    // console.log('=========== I just wanna fly === ')
-    // console.log('=========== CArosol props === ', props)
 
     if ( (props !== false) || (Object.keys(props).length > 0) ) {
       Object.entries(props).forEach(
         ([key, value]) => {
-          // console.log("in iterate!!!!" , key, value.partInfo)
           partsInCart.push(key)
-          // console.log('<<<<>>>>>>>>> MY PARTs ARRAY ---- IMAGES :' , partsInCart)
         }
       );
     }
@@ -138,33 +126,24 @@ class ImageCarousol extends React.Component {
         )
       }
 
-      // console.log('~~~~~~ basePole: accessories', basePole )
-      // console.log('~~~~~~ part Ids Array: accessories', partsInCart )
-      // console.log('~~~~~~ part Ids Array: accessoriesPics', accessoryPics['3'] )
-
 
       for (let i = 0; i < partsInCart.length; i++) {
         if ( Object.keys(accessoryPics).includes(partsInCart[i]) ) {
           let partId = partsInCart[i]
-          // console.log('~~~~~~ part Ids Array: accessories ID', partId )
           if (basePole === '11') {
             let image = accessoryPics[partId]
-            // console.log('~~~~~~ part Ids Array: accessories image', image )
             images.push(
               {
                 original: image.trek,
                 thumbnail: image.trek,
-                // description: 'Optional SetUp with accessory selected'
               }
             )
           } else if (basePole === '10') {
             let image = accessoryPics[partId]
-            // console.log('~~~~~~ part Ids Array: accessories image', image )
             images.push(
               {
                 original: image.bow,
                 thumbnail: image.bow,
-                // description: 'Optional SetUp with accessory selected'
               }
             )
           }
@@ -176,14 +155,6 @@ class ImageCarousol extends React.Component {
         {
           original: require('../../images/tree-line.png'),
           thumbnail: require('../../images/tree-line.png')
-        // originalClass: 'featured-slide',
-        // thumbnailClass: 'featured-thumb',
-        // originalAlt: 'original-alt',
-        // thumbnailAlt: 'thumbnail-alt',
-        // // thumbnailLabel: 'Optional',
-        // description: 'Optional description...',
-        // // srcSet: 'Optional srcset (responsive images src)',
-        // sizes: 'Optional sizes (image sizes relative to thebreakpoint)'
         }
       )
     }

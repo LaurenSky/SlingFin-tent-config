@@ -4,22 +4,7 @@ import './footer.css';
 import { Row, Col } from 'react-bootstrap';
 
 
-// class component
-// class Credit extends React.Component {
-//   render() {
-//     return(
-//       <div className='credit'>
-//         <p>
-//           SlingFin:
-//           {' '}
-//           From the Mountain to your trailhead.
-//         </p>
-//       </div>
-//     )
-//   }
-// }
-
-// same this but stateless component
+//stateless component
 const Footer = () =>
   <Row className='credit'>
     <Col xs={6} md={10}>

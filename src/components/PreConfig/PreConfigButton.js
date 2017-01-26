@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-// import './accordion.css';
 import { Button } from 'react-bootstrap';
 
 

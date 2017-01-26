@@ -1,15 +1,7 @@
 import React from 'react';
-// import './accordion.css';
 
 
 class PackSize extends React.Component {
-
-  constructor() {
-    super();
-    this.state = {
-      // active: false
-    };
-  }
 
   render () {
 
@@ -21,8 +13,5 @@ class PackSize extends React.Component {
   }
 }
 
-// Accordion.propTypes = {
-//   weight: React.PropTypes.number.isRequired,
-// };
 
 export default PackSize;

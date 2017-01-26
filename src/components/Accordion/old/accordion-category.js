@@ -29,13 +29,11 @@ class AccordionCategory extends Component {
 
   render () {
     const data = this.props.data;
-    // OR const {data} = this.props
     const stateStyle = this.state.active ? styles.active : styles.inactive;
 
     const partList = data.map(part => {
       console.log(part.category, part.name)
       return (
-        // <li key={part.id} className={part.category}>{part.name}</li>
         <div key={part.id} onClick={this.toggle} className='accordion-header'>
           <h3>{part.category}</h3>
           <li>

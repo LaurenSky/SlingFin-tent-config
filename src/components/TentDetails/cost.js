@@ -11,9 +11,7 @@ class Cost extends React.Component {
     if (props !== false) {
       Object.entries(props).forEach(
         ([key, value]) => {
-          // console.log("in iterate!!!!" , key, value.partInfo)
           partsInCart.push(value.partInfo.price)
-          // console.log('<<<<>>>>>>>>> MY PARTs ARRAY ---- COST :' , partsInCart)
         }
       );
     }
@@ -21,12 +19,8 @@ class Cost extends React.Component {
     let total = '0.00'
 
     for (let i = 0 ; i < partsInCart.length; i++) {
-      // console.log('<<<<>>>>>>>>> IN COST ---- TOTAL-COST :' , total)
-      // console.log('<<<<>>>>>>>>> IN COST ---- TOTAL-COST :' , partsInCart[i])
       total = money.add(total, partsInCart[i])
     }
-
-    // console.log('<<<<>>>>>>>>> IN COST ---- TOTAL-COST :' , total)
 
     return (
       <div>

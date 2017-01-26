@@ -14,8 +14,8 @@ class EnvironmentConditions extends React.Component {
     // snowflake2 = '1' && '9' && '6' && '5' && '11'
 
     if ( (selectedParts.includes('1') && selectedParts.includes('9') && selectedParts.includes('6') && selectedParts.includes('5') && selectedParts.includes('10')) || (selectedParts.includes('1') && selectedParts.includes('9') && selectedParts.includes('6') && selectedParts.includes('5') && selectedParts.includes('11')) ){
-      // console.log(true)
-      // console.log("^^^^^^^^ I'm showing a snowflake")
+
+      //I'm showing a snowflake
       return <FontAwesome className="fa fa-snowflake-o increase-icon snowflake" name='snowflake' aria-hidden="true" />
     } else {
       return <FontAwesome className="fa fa-snowflake-o increase-icon snowflake decrease-opacity" name='snowflake' aria-hidden="true" />
@@ -33,11 +33,9 @@ class EnvironmentConditions extends React.Component {
     // raindrop5 = '1' && '9' && '5' && '10' && '6'
     // raindrop6 = '1' && '9' && '5' && '11' && '6'
     if ( ( selectedParts.includes('1') && selectedParts.includes('9') && selectedParts.includes('5') && selectedParts.includes('10') && selectedParts.includes('3') ) || ( selectedParts.includes('1') && selectedParts.includes('9') && selectedParts.includes('5') && selectedParts.includes('11') && selectedParts.includes('3') ) || ( selectedParts.includes('1') && selectedParts.includes('9') && selectedParts.includes('5') && selectedParts.includes('10') && selectedParts.includes('7') ) || ( selectedParts.includes('1') && selectedParts.includes('9') && selectedParts.includes('5') && selectedParts.includes('11') && selectedParts.includes('7') ) || ( selectedParts.includes('1') && selectedParts.includes('9') && selectedParts.includes('5') && selectedParts.includes('10') && selectedParts.includes('6') ) || ( selectedParts.includes('1') && selectedParts.includes('9') && selectedParts.includes('5') && selectedParts.includes('11') && selectedParts.includes('6') ) ){
-      // console.log(true)
-      // console.log("^^^^^^^^ I'm showing a raindrop")
+
       return <FontAwesome className="fa fa-tint increase-icon raindrop" name='raindrop' aria-hidden="true" />
     } else {
-      console.log(false)
       return <FontAwesome className="fa fa-tint increase-icon raindrop decrease-opacity" name='raindrop' aria-hidden="true" />
     }
   }
@@ -52,17 +50,14 @@ class EnvironmentConditions extends React.Component {
     // bug-trek2 = '1' && '9' && '7' && '11'
     // bug-trek3 = '1' && '9' && '8' && '11'
     if ( (selectedParts.includes('1') && selectedParts.includes('9') && selectedParts.includes('6') && selectedParts.includes('10')) || (selectedParts.includes('1') && selectedParts.includes('9') && selectedParts.includes('7') && selectedParts.includes('10')) || (selectedParts.includes('1') && selectedParts.includes('9') && selectedParts.includes('8') && selectedParts.includes('3') && selectedParts.includes('10')) || (selectedParts.includes('1') && selectedParts.includes('9') && selectedParts.includes('6') && selectedParts.includes('11')) || (selectedParts.includes('1') && selectedParts.includes('9') && selectedParts.includes('7') && selectedParts.includes('11')) || (selectedParts.includes('1') && selectedParts.includes('9') && selectedParts.includes('8') && selectedParts.includes('3') && selectedParts.includes('11'))) {
-      // console.log(true)
-      // console.log("^^^^^^^^ I'm showing a bug")
+
       return <FontAwesome className="fa fa-bug increase-icon bugs" name='bugs' aria-hidden="true" />
     } else {
-      console.log(false)
       return <FontAwesome className="fa fa-bug increase-icon bugs decrease-opacity" name='bugs' aria-hidden="true" />
     }
   }
 
   render () {
-    // console.log("^^^^^^^keys in conditions: ----" , Object.keys(partsInCart))
     let selectedParts = Object.keys(this.props.partsInCart);
 
     return (

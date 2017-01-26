@@ -8,30 +8,9 @@ class PartButton extends Component {
     super(props);
 
     this.state = {
-      // partInCart: this.currentlyInPartInCart(props.part.id)
       partInCart: props.partInCart
     }
   }
-
-  // setStateFromProps(parts, partId) {
-  //   // if (parts.includes(partId)) {
-  //   //   this.setState({
-  //   //     partInCart: true
-  //   //     })
-  //   // } else {
-  //   //   this.setState({
-  //   //     partInCart: false
-  //   //   })
-  //   // }
-  // }
-  // componentWillUpdate(nextProps, nextState) {
-  //   console.log("@@@@ in ON CHANGE -- state b4:", this.state.partInCart)
-  //   this.setState({
-  //     partInCart: !this.state.partInCart
-  //   })
-  //   console.log("@@@@ in ON CHANGE -- state after:", this.state.partInCart)
-  // }
-
 
   partStateUpdate() {
     const val = this.state.partInCart
@@ -41,13 +20,11 @@ class PartButton extends Component {
 
 
   _handleClick() {
-    // console.log("in handle_click--- before switch, value is ", this.state.partInCart);
     this.setState(
       {
         partInCart: !this.state.partInCart
       },
         function() {
-          // console.log("in handle_click--- after switch, value is ", this.state.partInCart);
           this.partStateUpdate()
       }
     );
@@ -62,14 +39,10 @@ class PartButton extends Component {
     if (!this.props.partInCart === false) {
       Object.entries(this.props.partInCart).forEach(
         ([key, value]) => {
-          // console.log("in button iterate!!!! -- key:" , key)
           parts.push(value.partInfo.id)
-          // console.log('in button iterate!!!! -- MY button PART ARRAY:' , parts)
         }
       );
     }
-
-    // this.setStateFromProps(parts, partId).bind(this)
 
     if(parts.includes(partId)) {
       return true
@@ -80,11 +53,6 @@ class PartButton extends Component {
 
   render () {
     const part = this.props.part;
-    // console.log('in PartButton ---- *****PartInCart props', this.props.partInCart)
-    // console.log('in PartButton ---- partName: ', part.name)
-    // console.log('partInCart state -- in button :', part.name, this.state.partInCart)
-
-
 
     let buttonText = 'Add'
     let bsStyle='success'

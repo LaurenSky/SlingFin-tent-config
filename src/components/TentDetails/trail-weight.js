@@ -22,9 +22,7 @@ class TrailWeight extends React.Component {
 
   addIfIncludesAll(partIds, parts, totalGrams) {
     for (let i = 0; i < partIds.length; i++) {
-      // console.log('<<<<>>>>>>>>> MY PARTs ARRAY ---- PartWEIGHT :', partIds[i],' : ' , parts[partIds[i]])
       totalGrams = money.add(totalGrams, parts[partIds[i]])
-      // console.log('<<<<>>>>>>>>> IN WEIGHT ---- TOTAL-WEIGHT :' , totalGrams)
     }
     return totalGrams;
   }
@@ -55,19 +53,12 @@ class TrailWeight extends React.Component {
     if (props !== false) {
       Object.entries(props).forEach(
         ([key, value]) => {
-          // console.log("in iterate!!!!" , key, value.partInfo)
-          // partWeightsInCart.push(value.partInfo.weight)
           parts[key] = value.partInfo.weight
-          // console.log('<<<<>>>>>>>>> MY PARTs ARRAY ---- WEIGHT :' , parts[key])
         }
       );
     }
 
     let partsInCart = Object.keys(parts)
-
-    // console.log('<<<<>>>>>>>>> MY PARTs ARRAY ---- PartWEIGHT1 :' , parts)
-    // console.log('<<<<>>>>>>>>> MY PARTs ARRAY ---- PartWEIGHT1 :' , Object.keys(parts))
-    // console.log('<<<<>>>>>>>>> MY PARTs ARRAY ---- PartWEIGHT1 :' , partsInCart)
 
     if (partsInCart.length > 0) {
 

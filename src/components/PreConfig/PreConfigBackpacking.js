@@ -14,7 +14,6 @@ class PreConfigBackpacking extends Component {
     parts['10'] = this.props.data.poles[1]
     parts['12'] = this.props.data.accessories[0]
 
-    // console.log('>>>>>> PRE CONFIG: ', parts);
     this.props.partStateConfig(parts);
     this.props.showNext();
   }

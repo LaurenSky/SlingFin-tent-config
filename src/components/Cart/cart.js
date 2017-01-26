@@ -5,9 +5,6 @@ import Table from './Table';
 class Cart extends React.Component {
 
   render () {
-    // console.log("11111111-----In Cart state passed: ", this.props.partInCart)
-
-
 
     return (
       <div className='tent-details'>
