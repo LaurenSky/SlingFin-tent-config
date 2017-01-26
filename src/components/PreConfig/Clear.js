@@ -7,7 +7,6 @@ class PreConfigBackpacking extends Component {
   _handleClick() {
     const parts = false
 
-    console.log('>>>>>> PRE CONFIG: ', parts)
     this.props.partStateConfig(parts)
   }
 
