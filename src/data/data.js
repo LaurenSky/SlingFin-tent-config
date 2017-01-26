@@ -140,7 +140,7 @@ export default {
       name: "Stakes (qty 6)",
       description: "You need 6 of these to stake out your fly in wet conditions.",
       price: '7.25',
-      weight: '0.00',
+      weight: '67.98',
       lineDrawing:require('../images/line-drawings/stakes.png'),
       thumbnail:require('../images/line-drawings/expand-images/stakes.png'),
       recommend: null
@@ -150,7 +150,7 @@ export default {
     //   category: "Accessories",
     //   name: "Stake (qty: 1)",
     //   description: ".....",
-    //   price: '1.00',
+    //   price: '11.33',
     //   weight: '111111.00',
     //   lineDrawing:require('../images/stakes/stakefront.jpg'),
     //   thumbnail:require('../images/stakes/stakefront.jpg'),

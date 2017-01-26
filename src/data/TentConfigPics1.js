@@ -88,20 +88,20 @@ export default {
       bow: require('../images/config-pics/stormpack-bow-accessory.png')
     },
     '4': { //flat footprint
-      trek: require('../images/config-pics/flat-footprint-accessory.jpg'),
-      bow: require('../images/config-pics/flat-footprint-accessory.jpg')
+      trek: require('../images/config-pics/flat-footprint-accessory.png'),
+      bow: require('../images/config-pics/flat-footprint-accessory.png')
     },
     '6': { //ripstop body
-      trek: require('../images/config-pics/ripstop-trek-accessory.jpg'),
-      bow: require('../images/config-pics/ripstop-bow-accessory.jpg')
+      trek: require('../images/config-pics/ripstop-trek-accessory.png'),
+      bow: require('../images/config-pics/ripstop-bow-accessory.png')
     },
     '7': { //mesh body
-      trek: require('../images/config-pics/mesh-trek-accessory.jpg'),
-      bow: require('../images/config-pics/mesh-bow-accessory.jpg'),
+      trek: require('../images/config-pics/mesh-trek-accessory.png'),
+      bow: require('../images/config-pics/mesh-bow-accessory.png'),
     },
     '8': { //mesh drop-in
-      trek: require('../images/config-pics/meshdropin-trek-accessory.jpg'),
-      bow: require('../images/config-pics/meshdropin-bow-accessory.jpg'),
+      trek: require('../images/config-pics/meshdropin-trek-accessory.png'),
+      bow: require('../images/config-pics/meshdropin-bow-accessory.png'),
     },
     '10': { //bowpole
       trek: require('../images/config-pics/bow-pole-accessory.png'),

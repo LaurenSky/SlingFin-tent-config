@@ -132,8 +132,8 @@ class ImageCarousol extends React.Component {
       } else {
         images.push (
           {
-            original: 'http://www.slingfin.com/img/promos/home-promo-2.jpg',
-            thumbnail: 'http://www.slingfin.com/img/promos/home-promo-2.jpg'
+            original: require('../../images/tree-line.png'),
+            thumbnail: require('../../images/tree-line.png')
           }
         )
       }
@@ -174,8 +174,8 @@ class ImageCarousol extends React.Component {
     } else {
       images.push (
         {
-          original: 'http://www.slingfin.com/img/promos/home-promo-2.jpg',
-          thumbnail: 'http://www.slingfin.com/img/promos/home-promo-2.jpg'
+          original: require('../../images/tree-line.png'),
+          thumbnail: require('../../images/tree-line.png')
         // originalClass: 'featured-slide',
         // thumbnailClass: 'featured-thumb',
         // originalAlt: 'original-alt',
