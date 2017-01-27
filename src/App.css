@@ -10,13 +10,14 @@
 
 .SF-logo-main {
   width: 20%;
+  padding: 1% 0 1% 0;
 }
 
 .App-header {
   /*background-image: url('./images/one-up-bkgd-thin.jpg');*/
-  background-image: url('./images/one-up-bkgnd.png');
+  background-image: url('./images/thin-background.png');
   height: 15%;
-  padding: 1%;
+  padding: 0 1% 0 1%;
   color: white;
 }
 
@@ -32,6 +33,10 @@
   height: 300%;
   padding: .5% 0 .5% 1%;
   margin-bottom: 2%;
+}
+
+.page-title {
+  padding-top: 5%;
 }
 
 .configuration-title {

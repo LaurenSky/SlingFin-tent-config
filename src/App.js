@@ -92,10 +92,9 @@ class App extends Component {
             <Col xs={12} md={8}>
               <a className="slingfin" href="http://www.slingfin.com/store/Tents/treeline-tents" target="new"><img src={logo} className='SF-logo-main' alt="logo" /></a>
             </Col>
-            <Col xs={12} md={4} className="page-title">
+            <Col xs={12} md={4} className="page-title text-right">
               <h2>SlingFin CrossBow2 Tent System Configurator</h2>
             </Col>
-
           </Row>
         </header>
         <section className='background-img'>
