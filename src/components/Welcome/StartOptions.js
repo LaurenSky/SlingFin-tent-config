@@ -22,8 +22,6 @@ class StartOptions extends Component {
       show: false,
       seeMessage: false
     };
-
-    this.clearPartsInCart = this.clearPartsInCart.bind(this);
   }
 
   clearPartsInCart() {
@@ -58,6 +56,7 @@ class StartOptions extends Component {
   }
 
   render () {
+    this.clearPartsInCart.bind(this);
     const stateStyle = this.state.active ? styles.active : styles.inactive;
     const showMeStyle = this.state.show ? styles.active : styles.inactive;
     const seeMessageStyle = this.state.seeMessage ? styles.active : styles.inactive;

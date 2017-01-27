@@ -8,6 +8,9 @@ import "../../../node_modules/react-image-gallery/styles/css/image-gallery.css";
 
 
 class ImageCarousol extends React.Component {
+  handleImageLoad(event) {
+    // console.log('Image loaded ', event.target)
+  }
 
   indexOf(array, partId) {
     let index = array.indexOf(partId);
@@ -45,6 +48,7 @@ class ImageCarousol extends React.Component {
     }
 
     let images = []
+    const treeLineClearImage = require('../../images/tree-line.png')
     const imgConfigPics = this.props.tentConfigPics
     const accessoryPics = imgConfigPics.accessories
     const meshPicsTrek = imgConfigPics.meshbody.trek
@@ -62,16 +66,16 @@ class ImageCarousol extends React.Component {
       if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('11') && partsInCart.includes('3') && partsInCart.includes('8') && partsInCart.includes('12') ) {
         // MeshDropInTrek
 
-        let partIds = ['1', '9', '5', '11', '8', '12']
-        // let partIds = ['1', '9', '5', '11', '3', '8', '12'] //with tub footprint
+        // let partIds = ['1', '9', '5', '11', '8', '12']
+        let partIds = ['1', '9', '5', '11', '3', '8', '12'] //with tub footprint
         this.addIfIncludesAll(partIds, meshDropInPicsTrek, partsInCart, images)
         basePole = '11'
 
       }  else if ( partsInCart.includes('1') && partsInCart.includes('9') && partsInCart.includes('5') && partsInCart.includes('10') && partsInCart.includes('3') && partsInCart.includes('8') && partsInCart.includes('12') ) {
         // meshDropInBow)
 
-        let partIds = ['1', '9', '5', '10', '8', '12']
-        // let partIds = ['1', '9', '5', '10', '3', '8', '12'] //with tub footprint
+        // let partIds = ['1', '9', '5', '10', '8', '12']
+        let partIds = ['1', '9', '5', '10', '3', '8', '12'] //with tub footprint
         this.addIfIncludesAll(partIds, meshDropInPicsBow, partsInCart, images)
         basePole = '10'
 
@@ -120,12 +124,11 @@ class ImageCarousol extends React.Component {
       } else {
         images.push (
           {
-            original: require('../../images/tree-line.png'),
-            thumbnail: require('../../images/tree-line.png')
+            original: treeLineClearImage,
+            thumbnail: treeLineClearImage
           }
         )
       }
-
 
       for (let i = 0; i < partsInCart.length; i++) {
         if ( Object.keys(accessoryPics).includes(partsInCart[i]) ) {
@@ -153,8 +156,8 @@ class ImageCarousol extends React.Component {
     } else {
       images.push (
         {
-          original: require('../../images/tree-line.png'),
-          thumbnail: require('../../images/tree-line.png')
+          original: treeLineClearImage,
+          thumbnail: treeLineClearImage
         }
       )
     }

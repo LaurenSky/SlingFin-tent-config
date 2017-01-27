@@ -20,16 +20,16 @@ class PartCategory extends Component {
   constructor(props) {
     super();
     this.state = {
-      show: false,
+      show: true,
       partsInCart: props.partInCart,
     };
   }
 
-  showRecommended() {
-    this.setState({
-      show: !this.state.show
-    })
-  }
+  // showRecommended() {
+  //   this.setState({
+  //     show: !this.state.show
+  //   })
+  // }
 
 
   render () {
@@ -79,7 +79,7 @@ class PartCategory extends Component {
 
               <Row>
                 <Col xs={8} md={8}>
-                  <PartButton part={part} type='normal' showRecommended={this.showRecommended.bind(this)} partStateUpdate={this.props.partStateUpdate} partInCart={this.props.partInCart} />
+                  <PartButton part={part} type='normal'  partStateUpdate={this.props.partStateUpdate} partInCart={this.props.partInCart} />
                 </Col>
 
                 <Col xs={4} md={4}>

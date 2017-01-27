@@ -35,7 +35,7 @@ class RecommendedPart extends Component {
           <Col xs={11} md={11} className='recommended-part-body'>
             <Row>
               <Col xs={9} md={9} className="recommended-part-image">
-                <EnlargeImage lineDrawing={part.lineDrawing} alt={part.name} />
+                <EnlargeImage lineDrawing={part.lineDrawing} thumbnail={part.thumbnail} partName={part.name} className="part-image" />
               </Col>
               <Col xs={3} md={3}>
                 <h4 className='text-right'>
