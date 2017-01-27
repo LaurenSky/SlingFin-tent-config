@@ -143,7 +143,7 @@ class App extends Component {
 
             <Col xs={6} md={6} className="alert-box bkgrd add-margin add-padding">
               <div className='tent-details'>
-                  <h4>Welcome to the SlingFin CrossBow2 Tent Configurator.</h4>
+                  <h4>Welcome to the SlingFin CrossBow2 Tent Configurator</h4>
               </div>
             </Col>
 
